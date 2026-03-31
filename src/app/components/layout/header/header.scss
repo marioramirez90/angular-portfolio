@@ -1,0 +1,25 @@
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(20, 29, 47, 1);
+    color: white;
+    .nav{
+        display: flex;
+        gap: 20px;
+        a{
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            transition: color 0.3s ease;
+            &:hover{
+                color: #ff6347;
+            }
+        }
+        button{
+            background-color: transparent;
+            border: none;
+            }
+        }
+    }
