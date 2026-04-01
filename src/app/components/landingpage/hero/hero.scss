@@ -1,3 +1,27 @@
+@use '../../../../styles/abstracts/variables' as * ;
 .hero{
     display: flex;
+    height: 100vh;
+    padding-right: 130px;
+    padding-left: 130px;
+
+    .hero-content{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+    }
+    .hero-image-stck{
+        position: relative;
+        width: 690px;
+        height: 620px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-image: url('/img/backgrounds/photoshadows.svg');
+        background-size: cover;
+        background-position: center;
+    }
 }
