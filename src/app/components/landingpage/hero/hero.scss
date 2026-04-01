@@ -4,6 +4,8 @@
     height: 100vh;
     padding-right: 130px;
     padding-left: 130px;
+    padding-top: 300px;
+
     
 
     .hero-content{
@@ -16,8 +18,9 @@
     }
     .hero-image-stck{
         position: relative;
-        width: 690px;
-        height: 620px;
+        width: 620px;
+        height: 690px;
+        margin-left: -80px;
         display: flex;
         justify-content: center;
         align-items: center;

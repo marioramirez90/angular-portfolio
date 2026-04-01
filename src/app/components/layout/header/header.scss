@@ -2,23 +2,34 @@
 @use '../../../../styles/abstracts/variables' as *;
 .header{
     display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     justify-content: space-between;
     align-items: center;
-    padding: 25px 75px 10px 100px;
-    margin-bottom: 50px;
-    
+    padding: 25px 80px 25px 100px;
+   
+    height: 100px;
+    margin: 0 auto;
     color: white;
+    max-width: 1440px;
+    background-color: $background;
+    z-index: 1000;
+    
     p{
         font-size: 35px;
+        letter-spacing: 0.05em;
         font-weight: 900;
         width: 100px;
         
     }
     .nav{
         display: flex;
-        gap: 130px;
+        gap: 100px;
         justify-content: center;
         align-items: center;
+        letter-spacing: 0.03em;
         
         .nav-link{
             display: flex;
@@ -29,10 +40,10 @@
             position: relative;
             color: $primary-color;
             text-decoration: none; 
-            font-size: 24px; 
+            font-size: 23px; 
             font-style: regular;
             transition: color 0.3s ease;
-            font-weight: 400;
+            font-weight: 500;
             padding: auto;
 
             &:hover{
