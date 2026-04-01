@@ -1,26 +1,54 @@
 @use '../../../../styles/components/buttons' as *;
+@use '../../../../styles/abstracts/variables' as *;
 .header{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background-color: rgba(20, 29, 47, 1);
+    padding: 37px 100px;
     color: white;
+
     .nav{
         display: flex;
-        gap: 20px;
+        gap: 150px;
+        justify-content: center;
+        align-items: center;
+        
+        .nav-link{
+            display: flex;
+            gap: 30px;
+        }
+        
         a{
+            position: relative;
             color: white;
             text-decoration: none; 
             font-size: 18px; 
             transition: color 0.3s ease;
+           
+
             &:hover{
-                color: #ff6347; 
+                color: $hover-color; 
             }
-        }
-        button{
-            background-color: transparent;
-            border: none;
+
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+                bottom: -3px;
+                width: 0;
+                height: 2px;
+                background-color: $secondary-color;
+                transition: width 0.3s ease;
+            }
+
+            &:hover::after {
+                width: 100%;
             }
         }
     }
+
+    .language-section{
+        display: flex;
+        gap: 10px;
+    }
+}

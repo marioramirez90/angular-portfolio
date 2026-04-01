@@ -1,9 +1,13 @@
-@use '/portfolio/src/styles/abstracts/variables';
+@use '../abstracts/variables' as *;
+
 .language-button{
     background-color: transparent;
     height: 32px;
-    width: 32px;
-    border: 2px solid $border-color;
+    width: 38px;
+    border: 1px solid $border-color;
     color: $primary-color;
-    
-}
+    border-radius: 10px;
+    padding: 0;
+    font-size: 18px;
+   
+} 
