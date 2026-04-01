@@ -4,12 +4,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 37px 100px;
+    padding: 25px 130px;
     color: white;
-
+    p{
+        font-size: 35px;
+        font-weight: 900;
+        width: 100px;
+        
+    }
     .nav{
         display: flex;
-        gap: 150px;
+        gap: 130px;
         justify-content: center;
         align-items: center;
         
@@ -20,11 +25,13 @@
         
         a{
             position: relative;
-            color: white;
+            color: $primary-color;
             text-decoration: none; 
-            font-size: 18px; 
+            font-size: 24px; 
+            font-style: regular;
             transition: color 0.3s ease;
-           
+            font-weight: 400;
+            padding: auto;
 
             &:hover{
                 color: $hover-color; 
@@ -34,9 +41,9 @@
                 content: '';
                 position: absolute;
                 left: 0;
-                bottom: -3px;
+                bottom: -4px;
                 width: 0;
-                height: 2px;
+                height: 3px;
                 background-color: $secondary-color;
                 transition: width 0.3s ease;
             }
@@ -44,11 +51,23 @@
             &:hover::after {
                 width: 100%;
             }
+
+              &:hover::after {
+                width: 100%;
+            }
+
+             &:last-child:hover::after {
+                width: 100%;
+            }
+            &:nth-child(2):hover::after {
+                width: 50%;
+            }
         }
     }
 
     .language-section{
         display: flex;
         gap: 10px;
-    }
+
+}
 }

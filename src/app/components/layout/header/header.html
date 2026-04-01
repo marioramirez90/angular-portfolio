@@ -3,13 +3,24 @@
 <p>Mario</p>
 <div class="nav">
 <div class="nav-link">
-<a href="http://">About me</a>
-<a href="">Skills</a> 
-<a href="">Portfolio</a>
+<a href="#about-me">About me</a>
+<a href="#skills">Skills</a> 
+<a href="#portfolio">Portfolio</a>
 </div>
 <div class="language-section">
-    <button class="language-button">DE</button>
-    <button class="language-button">EN</button>
+  <button 
+    class="language-button" 
+    [class.active]="currentLang === 'DE'" 
+    (click)="setLanguage('DE')">
+    DE
+  </button>
+
+  <button 
+    class="language-button" 
+    [class.active]="currentLang === 'EN'" 
+    (click)="setLanguage('EN')">
+    EN
+  </button>
 </div>
 </div>
 
