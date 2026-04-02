@@ -28,7 +28,7 @@
 
 .hero-button {
   cursor: pointer;
-  z-index: 999;
+  z-index: 10;
   background-color: $btn-background;
   height: 58px;
   width: 165px;
@@ -39,11 +39,10 @@
   font-size: 23px;
   margin-right: 100px;
   transform: scale(1);
-  transition: 0.2s ease;
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    width: 190px;
-    height: 70px;
+    transform: scale(1.1);
     background-color: $secondary-color;
     border-color: $secondary-color;
     color: $primary-color;
