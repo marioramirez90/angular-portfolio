@@ -1,64 +1,94 @@
 @use '../../../../styles/abstracts/variables' as *;
+
 .hero {
   display: flex;
+  position: relative;
   justify-content: space-between;
-  height: 100vh;
-  padding-right: 130px;
-  padding-left: 130px;
-  padding-top: 310px;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding-top: 170px;
+  margin-bottom: 50px;
 
   .hero-content {
     display: flex;
-    gap: 20px;
-    justify-content: center;
-    width: 100%;
+    justify-content: flex-start;
     text-align: center;
-  }
-  .hero-left{
-    margin-top: -150px;
-  .hero-image-stck {
-    width: 790px;
-    margin-left: -120px;
-    display: flex;
-    align-items: center;
-
-  }
-  }
-
-  .hero-right {
-    display: block;
-    position: relative;
-    margin: 0 0 120px;
-    line-height: 70px;
- 
-  .rotation {
-    margin-top: 68px;
-    position: absolute;
-    font-size: 64px;
-    font-weight: 400;
-    letter-spacing: 0.05em;
-    transform-origin: 0 100%;
-    transform: rotate(-90deg);
-  }
-
-  .hero-text {
-    display: inline-flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 16px;
-    h1 {
-      white-space: nowrap;
-      font-size: 82px;
-      font-weight: 900;
+    .hero-left {
+      display: flex;
+      align-items: flex-start;
+    
+      .hero-image-stck img {
+        width: 690px;
+        height: 670px;
+      }
     }
-    h2 {
-      font-size: 52px;
+
+    .hero-right {
+      display: block;
+      position: relative;
+      line-height: 70px;
+      top: 150px;
+
+      .rotation {
+        margin-top: 42px;
+        position: absolute;
+        font-size: 64px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        transform-origin: 0 90px;
+        transform: rotate(-90deg);
+      }
+
+      .hero-text {
+        display: inline-flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+
+        h1 {
+          font-size: 90px;
+          font-weight: 700;
+          font-style: normal;
+        }
+
+        h2 {
+          font-size: 50.5px;
+          font-weight: 400;
+          white-space: nowrap;
+          color: $secondary-color;
+          line-height: 120%;
+          margin-bottom: 40px;
+        }
+      }
+    }
+  }
+  
+  .hero-icons {
+   display: flex;
+   gap: 30px;
+   align-items: center;
+   justify-content: flex-start;
+   z-index: 2;
+  
+    .hero-line {
+      width: 100px;
+      height: 4px;
+      border-radius:0 4px 4px 0px;
+      background-color: $secondary-color;
+    }
+
+    .icons {
+    display: flex;
+    gap: 20px;
+      
+    }
+
+    p {
+      font-size: 23px;
       font-weight: 400;
-      white-space: nowrap;
-      color: $secondary-color;
-      line-height: 120%;
     }
   }
 }
- }
