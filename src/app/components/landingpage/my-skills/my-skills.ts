@@ -6,4 +6,15 @@ import { Component } from '@angular/core';
   templateUrl: './my-skills.html',
   styleUrl: './my-skills.scss',
 })
-export class MySkills {}
+export class MySkills {
+ items = [
+  { name: 'HTML', image: 'img/icons/html.svg' },
+  { name: 'CSS', image: 'img/icons/css.svg' },
+  { name: 'JavaScript', image: 'img/icons/javascript.svg' },
+  { name: 'TypeScript', image: 'img/icons/typescript.svg' },
+  { name: 'Angular', image: 'img/icons/angular.svg' },
+  { name: 'Git', image: 'img/icons/git.svg' },
+  { name: 'REST API', image: 'img/icons/rest-api.svg' },
+  { name: 'Material Design', image: 'img/icons/material-design.svg' }
+];
+}

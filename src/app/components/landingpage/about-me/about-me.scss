@@ -55,9 +55,17 @@ article {
 
     .about-me-info-section {
       display: flex;
-      justify-content: center;
-      align-items: center;
+      justify-content: flex-start;
+      align-items: flex-start;
       gap: 10px;
+
+      img {
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.5);
+        }
+      }
     }
   }
 

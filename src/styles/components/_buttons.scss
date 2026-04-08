@@ -42,9 +42,10 @@
   transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
 
   &:hover {
-    transform: scale(1.1);
-    background-color: $secondary-color;
-    border-color: $secondary-color;
-    color: $primary-color;
+  height: 70px;
+  width: 200px;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  color: $primary-color;
   }
 }
