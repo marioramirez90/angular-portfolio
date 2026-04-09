@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
   styleUrl: './my-skills.scss',
 })
 export class MySkills {
- items = [
+ skills = [
   { name: 'HTML', image: 'img/icons/html.svg' },
   { name: 'CSS', image: 'img/icons/css.svg' },
   { name: 'JavaScript', image: 'img/icons/javascript.svg' },

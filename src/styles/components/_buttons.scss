@@ -49,3 +49,25 @@
   color: $primary-color;
   }
 }
+  .skills-button {
+  cursor: pointer;
+  z-index: 10;
+  background-color: $btn-background;
+  height: 58px;
+  width: 195px;
+  border: 1px solid $border-color;
+  color: $primary-color;
+  border-radius: 10px;
+  padding: 0;
+  font-size: 23px;
+  transform: scale(1);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+
+  &:hover {
+  height: 70px;
+  width: 200px;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+  color: $primary-color;
+  }
+}

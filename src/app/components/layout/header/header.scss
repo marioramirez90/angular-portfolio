@@ -17,13 +17,32 @@
     background-color: $background;
     z-index: 1000;
     
-    p{
-        font-size: 35px;
+  .mario {
+  font-size: 35px;
         letter-spacing: 0.05em;
         font-weight: 900;
         width: 100px;
-        
+
+  .o {
+    background: linear-gradient(to right, white 50%, $btn-background 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .i {
+    position: relative;
+
+    .dot {
+      position: absolute;
+      width: 6.6px;
+      height: 5px;
+      background: $secondary-color;
+      top: 13.3px;
+      left: 6px;
+      transform: translateX(-50%);
     }
+  }
+}
     .nav{
         display: flex;
         gap: 100px;

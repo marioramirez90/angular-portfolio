@@ -1,23 +1,31 @@
-<section>
-    <div>
-        <div>
+<section class="myskills">
+    <div class="icon-skills">
+        @for (skill of skills; track $index) {
+            <div class="icon">
+                <img class="image-icon" src="{{skill.image}}" alt="{{skill.name}}-icon">
+                <p>{{skill.name}}</p>
+            </div>
+        }
+        <div class="continually-icon icon">
+            <img src="img/icons/continually.svg" alt="Continually-learning-icon">
+            <p>Continually <br> learning</p>
         </div>
-        <div></div>
-        <div></div>
+        
     </div>
 
 
-    <div>
-        <div>
+    <div class="myskills-container">
+        <div class="titel-myskills-container">
             <h3>My Skills</h3>
             <div class="line"></div>
         </div>
-        <div>
+        <div class="myskills-container-text" >
             <span>Show that you have used a variety of  front-end technologies in your projects.</span>
-            <p>Looking for another skill?</p>
+            <p>Looking for <span class="highlight">another skill</span>?</p> 
             <span>Reveal enthusiasm for learning new technologies and frameworks.</span>
-            <button>Learn More</button>
         </div>
+        <button class="skills-button">Get in Touch</button>
+
     </div>
 
 </section>
