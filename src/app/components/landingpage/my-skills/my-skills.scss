@@ -10,7 +10,6 @@
   .icon-skills {
     display: flex;
     flex-wrap: wrap;
-    gap: px;
     margin-left: 70px;
     height: 400px;
 
@@ -57,7 +56,7 @@
 
       .bubble {
         opacity: 0;
-        transform: translate(-20%, -90px); // etwas höher
+        transform: translate(-25%, -70px); 
         z-index: 0;
       }
 
