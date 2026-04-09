@@ -1,1 +1,33 @@
-<p>portfolio works!</p>
+<section>
+    <div class="portfolio-header">
+        <div class="head">
+        <div class="small-line"></div>
+        <h2>Portfolio</h2>
+        <div class="big-line"></div>
+    </div>
+    </div>
+     <div class="p-tag">    
+        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+    </div>
+    
+    <div class="portfolio-content">@for (project of projects; track $index) {
+    <div class="project-content">
+        <div class="project-image">
+            <img class="image" src="{{project.image}}" alt="">
+        </div>
+        <div>
+            <div class="project-info">
+                <h3>{{project.projectName}}</h3>
+                <span>{{project.technologies}}</span>
+                <p>{{project.discription}}</p>
+                <div class="portfolio-buttons">
+                <button class="live-test-button"><a href="{{project.link}}" target="_blank"></a>live test</button>
+                <button class="github-button"><a href="{{project.github}}" target="_blank"></a>GitHub</button>
+            </div>
+            </div>
+            
+        </div>
+    </div>
+}</div>
+    
+</section>

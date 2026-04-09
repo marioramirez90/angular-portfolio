@@ -1,0 +1,124 @@
+@use '../../../../styles/components/buttons' as *;
+@use '../../../../styles/abstracts/variables' as *;
+section{
+   display: flex;
+   flex-direction: column;
+    max-width: 1440px;
+    margin: 0 auto;
+    align-items: center;
+
+    .portfolio-header{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 100%;
+        justify-content: center;
+        gap:20px ;
+
+
+        .head{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            width: 1060px;
+            gap: 30px;
+            
+           
+            
+        .small-line{
+            height: 4px;
+            width: 100px;
+            background-color: $secondary-color;
+        }
+
+         .big-line{
+            height: 4px;
+            width: 500px;
+            background-color: $secondary-color;
+        }
+
+        h2{
+            font-size: 90px;
+            font-weight: 900;
+        }
+
+        }
+
+        
+
+    }
+
+          p{
+            font-size: 16px;
+            font-weight: 400;
+        }
+
+    .portfolio-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        .project-content{
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: 50px;
+
+             .portfolio-buttons{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+
+                }
+
+
+            .project-image{
+                width: 600px;
+                height: 340px;
+
+                .image{
+                  width: 80%;
+                }
+            }
+            .project-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: flex-start;
+                gap: 20px;
+                width: 500px;
+
+                h3{
+                    font-size: 32px;
+                    font-weight: 700;
+                    font-style: normal;
+                    line-height: 120%;
+                    color: $secondary-color;
+                }
+
+                span{
+                    font-size: 23px;
+                    font-weight: 400;
+                    font-style: normal;
+                    line-height: 120%;
+                    color: $border-color;
+
+                }
+
+                p{
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-style: normal;
+                    line-height: 120%;
+                }
+
+                
+
+               
+            }
+
+            
+        }
+    }
+}
