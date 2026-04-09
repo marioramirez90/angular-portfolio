@@ -1,45 +1,85 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-.myskills{
-  
+.myskills {
+  display: flex;
+  max-width: 1440px;
+  margin: 200px auto;
+  justify-content: space-between;
+  align-items: start;
+
+  .icon-skills {
     display: flex;
-    max-width: 1440px;
-    margin: 200px auto;
-    justify-content: space-between;
-    align-items: start;
+    flex-wrap: wrap;
+    gap: px;
+    margin-left: 70px;
+    height: 400px;
 
+    .icon {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 12px;
+      width: calc(25% - 12px);
 
-    .icon-skills{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 16px;
-        
-        height: 400px;
+      .image-icon {
+        width: 60px;
+        height: 60px;
+        display: inline-block;
+        transition: 0.3s ease;
 
-         .icon{
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            gap: 12px;
-            width: calc(25% - 12px);
-
-
-            .image-icon{
-                width: 60px;
-                height: 60px;
-                display: inline-block;
-                transition: 0.3s ease;
-
-                &:hover{
-                transform: translateY(-15px);
-
-                }
-            }
-        
+        &:hover {
+          transform: translateY(-15px);
+        }
+      }
     }
- }
- .myskills-container{
+
+    .continually-icon {
+      position: relative;
+      text-align: center;
+
+      img {
+        position: absolute;
+        left: 50%;
+        margin-bottom: 5px;
+        transform: translateX(-50%);
+        transition: 0.2s ease;
+      }
+
+      .base {
+        z-index: 1;
+      }
+
+      .white {
+        opacity: 0;
+        z-index: 2;
+      }
+
+      .bubble {
+        opacity: 0;
+        transform: translate(-20%, -90px); // etwas höher
+        z-index: 0;
+      }
+
+      &:hover {
+        .white {
+          opacity: 1;
+        }
+
+        .bubble {
+          opacity: 1;
+        }
+      }
+
+      p {
+        position: relative;
+        top: 50px;
+        margin: 0;
+        font-size: 14px;
+      }
+    }
+  }
+  .myskills-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -47,66 +87,56 @@
     gap: 30px;
     width: 500px;
 
-    .titel-myskills-container{
-        display: flex;
-        align-items: center;
-        gap: 30px;
-    h3{
+    .titel-myskills-container {
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      h3 {
         font-size: 90px;
         font-weight: 700;
         font-style: normal;
         line-height: 120%;
-    }
-    .line{
+      }
+      .line {
         border-radius: 4px 0px 0px 4px;
         height: 4px;
         width: 68px;
         background-color: $secondary-color;
+      }
     }
 
-    }
+    .myskills-container-text {
+      display: flex;
+      flex-direction: column;
+      text-align: end;
+      gap: 25px;
+      padding-right: 100px;
 
-    .myskills-container-text{
-        display: flex;
-        flex-direction: column;
-        text-align: end;
-        gap: 25px;
-        padding-right: 100px;
-
-         span{
+      span {
         font-size: 16px;
         font-weight: 400;
         font-style: normal;
         line-height: 120%;
-        
-       
-    }
+      }
 
-    p{
+      p {
         font-size: 32px;
         font-weight: 700;
         font-style: bold;
         line-height: 120%;
 
-        .highlight{
-             font-size: 32px;
-        font-weight: 700;
-        font-style: bold;
-        line-height: 120%;
-            color: $secondary-color;
+        .highlight {
+          font-size: 32px;
+          font-weight: 700;
+          font-style: bold;
+          line-height: 120%;
+          color: $secondary-color;
         }
-        
+      }
     }
- 
+  }
 
-
-    }
-
- 
-
-}
-
-button{
+  button {
     margin-right: 95px;
-}
+  }
 }
