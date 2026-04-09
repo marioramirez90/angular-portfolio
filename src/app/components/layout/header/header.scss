@@ -26,6 +26,7 @@
   .o {
     background: linear-gradient(to right, white 50%, $btn-background 50%);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
