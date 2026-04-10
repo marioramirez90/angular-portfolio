@@ -1,1 +1,35 @@
-<p>references works!</p>
+<section class="references">
+   <div class="reference-icon">
+    <img src="img/icons/apostrop.svg" alt="">
+   </div>
+   <div class="references-background">
+    <img src="img/backgrounds/green-shadow.svg" alt="">
+   </div>
+  <div class="content">
+
+    <div class="reference-text">
+
+      <div class="titel-references-container">
+        <p>{{ references[currentIndex]?.discripton }}</p>
+      </div>
+      <div class="reference-name">
+          <div class="line"></div>
+          <p>{{ references[currentIndex]?.name }} - Team Partner</p>
+        </div>
+    </div>
+
+    <div class="image">
+      <img [src]="references[currentIndex]?.img" alt="{{ references[currentIndex]?.name }}" />
+    </div>
+  </div>
+
+  <div class="slider">
+    <button (click)="prev()"><img src="img/icons/links.svg" alt="" /></button>
+    <div class="dots">
+      @for (ref of references; track $index; let i = $index) {
+        <span class="dot" [class.active]="i === currentIndex"> </span>
+      }
+    </div>
+    <button (click)="next()"><img src="img/icons/rechts.svg" alt="" /></button>
+  </div>
+</section>
