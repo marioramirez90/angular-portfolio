@@ -24,12 +24,16 @@
   </div>
 
   <div class="slider">
-    <button (click)="prev()"><img src="img/icons/links.svg" alt="" /></button>
+    <button (click)="prev()" (mouseenter)="leftHover=true" (mouseleave)="leftHover=false">
+      <img [src]="leftHover ? 'img/icons/hover-left.svg' : 'img/icons/links.svg'" alt="" />
+    </button>
     <div class="dots">
       @for (ref of references; track $index; let i = $index) {
         <span class="dot" [class.active]="i === currentIndex"> </span>
       }
     </div>
-    <button (click)="next()"><img src="img/icons/rechts.svg" alt="" /></button>
+    <button (click)="next()" (mouseenter)="rightHover=true" (mouseleave)="rightHover=false">
+      <img [src]="rightHover ? 'img/icons/hover-right.svg' : 'img/icons/rechts.svg'" alt="" />
+    </button>
   </div>
 </section>

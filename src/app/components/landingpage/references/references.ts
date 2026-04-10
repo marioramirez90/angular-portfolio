@@ -27,6 +27,8 @@ img: 'img/references/3.png'
 ];
 
 currentIndex = 0;
+leftHover = false;
+rightHover = false;
 
 next() {
 this.currentIndex =
