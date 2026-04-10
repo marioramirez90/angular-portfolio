@@ -7,6 +7,14 @@ section{
     margin: 0 auto;
     align-items: center;
 
+    .portfolio-background{
+        position: absolute;
+        left: -500px;
+        top: 3200px;
+        z-index: -1;
+    }
+
+
     .portfolio-header{
         display: flex;
         flex-direction: column;
@@ -62,6 +70,7 @@ section{
         align-items: center;
         gap: 50px;
         margin-top: 50px;
+     
 
         .project-content{
             display: flex;

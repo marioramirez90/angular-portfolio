@@ -9,7 +9,7 @@ article {
   position: relative;
   z-index: 10;
   max-width: 1440px;
-  overflow-x: clip;
+  
 
   .about-me-background {
     position: absolute;
@@ -17,9 +17,7 @@ article {
     z-index: -2;
     top: -290px;
     max-width: 1440px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+   
 
     img {
       object-position: top;

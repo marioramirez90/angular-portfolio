@@ -9,6 +9,9 @@
      <div class="p-tag">    
         <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
     </div>
+    <div class="portfolio-background">
+        <img src="img/backgrounds/shadow-portfolio.svg" alt="portfolio-background">
+    </div>
     
     <div class="portfolio-content">@for (project of projects; track $index) {
     <div class="project-content" [class.reverse]="$index % 2 !== 0">
@@ -29,5 +32,6 @@
         </div>
     </div>
 }</div>
+
     
 </section>
