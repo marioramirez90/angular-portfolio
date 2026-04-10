@@ -124,10 +124,10 @@
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: #00ff88;
+        background: $secondary-color;
 
         &.active {
-          background: purple;
+          background: $border-color;
         }
       }
     }
