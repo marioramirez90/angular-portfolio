@@ -22,6 +22,7 @@ section{
             justify-content: end;
             width: 1060px;
             gap: 30px;
+            margin-bottom: 30px;
             
            
             
@@ -40,6 +41,7 @@ section{
         h2{
             font-size: 90px;
             font-weight: 900;
+
         }
 
         }
@@ -58,24 +60,41 @@ section{
         flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 50px;
+        margin-top: 50px;
 
         .project-content{
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            gap: 50px;
+
+
+            &.reverse{
+                flex-direction: row-reverse;
+                gap: 30px;
+
+                 .project-image{
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                }
+
+                .project-info{
+                    align-items: flex-end;
+                    text-align: end;
+                }
+            }
 
              .portfolio-buttons{
                     display: flex;
                     justify-content: center;
-                    gap: 20px;
+                    gap: 80px;
 
                 }
 
 
             .project-image{
-                width: 600px;
-                height: 340px;
+                
 
                 .image{
                   width: 80%;
@@ -84,10 +103,12 @@ section{
             .project-info{
                 display: flex;
                 flex-direction: column;
-                justify-content: center;
                 align-items: flex-start;
+                margin-top: -50px;
                 gap: 20px;
                 width: 500px;
+                
+                
 
                 h3{
                     font-size: 32px;

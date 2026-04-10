@@ -11,14 +11,14 @@
     </div>
     
     <div class="portfolio-content">@for (project of projects; track $index) {
-    <div class="project-content">
+    <div class="project-content" [class.reverse]="$index % 2 !== 0">
         <div class="project-image">
             <img class="image" src="{{project.image}}" alt="">
         </div>
         <div>
             <div class="project-info">
                 <h3>{{project.projectName}}</h3>
-                <span>{{project.technologies}}</span>
+                <span>{{project.technologies.join(' | ')}}</span>
                 <p>{{project.discription}}</p>
                 <div class="portfolio-buttons">
                 <button class="live-test-button"><a href="{{project.link}}" target="_blank"></a>live test</button>
