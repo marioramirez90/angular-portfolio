@@ -1,29 +1,28 @@
-
-<nav class="header">
-<p class="mario">
-  Mar<span class="i">i<span class="dot"></span></span><span class="o">o</span>
-</p>
-<div class="nav">
-<div class="nav-link">
-<a href="#about-me">About me</a>
-<a href="#skills">Skills</a> 
-<a href="#portfolio">Portfolio</a>
-</div>
-<div class="language-section">
-  <button 
-    class="language-button" 
-    [class.active]="currentLang === 'DE'" 
-    (click)="setLanguage('DE')">
-    DE
-  </button>
-
-  <button 
-    class="language-button" 
-    [class.active]="currentLang === 'EN'" 
-    (click)="setLanguage('EN')">
-    EN
-  </button>
-</div>
-</div>
-
-</nav>
+<header>
+  <nav class="header">
+    <p class="mario">
+      Mar<span class="i">i<span class="dot"></span></span><span class="o">o</span>
+    </p>
+    <div class="nav">
+      <div class="nav-link">
+        <a href="#about-me">About me</a>
+        <a href="#skills">Skills</a> 
+        <a href="#portfolio">Portfolio</a>
+      </div>
+      <div class="language-section">
+        <button 
+          class="language-button" 
+          [class.active]="currentLang === 'DE'" 
+          (click)="setLanguage('DE')">
+          DE
+        </button>
+        <button 
+          class="language-button" 
+          [class.active]="currentLang === 'EN'" 
+          (click)="setLanguage('EN')">
+          EN
+        </button>
+      </div>
+    </div>
+  </nav>
+</header>

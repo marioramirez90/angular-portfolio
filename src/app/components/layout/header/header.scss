@@ -1,21 +1,27 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-.header{
-    display: flex;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    justify-content: space-between;
-    align-items: center;
-    padding: 25px 80px 25px 100px;
-    
-    height: 110px;
-    margin: 0 auto;
-    color: white;
-    max-width: 1440px;
-    background-color: $background;
-    z-index: 1000;
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  background-color: $background;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+}
+
+.header {
+  display: flex;
+  width: 100%;
+  max-width: 1440px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 80px 25px 100px;
+  height: 110px;
+  color: white;
     
   .mario {
   font-size: 35px;
