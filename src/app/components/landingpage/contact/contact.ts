@@ -22,6 +22,9 @@ export class Contact {
       validators: [Validators.required,Validators.minLength(10)]
 
     }),
+    checkbox: new FormControl(false, {
+      validators: [Validators.requiredTrue]
+    }),
   })
   
 

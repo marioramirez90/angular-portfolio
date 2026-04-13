@@ -1,7 +1,7 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
-section{
+section {
     max-width: 1440px;
     margin: 200px auto;
     display: flex;
@@ -9,19 +9,20 @@ section{
     justify-content: flex-end;
     align-items: start;
 
-    .contact-header{
+    .contact-header {
         display: flex;
         justify-content: flex-start;
         align-items: center;
 
 
-        .line{
+        .line {
             width: 500px;
             height: 4px;
             background-color: $secondary-color;
             margin-right: 20px;
         }
-        h2{
+
+        h2 {
             font-size: 90px;
             font-weight: 700;
             font-style: bold;
@@ -29,34 +30,37 @@ section{
         }
     }
 
-    .contact-content{
+    .contact-content {
         display: flex;
         justify-content: center;
-        margin-top: 100px;
-        width:100%;
+        margin-top: 50px;
+        width: 100%;
         gap: 70px;
 
-        .contact-text{
+        .contact-text {
+            margin-top: 10px;
             width: 480px;
             display: flex;
             flex-direction: column;
             gap: 20px;
 
 
-            h4{
-                font-size: 24px;
+            h4 {
+                font-size: 32px;
                 font-weight: 700;
                 font-style: normal;
 
             }
-            p{
+
+            p {
                 font-size: 16px;
                 font-weight: 400;
                 font-style: normal;
                 line-height: 1.5;
-                
+
             }
-            span{
+
+            span {
                 font-size: 16px;
                 font-weight: 400;
                 font-style: normal;
@@ -66,47 +70,114 @@ section{
             }
         }
 
-        .form-box{
+        .form-box {
             width: 620px;
             height: 510px;
 
-            form{
+            form {
                 display: flex;
                 flex-direction: column;
                 gap: 20px;
+                align-items: center;
 
 
-                input, textarea{
+                input,
+                textarea {
                     background-color: transparent;
-                    width: 100%;
-                    padding: 10px;
+                    width: 620px;
+                    height: 50px;
+                    padding: 15px 25px 15px 25px;
                     border: 1px solid $secondary-color;
-                    border-radius: 4px;
+                    border-radius: 10px;
+                    color: $primary-color;
                     font-size: 16px;
-                    font-weight: 400;
-                    font-style: normal;
-                    line-height: 1.5;
-                    color: $primary-color; 
+                    color: $primary-color;
                     cursor: pointer;
 
-                    &:hover{
+                    &::placeholder {
+                        color: $primary-color;
+                    }
+
+                    &:hover {
                         border-color: $border-color;
                     }
 
-                    &:focus{
+                    &:focus {
                         outline: none;
-                        border-color: $primary-color;
+                        border-color: $warnning-color;
                     }
                 }
 
-                textarea{
-                    resize: none;
-                    height: 150px;
+                textarea {
+                    height: 200px;
                 }
 
-             
+
+
+                .checkbox-content {
+                    display: flex;
+                    align-items: center;
+                    width: 100%;
+
+                    .custom-checkbox {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        cursor: pointer;
+
+                        input {
+                            display: none;
+                        }
+
+                        .box {
+                            width: 18px;
+                            height: 18px;
+                            min-width: 18px;
+                            border: 2px solid $border-color;
+                            background: transparent;
+                            display: inline-block;
+                            position: relative;
+                            border-radius: 4px;
+                        }
+
+                        input:checked+.box::after {
+                            content: "";
+                            position: absolute;
+                            left: 4px;
+                            top: 0px;
+                            width: 5px;
+                            height: 10px;
+                            border: solid $border-color;
+                            border-width: 0 2px 2px 0;
+                            transform: rotate(45deg);
+                        }
+
+                        &:hover .box {
+                            filter: drop-shadow(0px 0px 4px rgba(121, 126, 243, 1));
+                            border-color: darken($border-color, 10%);
+                        }
+                    }
+                }
+
+                button {
+                    width: 150px;
+                    height: 50px;
+                    background-color: $btn-background;
+                    border: none;
+                    border-radius: 10px;
+                    color: $primary-color;
+                    font-size: 16px;
+                    font-weight: 700;
+                    font-style: normal;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: $hover-color;
+                    }
+                }
+
+            }
+
         }
-
     }
-
-    }}
+}
