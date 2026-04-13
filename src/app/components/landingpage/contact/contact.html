@@ -1,1 +1,32 @@
-<p>contact works!</p>
+<section class="form">
+    <div class="contact-header">
+        <div class="line"></div>
+        <h2>Contact</h2>
+    </div>
+    <div class="contact-content">
+        <div class="contact-text">
+            <h4>Got a problem to solve?</h4>
+            <p>Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.</p>
+            <span>Need a Frontend developer? Contact me!</span>
+        </div>
+        <div class="form-box">
+        <form [formGroup]="userform">
+            <label for="name"> </label>
+            <input placeholder="Your Name" id="name" type="text" formControlName="name" />
+
+            <label for="mail"> </label>
+            <input placeholder="Your Email" id="mail" type="text" formControlName="email" />
+
+            <label for="text"> </label>
+            <textarea placeholder="Your Message" id="text" formControlName="text"></textarea>
+
+            <button>Send Message</button>
+
+
+         
+        </form>
+        </div>
+    </div>
+    
+  
+</section>

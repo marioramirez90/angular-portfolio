@@ -1,0 +1,112 @@
+@use '../../../../styles/components/buttons' as *;
+@use '../../../../styles/abstracts/variables' as *;
+
+section{
+    max-width: 1440px;
+    margin: 200px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: start;
+
+    .contact-header{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+
+
+        .line{
+            width: 500px;
+            height: 4px;
+            background-color: $secondary-color;
+            margin-right: 20px;
+        }
+        h2{
+            font-size: 90px;
+            font-weight: 700;
+            font-style: bold;
+
+        }
+    }
+
+    .contact-content{
+        display: flex;
+        justify-content: center;
+        margin-top: 100px;
+        width:100%;
+        gap: 70px;
+
+        .contact-text{
+            width: 480px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+
+            h4{
+                font-size: 24px;
+                font-weight: 700;
+                font-style: normal;
+
+            }
+            p{
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 1.5;
+                
+            }
+            span{
+                font-size: 16px;
+                font-weight: 400;
+                font-style: normal;
+                line-height: 1.5;
+                color: $primary-color;
+
+            }
+        }
+
+        .form-box{
+            width: 620px;
+            height: 510px;
+
+            form{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+
+
+                input, textarea{
+                    background-color: transparent;
+                    width: 100%;
+                    padding: 10px;
+                    border: 1px solid $secondary-color;
+                    border-radius: 4px;
+                    font-size: 16px;
+                    font-weight: 400;
+                    font-style: normal;
+                    line-height: 1.5;
+                    color: $primary-color; 
+                    cursor: pointer;
+
+                    &:hover{
+                        border-color: $border-color;
+                    }
+
+                    &:focus{
+                        outline: none;
+                        border-color: $primary-color;
+                    }
+                }
+
+                textarea{
+                    resize: none;
+                    height: 150px;
+                }
+
+             
+        }
+
+    }
+
+    }}
