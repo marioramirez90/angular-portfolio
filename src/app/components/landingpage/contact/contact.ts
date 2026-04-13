@@ -1,5 +1,5 @@
-import { Component } from '@angular/core';
-import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/forms';
+import { Component, inject } from '@angular/core';
+import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-contact',
@@ -8,24 +8,27 @@ import {FormControl, FormGroup, ReactiveFormsModule, Validators} from '@angular/
   styleUrl: './contact.scss',
 })
 export class Contact {
+  private fb = inject(FormBuilder);
 
- userform = new FormGroup({
-    name: new FormControl('', {
-      validators: [Validators.required,Validators.minLength(4)]
-    }),
+  userform = this.fb.group({
+    name: ['', [Validators.required, Validators.minLength(4)]],
+    email: ['', [Validators.required, Validators.email]],
+    text: ['', [Validators.required, Validators.minLength(10)]],
+    checkbox: [false, [Validators.requiredTrue]],
+  });
 
-    email: new FormControl('', {
-      validators: [Validators.required,Validators.email]
+  focused: Record<string, boolean> = {};
 
-    }),
-    text: new FormControl('', {
-      validators: [Validators.required,Validators.minLength(10)]
+  onFocus(field: string) {
+    this.focused[field] = true;
+    this.userform.get(field)?.markAsTouched();
+  }
 
-    }),
-    checkbox: new FormControl(false, {
-      validators: [Validators.requiredTrue]
-    }),
-  })
-  
-
+  onSubmit() {
+    if (this.userform.valid) {
+      console.log(this.userform.value);
+      this.userform.reset();
+      this.focused = {};
+    }
+  }
 }

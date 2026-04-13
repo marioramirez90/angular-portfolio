@@ -13,15 +13,36 @@
       <span>Need a Frontend developer? Contact me!</span>
     </div>
     <div class="form-box">
-      <form [formGroup]="userform">
-        <label for="name"> </label>
-        <input placeholder="Your Name" id="name" type="text" formControlName="name" />
+      <form [formGroup]="userform" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <input [placeholder]="focused['name'] ? '' : 'Your Name'" id="name" type="text" formControlName="name"
+            (focus)="onFocus('name')"
+            [class.invalid]="userform.get('name')?.invalid && userform.get('name')?.touched"
+            [class.valid]="userform.get('name')?.valid && userform.get('name')?.touched" />
+          <span class="error-icon" [class.visible]="userform.get('name')?.invalid && userform.get('name')?.touched">!</span>
+          <span class="success-icon" [class.visible]="userform.get('name')?.valid && userform.get('name')?.touched">✓</span>
+          <span class="error-msg" [class.visible]="userform.get('name')?.invalid && userform.get('name')?.touched">Your name is required</span>
+        </div>
 
-        <label for="mail"> </label>
-        <input placeholder="Your Email" id="mail" type="text" formControlName="email" />
+        <div class="input-group">
+          <input [placeholder]="focused['email'] ? '' : 'Your Email'" id="mail" type="email" formControlName="email"
+            (focus)="onFocus('email')"
+            [class.invalid]="userform.get('email')?.invalid && userform.get('email')?.touched"
+            [class.valid]="userform.get('email')?.valid && userform.get('email')?.touched" />
+          <span class="error-icon" [class.visible]="userform.get('email')?.invalid && userform.get('email')?.touched">!</span>
+          <span class="success-icon" [class.visible]="userform.get('email')?.valid && userform.get('email')?.touched">✓</span>
+          <span class="error-msg" [class.visible]="userform.get('email')?.invalid && userform.get('email')?.touched">Your email is required</span>
+        </div>
 
-        <label for="text"> </label>
-        <textarea placeholder="Your Message" id="text" formControlName="text"></textarea>
+        <div class="input-group">
+          <textarea [placeholder]="focused['text'] ? '' : 'Your Message'" id="text" formControlName="text"
+            (focus)="onFocus('text')"
+            [class.invalid]="userform.get('text')?.invalid && userform.get('text')?.touched"
+            [class.valid]="userform.get('text')?.valid && userform.get('text')?.touched"></textarea>
+          <span class="error-icon textarea-icon" [class.visible]="userform.get('text')?.invalid && userform.get('text')?.touched">!</span>
+          <span class="success-icon textarea-icon" [class.visible]="userform.get('text')?.valid && userform.get('text')?.touched">✓</span>
+          <span class="error-msg" [class.visible]="userform.get('text')?.invalid && userform.get('text')?.touched">Your message is empty</span>
+        </div>
 
         <div class="checkbox-content">
           <label class="custom-checkbox">
@@ -32,11 +53,10 @@
               outlined.
             </span>
           </label>
+          <span class="error-msg" [class.visible]="userform.get('checkbox')?.invalid && userform.get('checkbox')?.dirty">Please accept the policy</span>
         </div>
 
-        <button>Send Message</button>
-
-        
+        <button type="submit" [disabled]="userform.invalid">Send Message :)</button>
       </form>
     </div>
   </div>

@@ -8,6 +8,7 @@ section {
     flex-direction: column;
     justify-content: flex-end;
     align-items: start;
+    margin-bottom: 100px;
 
     .contact-header {
         display: flex;
@@ -16,7 +17,7 @@ section {
 
 
         .line {
-            width: 500px;
+            width: 520px;
             height: 4px;
             background-color: $secondary-color;
             margin-right: 20px;
@@ -80,22 +81,98 @@ section {
                 gap: 20px;
                 align-items: center;
 
+                .input-group {
+                    width: 620px;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+
+                    .error-icon {
+                        position: absolute;
+                        right: 15px;
+                        top: 12px;
+                        width: 24px;
+                        height: 24px;
+                        background-color: $warnning-color;
+                        border-radius: 50%;
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 700;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        transition: opacity 0.6s ease;
+
+                        &.visible {
+                            opacity: 1;
+                        }
+
+                        &.textarea-icon {
+                            top: 12px;
+                        }
+                    }
+
+                    .success-icon {
+                        position: absolute;
+                        right: 15px;
+                        top: 12px;
+                        width: 24px;
+                        height: 24px;
+                        background-color: $border-color;
+                        border-radius: 50%;
+                        color: white;
+                        font-size: 14px;
+                        font-weight: 700;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        opacity: 0;
+                        transition: opacity 0.6s ease;
+
+                        &.visible {
+                            opacity: 1;
+                        }
+
+                        &.textarea-icon {
+                            top: 12px;
+                        }
+                    }
+
+                    .error-msg {
+                        color: $warnning-color;
+                        font-size: 14px;
+                        margin-top: 10px;
+                        opacity: 0;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: opacity 0.6s ease, max-height 0.6s ease;
+
+                        &.visible {
+                            opacity: 1;
+                            max-height: 30px;
+                        }
+                    }
+                }
 
                 input,
                 textarea {
                     background-color: transparent;
                     width: 620px;
                     height: 50px;
-                    padding: 15px 25px 15px 25px;
+                    padding: 15px 25px 15px 30px;
                     border: 1px solid $secondary-color;
                     border-radius: 10px;
                     color: $primary-color;
+                    font-family: inherit;
                     font-size: 16px;
-                    color: $primary-color;
                     cursor: pointer;
 
                     &::placeholder {
+                        font-family: inherit;
+                        font-size: 16px;
                         color: $primary-color;
+                        opacity: 0.7;
                     }
 
                     &:hover {
@@ -105,6 +182,14 @@ section {
                     &:focus {
                         outline: none;
                         border-color: $warnning-color;
+                    }
+
+                    &.invalid {
+                        border-color: $warnning-color;
+                    }
+
+                    &.valid {
+                        border-color: $border-color;
                     }
                 }
 
@@ -116,7 +201,8 @@ section {
 
                 .checkbox-content {
                     display: flex;
-                    align-items: center;
+                    flex-direction: column;
+                    align-items: flex-start;
                     width: 100%;
 
                     .custom-checkbox {
@@ -124,6 +210,10 @@ section {
                         align-items: center;
                         gap: 10px;
                         cursor: pointer;
+
+                        a{
+                            text-decoration: none;
+                        }
 
                         input {
                             display: none;
@@ -150,11 +240,27 @@ section {
                             border: solid $border-color;
                             border-width: 0 2px 2px 0;
                             transform: rotate(45deg);
+                            background: transparent;
                         }
 
                         &:hover .box {
                             filter: drop-shadow(0px 0px 4px rgba(121, 126, 243, 1));
                             border-color: darken($border-color, 10%);
+                        }
+                    }
+
+                    .error-msg {
+                        color: $warnning-color;
+                        font-size: 14px;
+                        margin-top: 5px;
+                        opacity: 0;
+                        max-height: 0;
+                        overflow: hidden;
+                        transition: opacity 0.6s ease, max-height 0.6s ease;
+
+                        &.visible {
+                            opacity: 1;
+                            max-height: 30px;
                         }
                     }
                 }
@@ -171,8 +277,13 @@ section {
                     font-style: normal;
                     cursor: pointer;
 
-                    &:hover {
+                    &:hover:not(:disabled) {
                         background-color: $hover-color;
+                    }
+
+                    &:disabled {
+                        opacity: 0.4;
+                        cursor: not-allowed;
                     }
                 }
 
