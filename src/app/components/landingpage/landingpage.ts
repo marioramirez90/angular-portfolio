@@ -5,13 +5,12 @@ import { MySkills } from "./my-skills/my-skills";
 import { Portfolio } from "./portfolio/portfolio";
 import { References } from "./references/references";
 import { Contact } from "./contact/contact";
-import { RouterLink } from '@angular/router';
 
 
 
 @Component({
   selector: 'app-landingpage',
-  imports: [RouterLink, Hero, AboutMe, MySkills, Portfolio, References, Contact],
+  imports: [Hero, AboutMe, MySkills, Portfolio, References, Contact],
   templateUrl: './landingpage.html',
   styleUrl: './landingpage.scss',
 })

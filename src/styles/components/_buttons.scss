@@ -81,6 +81,10 @@
 }
 
 .live-test-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   height: 58px;
   width: 152px;
   background-color: $secondary-color;
@@ -98,6 +102,10 @@
 }
 
 .github-button{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
   height: 58px;
   width: 152px;
   background-color: transparent;

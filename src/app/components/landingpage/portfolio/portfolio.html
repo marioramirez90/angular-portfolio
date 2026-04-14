@@ -1,4 +1,4 @@
-<section>
+<section id="portfolio" class="portfolio">
     <div class="portfolio-header">
         <div class="head">
         <div class="small-line"></div>
@@ -24,8 +24,8 @@
                 <span>{{project.technologies.join(' | ')}}</span>
                 <p>{{project.discription}}</p>
                 <div class="portfolio-buttons">
-                <button class="live-test-button"><a href="{{project.link}}" target="_blank"></a>live test</button>
-                <button class="github-button"><a href="{{project.github}}" target="_blank"></a>GitHub</button>
+                <a href="{{project.link}}" target="_blank" class="live-test-button">live test</a>
+                <a href="{{project.github}}" target="_blank" class="github-button">GitHub</a>
             </div>
             </div>
             
