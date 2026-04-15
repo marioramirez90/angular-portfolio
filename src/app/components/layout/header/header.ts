@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -7,13 +8,25 @@ import { Router } from '@angular/router';
   styleUrl: './header.scss',
 })
 export class Header {
-  currentLang: string = 'DE';
+  currentLang: string = 'de';
 
-  constructor(private router: Router) {}
+ constructor(
+  private router: Router,
+  private translate: TranslateService
+) {
+  const savedLang = localStorage.getItem('lang') || 'de';
+  this.currentLang = savedLang.toUpperCase();
+  this.translate.use(savedLang);
+}
 
-  setLanguage(lang: string) {
-    this.currentLang = lang;
-  }
+setLanguage(lang: string) {
+  const lower = lang.toLowerCase();
+  this.currentLang = lang.toUpperCase();
+
+  this.translate.use(lower);
+
+  localStorage.setItem('lang', lower);
+}
 
   scrollTo(id: string) {
     if (this.router.url !== '/') {
