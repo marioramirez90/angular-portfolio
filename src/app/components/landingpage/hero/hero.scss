@@ -11,8 +11,11 @@
   margin: 0 auto;
   padding-top: 170px;
   margin-bottom: 300px;
+ 
 
-  
+  @media (max-width: 1439px) {
+    overflow-x: clip;
+  }
 
   .hero-content {
     display: flex;

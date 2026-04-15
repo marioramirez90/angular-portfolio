@@ -10,18 +10,19 @@
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
-
-  .references-background{
-    display: flex;
-    z-index: -10;
-    top: -500px;
-    right: -450px;
-    position: absolute;
-    rotate: 260deg;
-    -webkit-transform: scaleX(-1);
-  transform: scaleX(-1);
-
+  
+   @media (max-width: 1439px) {
+    overflow-x: clip;
   }
+  
+.references-background {
+  position: absolute;
+  left: 100%;
+  top: -500px;
+  transform: translateX(-50%) rotate(260deg) scaleX(-1);
+  z-index: -10;
+  pointer-events: none;
+}
 
   .reference-icon{
     display: flex;
@@ -135,5 +136,14 @@
         }
       }
     }
+  }
+}
+
+@import '../../../../styles/abstracts/variables';
+@import '../../../../styles/components/buttons';
+
+.references {
+  @media (max-width: 1439px) {
+    overflow-x: clip;
   }
 }
