@@ -10,6 +10,7 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 })
 export class Header {
   currentLang: string = 'de';
+  activeSection: string = '';
 
  constructor(
   private router: Router,
@@ -30,6 +31,7 @@ setLanguage(lang: string) {
 }
 
   scrollTo(id: string) {
+    this.activeSection = id;
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
         setTimeout(() => {

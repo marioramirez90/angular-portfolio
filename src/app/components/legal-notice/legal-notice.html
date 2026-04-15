@@ -1,32 +1,22 @@
 <section>
     <div class="legal-notice-header">
         <div class="small-line"></div>
-        <h1>Impressum</h1>
+        <h1>{{ 'LEGAL.TITLE' | translate }}</h1>
         <div class="big-line"></div>
     </div>
   
   <div class="legal-notice-content">
-    <h2>Impresum</h2>
+    <h2>{{ 'LEGAL.IMPRINT' | translate }}</h2>
+  <p [innerHTML]="'LEGAL.ADDRESS' | translate"></p>
+
+  <h2>{{ 'LEGAL.CONTACT' | translate }}</h2>
   <p>
-    Mario Ramirez<br>
-    Torfmoos 27<br>
-    22415 Hamburg<br>
-    Deutschland
+    {{ 'LEGAL.EMAIL' | translate }}<br>
+    {{ 'LEGAL.PHONE' | translate }}
   </p>
 
-  <h2>Kontakt</h2>
-  <p>
-    E-Mail: [deine E-Mail]<br>
-    Telefon: [optional]
-  </p>
-
-  <h2>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV</h2>
-  <p>
-    Mario Ramirez<br>
-    Torfmoos 27<br>
-    22415 Hamburg<br>
-    Deutschland
-  </p>
+  <h2>{{ 'LEGAL.RESPONSIBLE' | translate }}</h2>
+  <p [innerHTML]="'LEGAL.ADDRESS' | translate"></p>
   </div>
 </section>
 

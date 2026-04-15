@@ -44,8 +44,10 @@ footer {
 
     .footer-name-content {
       display: flex;
-      align-items: center;
-      gap: 20px;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      
 
       .mario {
         font-size: 35px;

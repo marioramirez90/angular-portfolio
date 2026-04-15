@@ -33,7 +33,15 @@
     "GITHUB": "GitHub"
   },
   "REFERENCES": {
-    "TEAM_PARTNER": "Teampartner"
+    "TEAM_PARTNER": "Teampartner",
+    "REF1": "Mario hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+    "REF2": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+    "REF3": "Mario hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen."
+  },
+  "PROJECTS": {
+    "POKEDEX_DESC": "Basierend auf der PokéAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
+    "POLLO_DESC": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf dem Mexikaner, Münzen und explosive Flaschen zu finden, um gegen den Endboss zu kämpfen.",
+    "JOIN_DESC": "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop, weise Benutzer und Kategorien zu."
   },
   "CONTACT": {
     "TITLE": "Kontakt",
@@ -54,5 +62,46 @@
   },
   "FOOTER": {
     "LEGAL_NOTICE": "Impressum"
+  },
+  "LEGAL": {
+    "TITLE": "Impressum",
+    "IMPRINT": "Impressum",
+    "CONTACT": "Kontakt",
+    "EMAIL": "E-Mail: [deine E-Mail]",
+    "PHONE": "Telefon: [optional]",
+    "RESPONSIBLE": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
+    "ADDRESS": "Mario Ramirez<br>Torfmoos 27<br>22415 Hamburg<br>Deutschland"
+  },
+  "PRIVACY": {
+    "TITLE": "Datenschutzerklärung",
+    "GENERAL_TITLE": "1. Allgemeine Hinweise",
+    "GENERAL_TEXT": "Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Website verarbeitet personenbezogene Daten ausschließlich im Rahmen der gesetzlichen Bestimmungen (DSGVO).",
+    "RESPONSIBLE_TITLE": "2. Verantwortlicher",
+    "RESPONSIBLE_TEXT": "Mario Ramirez<br>Im Torfmoss 27<br>E-Mail: mario-ramirez@hotmail.de",
+    "LOGFILES_TITLE": "3. Zugriffsdaten (Server-Logfiles)",
+    "LOGFILES_TEXT": "Der Hosting-Provider dieser Website erhebt und speichert automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt.",
+    "LOGFILES_BROWSER": "Browsertyp und Browserversion",
+    "LOGFILES_OS": "verwendetes Betriebssystem",
+    "LOGFILES_REFERRER": "Referrer URL",
+    "LOGFILES_HOST": "Hostname des zugreifenden Rechners",
+    "LOGFILES_TIME": "Uhrzeit der Serveranfrage",
+    "LOGFILES_IP": "IP-Adresse",
+    "CONTACT_TITLE": "4. Kontaktformular",
+    "CONTACT_TEXT": "Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung gespeichert.",
+    "THIRD_TITLE": "5. Drittanbieter",
+    "THIRD_TEXT": "Diese Website kann Inhalte von Drittanbietern wie GitHub oder LinkedIn einbinden.",
+    "RIGHTS_TITLE": "6. Ihre Rechte",
+    "RIGHTS_INFO": "Auskunft",
+    "RIGHTS_CORRECT": "Berichtigung",
+    "RIGHTS_DELETE": "Löschung",
+    "RIGHTS_RESTRICT": "Einschränkung der Verarbeitung",
+    "RIGHTS_OBJECT": "Widerspruch",
+    "RIGHTS_PORT": "Datenübertragbarkeit",
+    "HOSTING_TITLE": "7. Hosting",
+    "HOSTING_TEXT": "Diese Website wird bei einem externen Dienstleister gehostet.",
+    "SSL_TITLE": "8. SSL / TLS",
+    "SSL_TEXT": "Diese Seite nutzt eine SSL- bzw. TLS-Verschlüsselung.",
+    "DATE_TITLE": "9. Aktualität",
+    "DATE_TEXT": "Stand: April 2026"
   }
 }

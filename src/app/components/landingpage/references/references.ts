@@ -12,17 +12,17 @@ export class References {
 references = [
 {
 name: 'V.Schuster',
-discripton: 'Mario really kept the team together with his great organization and clear communication. We wouldn t have got this far without his commitment.',
+descriptionKey: 'REFERENCES.REF1',
 img: 'img/references/1.png'
 },
 {
 name: 'E.Eichinger',
-discripton: 'Michael really kept the team together with his great organization and clear communication. We wouldn t have got this far without his commitment.',
+descriptionKey: 'REFERENCES.REF2',
 img: 'img/references/2.png'
 },
 {
 name: 'I.Nuber',
-discripton: 'Mario really kept the team together with his great organization and clear communication. We wouldn t have got this far without his commitment.',
+descriptionKey: 'REFERENCES.REF3',
 img: 'img/references/3.png'
 }
 ];

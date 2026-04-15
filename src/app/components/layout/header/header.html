@@ -5,9 +5,9 @@
     </p>
     <div class="nav">
       <div class="nav-link">
-        <a (click)="scrollTo('about-me')">{{ 'HEADER.ABOUT_ME' | translate }}</a>
-        <a (click)="scrollTo('my-skills')">{{ 'HEADER.SKILLS' | translate }}</a> 
-        <a (click)="scrollTo('portfolio')">{{ 'HEADER.PORTFOLIO' | translate }}</a>
+        <a (click)="scrollTo('about-me')" [class.active]="activeSection === 'about-me'">{{ 'HEADER.ABOUT_ME' | translate }}</a>
+        <a (click)="scrollTo('my-skills')" [class.active]="activeSection === 'my-skills'">{{ 'HEADER.SKILLS' | translate }}</a> 
+        <a (click)="scrollTo('portfolio')" [class.active]="activeSection === 'portfolio'">{{ 'HEADER.PORTFOLIO' | translate }}</a>
       </div>
       <div class="language-section">
         <button 

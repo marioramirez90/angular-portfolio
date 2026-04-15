@@ -12,17 +12,17 @@
   },
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "DESCRIPTION": "Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
-    "LOCATION": "Where are you located? Are you open to different ways of working, such as working remotely or even relocating?",
-    "MINDSET": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
-    "PROBLEM_SOLVING": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration."
+    "DESCRIPTION": "Ich bin Fullstack-Entwickler aus Deutschland. Ich liebe es, Ideen in echte Anwendungen umzusetzen und lerne ständig neue Technologien durch Projekte, praktische Erfahrung und kontinuierliche Weiterentwicklung im Alltag.",
+    "LOCATION": "Ich bin in Hamburg, Deutschland, ansässig und offen für verschiedene Arbeitsmodelle, einschließlich Remote-Arbeit.",
+    "MINDSET": "Ich bin offen für neue Technologien und lerne ständig dazu, um mich kontinuierlich weiterzuentwickeln.",
+    "PROBLEM_SOLVING": "Ich arbeite analytisch und lösungsorientiert. Bei jedem Problem suche ich nach einer effizienten und sauberen Lösung und lerne aus jeder Herausforderung dazu. Dabei sind für mich kreatives Denken, Ausdauer und Teamarbeit besonders wichtig."
   },
   "SKILLS": {
     "TITLE": "My Skills",
     "CONTINUALLY": "Continually learning",
-    "DESCRIPTION": "Show that you have used a variety of front-end technologies in your projects.",
+    "DESCRIPTION": "Experience with various front-end technologies in multiple projects.",
     "ANOTHER_SKILL": "another skill",
-    "ENTHUSIASM": "Reveal enthusiasm for learning new technologies and frameworks.",
+    "ENTHUSIASM": "Enthusiastic about learning new technologies and frameworks.",
     "LOOKING_FOR": "Looking for",
     "GET_IN_TOUCH": "Get in Touch"
   },
@@ -33,7 +33,15 @@
     "GITHUB": "GitHub"
   },
   "REFERENCES": {
-    "TEAM_PARTNER": "Team Partner"
+    "TEAM_PARTNER": "Team Partner",
+    "REF1": "Mario really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+    "REF2": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+    "REF3": "Mario really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+  },
+  "PROJECTS": {
+    "POKEDEX_DESC": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
+    "POLLO_DESC": "A simple jump-and-run game based on an object-oriented approach. Help the character find coins and explosive bottles to fight the final boss.",
+    "JOIN_DESC": "Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories."
   },
   "CONTACT": {
     "TITLE": "Contact",
@@ -54,5 +62,46 @@
   },
   "FOOTER": {
     "LEGAL_NOTICE": "Legal Notice"
+  },
+  "LEGAL": {
+    "TITLE": "Legal Notice",
+    "IMPRINT": "Legal Notice",
+    "CONTACT": "Contact",
+    "EMAIL": "Email: [your email]",
+    "PHONE": "Phone: [optional]",
+    "RESPONSIBLE": "Responsible for content according to § 55 Abs. 2 RStV",
+    "ADDRESS": "Mario Ramirez<br>Torfmoos 27<br>22415 Hamburg<br>Germany"
+  },
+  "PRIVACY": {
+    "TITLE": "Privacy Policy",
+    "GENERAL_TITLE": "1. General Information",
+    "GENERAL_TEXT": "The protection of your personal data is important to me. This website processes personal data exclusively within the framework of legal provisions (GDPR).",
+    "RESPONSIBLE_TITLE": "2. Responsible Party",
+    "RESPONSIBLE_TEXT": "Mario Ramirez<br>Im Torfmoss 27<br>Email: mario-ramirez@hotmail.de",
+    "LOGFILES_TITLE": "3. Access Data (Server Log Files)",
+    "LOGFILES_TEXT": "The hosting provider of this website automatically collects and stores information in so-called server log files, which your browser automatically transmits.",
+    "LOGFILES_BROWSER": "Browser type and version",
+    "LOGFILES_OS": "Operating system used",
+    "LOGFILES_REFERRER": "Referrer URL",
+    "LOGFILES_HOST": "Hostname of the accessing computer",
+    "LOGFILES_TIME": "Time of the server request",
+    "LOGFILES_IP": "IP address",
+    "CONTACT_TITLE": "4. Contact Form",
+    "CONTACT_TEXT": "If you send me inquiries via the contact form, your details will be stored for the purpose of processing.",
+    "THIRD_TITLE": "5. Third Parties",
+    "THIRD_TEXT": "This website may embed content from third parties such as GitHub or LinkedIn.",
+    "RIGHTS_TITLE": "6. Your Rights",
+    "RIGHTS_INFO": "Information",
+    "RIGHTS_CORRECT": "Correction",
+    "RIGHTS_DELETE": "Deletion",
+    "RIGHTS_RESTRICT": "Restriction of processing",
+    "RIGHTS_OBJECT": "Objection",
+    "RIGHTS_PORT": "Data portability",
+    "HOSTING_TITLE": "7. Hosting",
+    "HOSTING_TEXT": "This website is hosted by an external service provider.",
+    "SSL_TITLE": "8. SSL / TLS",
+    "SSL_TEXT": "This site uses SSL or TLS encryption.",
+    "DATE_TITLE": "9. Last Updated",
+    "DATE_TEXT": "As of: April 2026"
   }
 }

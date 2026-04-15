@@ -2,70 +2,52 @@
   <div class="container">
     <div class="header">
     <div class="small-line"></div>
-    <h1>Datenschutzerklärung</h1>
+    <h1>{{ 'PRIVACY.TITLE' | translate }}</h1>
     <div class="big-line"></div>
     </div>
    
     <div class="content">
-    <h2>1. Allgemeine Hinweise</h2>
-    <p>
-      Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Website verarbeitet personenbezogene Daten ausschließlich im Rahmen der gesetzlichen Bestimmungen (DSGVO).
-    </p>
+    <h2>{{ 'PRIVACY.GENERAL_TITLE' | translate }}</h2>
+    <p>{{ 'PRIVACY.GENERAL_TEXT' | translate }}</p>
 
-    <h2>2. Verantwortlicher</h2>
-    <p>
-      Mario Ramirez<br>
-      Im Torfmoss 27<br>
-      E-Mail: mario-ramirez@hotmail.de
-    </p>
+    <h2>{{ 'PRIVACY.RESPONSIBLE_TITLE' | translate }}</h2>
+    <p [innerHTML]="'PRIVACY.RESPONSIBLE_TEXT' | translate"></p>
 
-    <h2>3. Zugriffsdaten (Server-Logfiles)</h2>
-    <p>
-      Der Hosting-Provider dieser Website erhebt und speichert automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt.
-    </p>
+    <h2>{{ 'PRIVACY.LOGFILES_TITLE' | translate }}</h2>
+    <p>{{ 'PRIVACY.LOGFILES_TEXT' | translate }}</p>
     <ul>
-      <li>Browsertyp und Browserversion</li>
-      <li>verwendetes Betriebssystem</li>
-      <li>Referrer URL</li>
-      <li>Hostname des zugreifenden Rechners</li>
-      <li>Uhrzeit der Serveranfrage</li>
-      <li>IP-Adresse</li>
+      <li>{{ 'PRIVACY.LOGFILES_BROWSER' | translate }}</li>
+      <li>{{ 'PRIVACY.LOGFILES_OS' | translate }}</li>
+      <li>{{ 'PRIVACY.LOGFILES_REFERRER' | translate }}</li>
+      <li>{{ 'PRIVACY.LOGFILES_HOST' | translate }}</li>
+      <li>{{ 'PRIVACY.LOGFILES_TIME' | translate }}</li>
+      <li>{{ 'PRIVACY.LOGFILES_IP' | translate }}</li>
     </ul>
 
-    <h2>4. Kontaktformular</h2>
-    <p>
-      Wenn Sie mir per Kontaktformular Anfragen zukommen lassen, werden Ihre Angaben zwecks Bearbeitung gespeichert.
-    </p>
+    <h2>{{ 'PRIVACY.CONTACT_TITLE' | translate }}</h2>
+    <p>{{ 'PRIVACY.CONTACT_TEXT' | translate }}</p>
 
-    <h2>5. Drittanbieter</h2>
-    <p>
-      Diese Website kann Inhalte von Drittanbietern wie GitHub oder LinkedIn einbinden.
-    </p>
+    <h2>{{ 'PRIVACY.THIRD_TITLE' | translate }}</h2>
+    <p>{{ 'PRIVACY.THIRD_TEXT' | translate }}</p>
 
-    <h2>6. Ihre Rechte</h2>
+    <h2>{{ 'PRIVACY.RIGHTS_TITLE' | translate }}</h2>
     <ul>
-      <li>Auskunft</li>
-      <li>Berichtigung</li>
-      <li>Löschung</li>
-      <li>Einschränkung der Verarbeitung</li>
-      <li>Widerspruch</li>
-      <li>Datenübertragbarkeit</li>
+      <li>{{ 'PRIVACY.RIGHTS_INFO' | translate }}</li>
+      <li>{{ 'PRIVACY.RIGHTS_CORRECT' | translate }}</li>
+      <li>{{ 'PRIVACY.RIGHTS_DELETE' | translate }}</li>
+      <li>{{ 'PRIVACY.RIGHTS_RESTRICT' | translate }}</li>
+      <li>{{ 'PRIVACY.RIGHTS_OBJECT' | translate }}</li>
+      <li>{{ 'PRIVACY.RIGHTS_PORT' | translate }}</li>
     </ul>
 
-    <h2>7. Hosting</h2>
-    <p>
-      Diese Website wird bei einem externen Dienstleister gehostet.
-    </p>
+    <h2>{{ 'PRIVACY.HOSTING_TITLE' | translate }}</h2>
+    <p>{{ 'PRIVACY.HOSTING_TEXT' | translate }}</p>
 
-    <h2>8. SSL / TLS</h2>
-    <p>
-      Diese Seite nutzt eine SSL- bzw. TLS-Verschlüsselung.
-    </p>
+    <h2>{{ 'PRIVACY.SSL_TITLE' | translate }}</h2>
+    <p>{{ 'PRIVACY.SSL_TEXT' | translate }}</p>
 
-    <h2>9. Aktualität</h2>
-    <p>
-      Stand: April 2026
-    </p>
+    <h2>{{ 'PRIVACY.DATE_TITLE' | translate }}</h2>
+    <p>{{ 'PRIVACY.DATE_TEXT' | translate }}</p>
   </div>
   </div>
 </section>
