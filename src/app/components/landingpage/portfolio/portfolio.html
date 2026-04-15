@@ -2,12 +2,12 @@
     <div class="portfolio-header">
         <div class="head">
         <div class="small-line"></div>
-        <h2>Portfolio</h2>
+        <h2>{{ 'PORTFOLIO.TITLE' | translate }}</h2>
         <div class="big-line"></div>
     </div>
     </div>
      <div class="p-tag">    
-        <p>Explore a selection of my work here - Interact with projects to see my skills in action.</p>
+        <p>{{ 'PORTFOLIO.DESCRIPTION' | translate }}</p>
     </div>
     <div class="portfolio-background">
         <img src="img/backgrounds/shadow-portfolio.svg" alt="portfolio-background">
@@ -24,8 +24,8 @@
                 <span>{{project.technologies.join(' | ')}}</span>
                 <p>{{project.discription}}</p>
                 <div class="portfolio-buttons">
-                <a href="{{project.link}}" target="_blank" class="live-test-button">live test</a>
-                <a href="{{project.github}}" target="_blank" class="github-button">GitHub</a>
+                <a href="{{project.link}}" target="_blank" class="live-test-button">{{ 'PORTFOLIO.LIVE_TEST' | translate }}</a>
+                <a href="{{project.github}}" target="_blank" class="github-button">{{ 'PORTFOLIO.GITHUB' | translate }}</a>
             </div>
             </div>
             

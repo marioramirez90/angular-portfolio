@@ -1,5 +1,58 @@
 {
   "HEADER": {
-    "TITLE": "Willkommen"
+    "ABOUT_ME": "Über mich",
+    "SKILLS": "Fähigkeiten",
+    "PORTFOLIO": "Projekte"
+  },
+  "HERO": {
+    "I_AM": "I am",
+    "ROLE": "FULLSTACK DEVELOPER",
+    "LETS_TALK": "Kontakt",
+    "SCROLL_DOWN": "runterscrollen"
+  },
+  "ABOUT_ME": {
+    "TITLE": "Über mich",
+    "DESCRIPTION": "Ich bin Fullstack-Entwickler aus Deutschland. Ich liebe es, Ideen in echte Anwendungen umzusetzen und lerne ständig neue Technologien durch Projekte, praktische Erfahrung und kontinuierliche Weiterentwicklung im Alltag",
+    "LOCATION": "Ich bin in Hamburg, Deutschland, ansässig und offen für verschiedene Arbeitsmodelle, einschließlich Remote-Arbeit.",
+    "MINDSET": "Ich bin offen für neue Technologien und lerne ständig dazu, um mich kontinuierlich weiterzuentwickeln.",
+    "PROBLEM_SOLVING": "Ich arbeite analytisch und lösungsorientiert. Bei jedem Problem suche ich nach einer effizienten und sauberen Lösung und lerne aus jeder Herausforderung dazu. Dabei sind für mich kreatives Denken, Ausdauer und Teamarbeit besonders wichtig."
+  },
+  "SKILLS": {
+    "TITLE": "Fähigkeiten",
+    "CONTINUALLY": "Continually learning",
+    "DESCRIPTION": "Erfahrung mit verschiedenen Frontend-Technologien aus mehreren Projekten.",
+    "ANOTHER_SKILL": "skills",
+    "ENTHUSIASM": "Begeistert neue Technologien und Frameworks zu lernen.",
+    "LOOKING_FOR": "Offen für weitere",
+    "GET_IN_TOUCH": "Kontakt"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "DESCRIPTION": "Entdecke hier eine Auswahl meiner Arbeit – interagiere mit den Projekten, um meine Skills in Aktion zu sehen.",
+    "LIVE_TEST": "Live",
+    "GITHUB": "GitHub"
+  },
+  "REFERENCES": {
+    "TEAM_PARTNER": "Teampartner"
+  },
+  "CONTACT": {
+    "TITLE": "Kontakt",
+    "HEADING": "Hast du ein Problem zu lösen?",
+    "DESCRIPTION": "Du suchst einen Fullstack-Entwickler? Ich bringe mit meiner Arbeit saubere Lösungen und echten Mehrwert für deine Projekte",
+    "CTA": "Kontaktiere mich gerne.",
+    "NAME_PLACEHOLDER": "Name",
+    "EMAIL_PLACEHOLDER": "E-Mail",
+    "MESSAGE_PLACEHOLDER": "Nachricht",
+    "NAME_ERROR": "Name erforderlich",
+    "EMAIL_ERROR": "E-Mail erforderlich",
+    "MESSAGE_ERROR": "Nachricht erforderlich",
+    "PRIVACY_BEFORE": "Ich habe die",
+    "PRIVACY_LINK": "Datenschutzerklärung",
+    "PRIVACY_AFTER": "gelesen und stimme zu.",
+    "POLICY_ERROR": "Bitte zustimmen",
+    "SUBMIT": "Senden"
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Impressum"
   }
 }

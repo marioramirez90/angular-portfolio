@@ -1,5 +1,58 @@
 {
   "HEADER": {
-    "TITLE": "Welcome"
+    "ABOUT_ME": "About me",
+    "SKILLS": "Skills",
+    "PORTFOLIO": "Portfolio"
+  },
+  "HERO": {
+    "I_AM": "I am",
+    "ROLE": "FULLSTACK DEVELOPER",
+    "LETS_TALK": "let's talk",
+    "SCROLL_DOWN": "scroll down"
+  },
+  "ABOUT_ME": {
+    "TITLE": "About Me",
+    "DESCRIPTION": "Write some information about yourself that is IT related. Why are you passionate about coding? What is your source of inspiration for improving your programming skills?",
+    "LOCATION": "Where are you located? Are you open to different ways of working, such as working remotely or even relocating?",
+    "MINDSET": "Show that you are open-minded. Are you enthusiastic about learning new technologies and continually improving your skills?",
+    "PROBLEM_SOLVING": "A brief description of your problem-solving approach. Do you learn from each challenge as you search for the most efficient or elegant solution? You can include some keywords like: analytical thinking, creativity, persistence and collaboration."
+  },
+  "SKILLS": {
+    "TITLE": "My Skills",
+    "CONTINUALLY": "Continually learning",
+    "DESCRIPTION": "Show that you have used a variety of front-end technologies in your projects.",
+    "ANOTHER_SKILL": "another skill",
+    "ENTHUSIASM": "Reveal enthusiasm for learning new technologies and frameworks.",
+    "LOOKING_FOR": "Looking for",
+    "GET_IN_TOUCH": "Get in Touch"
+  },
+  "PORTFOLIO": {
+    "TITLE": "Portfolio",
+    "DESCRIPTION": "Explore a selection of my work here - Interact with projects to see my skills in action.",
+    "LIVE_TEST": "live test",
+    "GITHUB": "GitHub"
+  },
+  "REFERENCES": {
+    "TEAM_PARTNER": "Team Partner"
+  },
+  "CONTACT": {
+    "TITLE": "Contact",
+    "HEADING": "Got a problem to solve?",
+    "DESCRIPTION": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
+    "CTA": "Need a Frontend developer? Contact me!",
+    "NAME_PLACEHOLDER": "Your Name",
+    "EMAIL_PLACEHOLDER": "Your Email",
+    "MESSAGE_PLACEHOLDER": "Your Message",
+    "NAME_ERROR": "Your name is required",
+    "EMAIL_ERROR": "Your email is required",
+    "MESSAGE_ERROR": "Your message is empty",
+    "PRIVACY_BEFORE": "I've read the",
+    "PRIVACY_LINK": "privacy policy",
+    "PRIVACY_AFTER": "and agree to the processing of my data as outlined.",
+    "POLICY_ERROR": "Please accept the policy",
+    "SUBMIT": "Send Message :)"
+  },
+  "FOOTER": {
+    "LEGAL_NOTICE": "Legal Notice"
   }
 }

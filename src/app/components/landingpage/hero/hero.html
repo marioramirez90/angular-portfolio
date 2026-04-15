@@ -5,12 +5,12 @@
     </div>
     <div class="hero-right">
       <div class="rotation">
-        <span>I am</span>
+        <span>{{ 'HERO.I_AM' | translate }}</span>
       </div>
       <div class="hero-text">
         <h1>Mario Ramirez</h1>
-        <h2>FULLSTACK DEVELOPER</h2>
-        <button (click)="scrollTo('contact')" class="hero-button">let's talk</button>
+        <h2>{{ 'HERO.ROLE' | translate }}</h2>
+        <button (click)="scrollTo('contact')" class="hero-button">{{ 'HERO.LETS_TALK' | translate }}</button>
       </div>
     </div>
   </div>
@@ -34,7 +34,7 @@
     <p>mario-ramirez@hotmail.de</p>
     </div>
     <div class="scroll-down">
-      <p>scroll down</p>
+      <p>{{ 'HERO.SCROLL_DOWN' | translate }}</p>
       <img src="img/icons/scroll-down.svg" alt="Scroll Down">
     </div>
   
