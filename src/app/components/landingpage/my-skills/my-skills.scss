@@ -6,11 +6,12 @@
   margin: 200px auto;
   justify-content: space-between;
   align-items: start;
+  position: relative;
 
   .myskill-background {
     position: absolute;
     left: -550px;
-    top: 2000px;
+    top: 100px;
     z-index: -1;
     
 

@@ -3,12 +3,25 @@
 
 section {
     max-width: 1440px;
+    width: 100%;
     margin: 200px auto;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-items: start;
     margin-bottom: 100px;
+    position: relative;
+
+    .footer-left {
+      position: absolute;
+      left: -550px;
+      top: 100px;
+      z-index: -1;
+      
+      img {
+        object-position: top;
+      }
+    }
 
     .contact-header {
         display: flex;

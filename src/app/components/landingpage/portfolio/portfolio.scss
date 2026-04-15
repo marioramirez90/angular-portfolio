@@ -6,11 +6,12 @@ section{
     max-width: 1440px;
     margin: 0 auto;
     align-items: center;
+    position: relative;
 
     .portfolio-background{
         position: absolute;
         left: -480px;
-        top: 2900px;
+        top: 500px;
         z-index: -1;
     }
 

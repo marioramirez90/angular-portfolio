@@ -6,12 +6,16 @@
   align-items: center;
   gap: 30px;
   margin-top: 10px;
+  position: relative;
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
 
   .references-background{
     display: flex;
     z-index: -10;
-    top: 3680px;
-    left: 1080px;
+    top: -500px;
+    right: -450px;
     position: absolute;
     rotate: 260deg;
     -webkit-transform: scaleX(-1);

@@ -1,37 +1,22 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
-:host {
-  display: block;
-  overflow: visible;
-  position: relative;
-}
 
-.line {
-  width: 100%;
-  height: 2px;
-  background-color: $border-color;
-}
 
-.footer-left {
-  position: absolute;
-  left: -480px;
-  bottom: 0;
-  z-index: -1;
 
-    img {
-        width: 80%;
-    }
-}
 
 footer {
   display: flex;
-  width: 100%;
+  border-top: 3px solid $border-color;
+
+  
   height: 290px;
   justify-content: center;
   align-items: center;
   color: #fff;
   background-color: $background;
+
+
 
   .footer-container {
     max-width: 1440px;
