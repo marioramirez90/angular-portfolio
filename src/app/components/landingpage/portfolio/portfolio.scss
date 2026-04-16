@@ -1,5 +1,6 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
+
 section{
    display: flex;
    flex-direction: column;
@@ -15,7 +16,6 @@ section{
         z-index: -1;
     }
 
-
     .portfolio-header{
         display: flex;
         flex-direction: column;
@@ -24,7 +24,6 @@ section{
         justify-content: center;
         gap:20px ;
 
-
         .head{
             display: flex;
             align-items: center;
@@ -32,8 +31,6 @@ section{
             width: 1060px;
             gap: 30px;
             margin-bottom: 30px;
-            
-           
             
         .small-line{
             height: 4px;
@@ -50,19 +47,15 @@ section{
         h2{
             font-size: 90px;
             font-weight: 900;
-
         }
 
         }
-
-        
-
     }
 
-          p{
-            font-size: 16px;
-            font-weight: 400;
-        }
+    p{
+        font-size: 16px;
+        font-weight: 400;
+    }
 
     .portfolio-content{
         display: flex;
@@ -71,13 +64,11 @@ section{
         align-items: center;
         gap: 50px;
         margin-top: 50px;
-     
 
         .project-content{
             display: flex;
             justify-content: flex-start;
             align-items: center;
-
 
             &.reverse{
                 flex-direction: row-reverse;
@@ -99,17 +90,14 @@ section{
                     display: flex;
                     justify-content: center;
                     gap: 80px;
-
                 }
 
-
             .project-image{
-                
-
                 .image{
                   width: 80%;
                 }
             }
+
             .project-info{
                 display: flex;
                 flex-direction: column;
@@ -117,13 +105,10 @@ section{
                 margin-top: -50px;
                 gap: 20px;
                 width: 500px;
-                
-                
 
                 h3{
                     font-size: 32px;
                     font-weight: 700;
-                    font-style: normal;
                     line-height: 120%;
                     color: $secondary-color;
                 }
@@ -131,25 +116,16 @@ section{
                 span{
                     font-size: 23px;
                     font-weight: 400;
-                    font-style: normal;
                     line-height: 120%;
                     color: $border-color;
-
                 }
 
                 p{
                     font-size: 16px;
                     font-weight: 400;
-                    font-style: normal;
                     line-height: 120%;
                 }
-
-                
-
-               
             }
-
-            
         }
     }
 }

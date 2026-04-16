@@ -141,8 +141,67 @@
     }
   }
 }
+@media screen and (max-width: 1000px) {
+  .references {
 
-@import '../../../../styles/abstracts/variables';
-@import '../../../../styles/components/buttons';
+    .content {
+
+      .reference-text {
+        padding: 32px 40px;
+        gap: 40px;
+        max-width: 90%;
+      }
+
+      .reference-name {
+        width: 100%;
+
+        .line {
+          width: 100%;
+        }
+      }
+
+      .image {
+        width: 200px;
+        height: 200px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .references {
+
+    .content {
+
+      .reference-text {
+        padding: 24px 20px;
+        gap: 24px;
+        border-width: 2px;
+      }
+
+      .titel-references-container {
+        p {
+          font-size: 16px;
+        }
+      }
+
+      .reference-name {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+
+        .line {
+          width: 100%;
+          height: 3px;
+        }
+      }
+
+      .image {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  }
+}
 
 
