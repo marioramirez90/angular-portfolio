@@ -1,13 +1,8 @@
 @use '../abstracts/variables' as *;
-html {
-  @media (max-width: 1439px) {
-    overflow-x: clip;
-  }
-}
 
 body {
  background-color: $background;
  font-family: 'Poppins', sans-serif;
  color: $primary-color;
- /* overflow-x removed */
+
 }

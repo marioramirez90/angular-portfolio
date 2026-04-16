@@ -258,7 +258,7 @@ section {
 
                         &:hover .box {
                             filter: drop-shadow(0px 0px 4px rgba(121, 126, 243, 1));
-                            border-color: darken($border-color, 10%);
+                            border-color: lighten($border-color, 10%);
                         }
                     }
 
