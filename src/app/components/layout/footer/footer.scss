@@ -26,6 +26,30 @@ footer {
     justify-content: center;
     align-items: center;
     gap: 300px;
+  }
+
+// Responsive Anpassung nur für kleinere Bildschirme
+@media (max-width: 1440px) {
+  .footer-container {
+    gap: 80px;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    padding: 30px 10px;
+  }
+  .footer-name-content {
+    align-items: center;
+    text-align: center;
+  }
+  .footer-icons .icons {
+    gap: 18px;
+  }
+}
 
     .footer-name-content {
       display: flex;
@@ -95,4 +119,4 @@ footer {
       }
     }
   }
-}
+

@@ -8,7 +8,7 @@
   margin-top: 10px;
   position: relative;
   max-width: 1440px;
-  width: 100%;
+  
   margin: 0 auto;
   
 
@@ -35,6 +35,10 @@
     justify-content: center;
     align-items: center;
     gap: 30px;
+    @media screen and (max-width: 1380px) {
+        flex-direction: column-reverse;
+      
+    }
 
     .reference-text {
       display: flex;
@@ -42,8 +46,9 @@
       align-items: center;
       gap: 80px;
       flex-direction: column;
-      height: 272px;
-      width: 850px;
+      max-height: 272px;
+      max-width: 850px;
+      width: 100%;
       border-radius: 32px;
       border: 4px solid $border-color;
       justify-content: center;
@@ -51,8 +56,8 @@
       padding: 48px 96px 48px 96px;
 
       .titel-references-container {
-        width: 670px;
-        height: 112px;
+       width: 100%;
+        height: 100%;
 
         p {
           font-size: 20px;
@@ -140,8 +145,4 @@
 @import '../../../../styles/abstracts/variables';
 @import '../../../../styles/components/buttons';
 
-.references {
-  @media (max-width: 1439px) {
-    overflow-x: clip;
-  }
-}
+
