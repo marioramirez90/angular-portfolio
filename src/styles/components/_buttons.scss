@@ -16,6 +16,7 @@
     border-color: $secondary-color;
     color: $primary-color;
     cursor: pointer;
+    
   }
 
   &.active {
@@ -23,6 +24,16 @@
     border-color: $hover-color;
     color: $primary-color;
     font-weight: 600;
+  }
+  @media screen and (max-width: 930px) {
+    border: none;
+    &:hover {
+      border: none;
+     
+    }
+    &.active {
+      border: none;
+    }
   }
 }
 

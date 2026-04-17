@@ -11,24 +11,31 @@ import { TranslateService, TranslatePipe } from '@ngx-translate/core';
 export class Header {
   currentLang: string = 'de';
   activeSection: string = '';
+  menuOpen: boolean = false;
 
- constructor(
-  private router: Router,
-  private translate: TranslateService
-) {
-  const savedLang = localStorage.getItem('lang') || 'de';
-  this.currentLang = savedLang.toUpperCase();
-  this.translate.use(savedLang);
-}
+  constructor(
+    private router: Router,
+    private translate: TranslateService
+  ) {
+    const savedLang = localStorage.getItem('lang') || 'de';
+    this.currentLang = savedLang.toUpperCase();
+    this.translate.use(savedLang);
+  }
 
-setLanguage(lang: string) {
-  const lower = lang.toLowerCase();
-  this.currentLang = lang.toUpperCase();
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
 
-  this.translate.use(lower);
+  closeMenu() {
+    this.menuOpen = false;
+  }
 
-  localStorage.setItem('lang', lower);
-}
+  setLanguage(lang: string) {
+    const lower = lang.toLowerCase();
+    this.currentLang = lang.toUpperCase();
+    this.translate.use(lower);
+    localStorage.setItem('lang', lower);
+  }
 
   scrollTo(id: string) {
     this.activeSection = id;
@@ -69,5 +76,3 @@ setLanguage(lang: string) {
     requestAnimationFrame(step);
   }
 }
-
-

@@ -10,19 +10,26 @@
         <a (click)="scrollTo('portfolio')" [class.active]="activeSection === 'portfolio'">{{ 'HEADER.PORTFOLIO' | translate }}</a>
       </div>
       <div class="language-section">
-        <button 
-          class="language-button" 
-          [class.active]="currentLang === 'DE'" 
-          (click)="setLanguage('DE')">
-          DE
-        </button>
-        <button 
-          class="language-button" 
-          [class.active]="currentLang === 'EN'" 
-          (click)="setLanguage('EN')">
-          EN
-        </button>
+        <button class="language-button" [class.active]="currentLang === 'DE'" (click)="setLanguage('DE')">DE</button>
+        <button class="language-button" [class.active]="currentLang === 'EN'" (click)="setLanguage('EN')">EN</button>
       </div>
+    </div>
+    <div class="hamburger" (click)="toggleMenu()">
+      <span></span>
+      <span></span>
+      <span></span>
     </div>
   </nav>
 </header>
+
+<div class="mobile-overlay" [class.open]="menuOpen">
+  <a (click)="scrollTo('about-me'); closeMenu()" [class.active]="activeSection === 'about-me'">{{ 'HEADER.ABOUT_ME' | translate }}</a>
+  <a (click)="scrollTo('my-skills'); closeMenu()" [class.active]="activeSection === 'my-skills'">{{ 'HEADER.SKILLS' | translate }}</a>
+  <a (click)="scrollTo('portfolio'); closeMenu()" [class.active]="activeSection === 'portfolio'">{{ 'HEADER.PORTFOLIO' | translate }}</a>
+    <a (click)="scrollTo('contact'); closeMenu()" [class.active]="activeSection === 'contact'">Contact</a>
+
+  <div class="mobile-lang">
+    <button class="language-button" [class.active]="currentLang === 'DE'" (click)="setLanguage('DE')">DE /</button>
+    <button class="language-button" [class.active]="currentLang === 'EN'" (click)="setLanguage('EN')">EN</button>
+  </div>
+</div>
