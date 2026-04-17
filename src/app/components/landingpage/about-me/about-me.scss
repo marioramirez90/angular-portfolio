@@ -6,11 +6,11 @@ article {
   justify-content: space-between;
   align-items: center;
   padding-top: 300px;
-  margin: -200px auto;
+  margin: -250px auto;
   position: relative;
   z-index: 10;
   max-width: 1440px;
-
+  margin-bottom: 100px;
   overflow: hidden;
   
 
@@ -110,7 +110,9 @@ overflow-y: visible;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  
+   .about-me-image {
+    display: none;
+   }
   .about-me-content {
     
     padding: 0;
@@ -122,17 +124,14 @@ overflow-y: visible;
       justify-content: center;
     }
   }
-}
+}}
      
 
        
       
 
 
-    .about-me-image {
-      display: none;
-    }
-  }
+
 
     
   
