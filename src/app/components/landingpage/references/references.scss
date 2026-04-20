@@ -1,6 +1,25 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
+section {
+  position: relative;
+  overflow: hidden;
+  .references-background {
+    position: absolute;
+    right: 10px;
+    top: -100px;
+    transform: translateX(50%) rotate(340deg) scaleX(-1);
+    z-index: -10;
+    pointer-events: none;
+    img {
+      display: block;
+      height: auto;
+     width: 800px;
+    }
+   
+  }
+}
+
 .references {
   display: flex;
   flex-direction: column;
@@ -11,15 +30,6 @@
   max-width: 1440px;
   margin: 0 auto;
   overflow-x: hidden;
-
-  .references-background {
-    position: absolute;
-    left: 100%;
-    top: -500px;
-    transform: translateX(-50%) rotate(270deg) scaleX(-1);
-    z-index: -10;
-    pointer-events: none;
-  }
 
   .reference-icon {
     display: flex;
@@ -134,9 +144,6 @@
     }
   }
 }
-
-
-/* ✅ Responsive bleibt gleich */
 
 @media screen and (max-width: 1000px) {
   .references {
