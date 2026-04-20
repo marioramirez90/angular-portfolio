@@ -14,7 +14,7 @@
   <img src="img/icons/continually.svg" class="base" alt="Continually-learning-icon">
   <img src="img/icons/continually-white.svg" class="white" alt="Hover icon">
   <img src="img/icons/bubble.svg" class="bubble" alt="Bubble">
-  <p>{{ 'SKILLS.CONTINUALLY' | translate }}</p>
+  <p class="titel-p">{{ 'SKILLS.CONTINUALLY' | translate }}</p>
 </div>
         
     </div>
@@ -22,13 +22,15 @@
 
     <div class="myskills-container">
         <div class="titel-myskills-container">
-            <h3>{{ 'SKILLS.TITLE' | translate }}</h3>
+            <div><h3>{{ 'SKILLS.TITLE' | translate }}</h3>
+            <span>{{ 'SKILLS.DESCRIPTION' | translate }}</span>
+            </div>
+            
             <div class="line"></div>
         </div>
         <div class="myskills-container-text" >
-            <span>{{ 'SKILLS.DESCRIPTION' | translate }}</span>
             <p>{{ 'SKILLS.LOOKING_FOR' | translate }} <span class="highlight">{{ 'SKILLS.ANOTHER_SKILL' | translate }}</span>?</p> 
-            <span>{{ 'SKILLS.ENTHUSIASM' | translate }}</span>
+            <span class="second-text">{{ 'SKILLS.ENTHUSIASM' | translate }}</span>
         </div>
         <button (click)="scrollTo('contact')" class="skills-button">{{ 'SKILLS.GET_IN_TOUCH' | translate }}</button>
 

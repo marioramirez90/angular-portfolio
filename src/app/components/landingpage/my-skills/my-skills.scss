@@ -103,18 +103,23 @@
     align-items: flex-end;
     gap: 30px;
     width: 500px;
+    margin-top: 30px;
 
     .titel-myskills-container {
       display: flex;
       align-items: center;
+      justify-content: flex-end;
       gap: 30px;
       h3 {
         font-size: 90px;
         font-weight: 700;
         font-style: normal;
         line-height: 120%;
+        padding-bottom: 20px;
       }
       .line {
+        display: flex;
+        margin-top: -50px;
         border-radius: 4px 0px 0px 4px;
         height: 4px;
         width: 68px;
@@ -155,5 +160,72 @@
 
   button {
     margin-right: 95px;
+  }
+}
+@media (max-width: 930px) {
+.second-text{
+  font-size: 23px;
+}
+   .titel-p{
+        top: 120px;
+      }
+  .myskills {
+    max-width: 360px;
+    margin: 300px auto;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .continually-icon {
+      top: -45px;
+
+
+    }
+    
+    .icon-skills {
+      width: 360px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 30px;
+      margin-left: 45px;
+    }
+
+    .myskills-container {
+      width: 100%;
+      align-items: center;
+      text-align: center;
+      .titel-myskills-container{
+        position: relative;
+        top: -600px;
+        justify-content: flex-end;
+        text-align: end;
+
+        h3{
+          font-size: 45px;
+        }
+        .line{
+          width: 30px;
+          height: 4px;
+        }
+      }
+
+      
+
+      .myskills-container-text {
+        position: relative;
+        margin-top: -150px;
+        padding-right: 20px;
+
+        p{
+          font-size: 20px;
+        }
+
+        span{
+          font-size: 16px;
+        }
+      }
+    }
+
+    button {
+      margin-right: 0;
+    }
   }
 }
