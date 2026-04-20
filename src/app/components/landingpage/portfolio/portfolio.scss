@@ -130,3 +130,81 @@ section{
         }
     }
 }
+
+@media (max-width: 930px) {
+    .portfolio-header .head {
+        width: 100% !important;
+       
+        align-items: center !important;
+        gap: 2px !important;
+    }
+    .portfolio-header .head h2 {
+        font-size: 45px !important;
+    }
+    .portfolio-header .head .small-line {
+        width: 24px !important;
+    }
+    .portfolio-header .head .big-line {
+        width: 80px !important;
+    }
+    .portfolio-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 32px !important;
+    }
+    .project-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 24px !important;
+        .project-info {
+            align-items: center !important;
+            text-align: center !important;
+            width: 100% !important;
+        }
+        .project-image {
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .portfolio-header .head {
+        width: 100% !important;
+       
+        align-items: center !important;
+        gap: 2px !important;
+    }
+    .portfolio-header .head h2 {
+        font-size: 45px !important;
+    }
+    .portfolio-header .head .small-line {
+        width: 24px !important;
+    }
+    .portfolio-header .head .big-line {
+        width: 80px !important;
+    }
+    .portfolio-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 16px !important;
+    }
+    .project-content {
+        flex-direction: column !important;
+        align-items: center !important;
+        gap: 12px !important;
+        .project-info {
+            align-items: center !important;
+            text-align: center !important;
+            width: 100% !important;
+        }
+        .project-image {
+            width: 100% !important;
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
