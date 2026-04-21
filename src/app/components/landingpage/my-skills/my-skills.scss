@@ -177,17 +177,27 @@
     justify-content: center;
     .continually-icon {
       top: -45px;
-
-
+      p {
+        font-size: 13px;
+      }
+      .image-icon {
+        width: 36px;
+        height: 36px;
+      }
     }
-    
     .icon-skills {
       width: 360px;
       grid-template-columns: repeat(3, 1fr);
-      gap: 30px;
-      margin-left: 45px;
+      gap: 18px;
+      margin-left: 0;
+      .icon {
+        width: 90px;
+        .image-icon {
+          width: 36px;
+          height: 36px;
+        }
+      }
     }
-
     .myskills-container {
       width: 100%;
       align-items: center;
@@ -197,17 +207,64 @@
         top: -600px;
         justify-content: flex-end;
         text-align: end;
-
         h3{
-          font-size: 45px;
+          font-size: 28px;
         }
         .line{
-          width: 30px;
-          height: 4px;
+          width: 18px;
+          height: 3px;
         }
       }
+      .myskills-container-text {
+        padding-right: 0;
+        span {
+          font-size: 12px;
+        }
+        p, .highlight {
+          font-size: 18px;
+        }
+      }
+    }
+    button {
+      margin-right: 0;
+      font-size: 16px;
+      height: 38px;
+      width: 110px;
+    }
 
       
+
+@media (max-width: 600px) {
+  .myskills {
+    margin: 120px auto;
+    .icon-skills {
+      width: 100%;
+      gap: 8px;
+      .icon {
+        width: 60px;
+        .image-icon {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    }
+    .myskills-container {
+      .titel-myskills-container h3 {
+        font-size: 18px;
+      }
+      .myskills-container-text {
+        span, p, .highlight {
+          font-size: 10px;
+        }
+      }
+    }
+    button {
+      font-size: 10px;
+      height: 28px;
+      width: 70px;
+    }
+  }
+}
 
       .myskills-container-text {
         position: relative;
@@ -228,4 +285,3 @@
       margin-right: 0;
     }
   }
-}

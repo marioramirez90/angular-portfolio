@@ -139,7 +139,7 @@ section{
         gap: 2px !important;
     }
     .portfolio-header .head h2 {
-        font-size: 45px !important;
+        font-size: 32px !important;
     }
     .portfolio-header .head .small-line {
         width: 24px !important;
@@ -162,11 +162,45 @@ section{
             text-align: center !important;
             width: 100% !important;
         }
+        .project-info h3 {
+            font-size: 18px !important;
+        }
+        .project-info span {
+            font-size: 14px !important;
+        }
+        .project-info p {
+            font-size: 12px !important;
+        }
         .project-image {
             width: 100% !important;
             display: flex;
             justify-content: center;
         }
+        .portfolio-buttons {
+            gap: 24px !important;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .portfolio-header .head h2 {
+        font-size: 18px !important;
+    }
+    .portfolio-header .head .small-line {
+        width: 10px !important;
+    }
+    .portfolio-header .head .big-line {
+        width: 24px !important;
+    }
+    .project-content .project-info h3 {
+        font-size: 12px !important;
+    }
+    .project-content .project-info span,
+    .project-content .project-info p {
+        font-size: 8px !important;
+    }
+    .portfolio-buttons {
+        gap: 8px !important;
     }
 }
 

@@ -37,6 +37,7 @@
   }
 }
 
+
 .hero-button {
   cursor: pointer;
   z-index: 10;
@@ -63,6 +64,10 @@
     border-color: $secondary-color;
     color: $primary-color;
   }
+  @media screen and (max-width: 480px) {
+    margin-right: 0;
+  }
+ 
 }
 .skills-button {
   cursor: pointer;
