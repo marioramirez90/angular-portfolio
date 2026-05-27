@@ -1,19 +1,23 @@
 <section class="hero">
   <div class="hero-content">
     <div class="hero-left">
-      <img class="hero-image-stack" src="img/backgrounds/photoshadows.svg" alt="" />
+            <img class="hero-image-stack" src="img/backgrounds/photoshadows.svg" alt="" />
+
     </div>
     <div class="hero-right">
+      <div class="hero-text">
       <div class="rotation">
         <span>{{ 'HERO.I_AM' | translate }}</span>
       </div>
-      <div class="hero-text">
+      <div class="name-title">
         <h1>Mario Ramirez</h1>
         <h2>{{ 'HERO.ROLE' | translate }}</h2>
-        <button (click)="scrollTo('contact')" class="hero-button">{{ 'HERO.LETS_TALK' | translate }}</button>
+        </div>  
       </div>
-    </div>
-  </div>
+      <button (click)="scrollTo('contact')" class="hero-button">{{ 'HERO.LETS_TALK' | translate }}</button>
+       </div>
+
+     </div>
   <div class="hero-background">
     <img src="img/backgrounds/Hero-Background.svg" alt="">
   </div>
