@@ -160,43 +160,53 @@
 }
  
 
- @media screen and (max-width: 480px) {
-  .hero
-  .hero-content {
+@media screen and (max-width: 1390px) {
+  .hero {
+    .hero-content {
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      margin-top: 80px;
 
-      .hero-left {
-    
-
-        .hero-image-stack {
-          margin-left: 0;
-        }
-      
+     .hero-left {
+      margin-left: 0;
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
 
       .hero-right {
+        margin-top: -20px;
+        order: 2;
+        margin-left: 0;
+        z-index: 2;
         display: flex;
-        
-        margin-top: 0px;
-
-        .rotation {
-          font-size: 30px;
-          top: -88px;
-          margin-left: -70px;
-          
-        }
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
 
         .hero-text {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .rotation {
+            margin-top: -18px;
+            margin-left : -25px;
+          }
+
+          .name-title {
+            margin-left: 0;
+            align-items: center;
+          }
 
           h1 {
-            font-size: 35px; 
-            line-height: 1;
-            white-space: nowrap;
           }
 
           h2 {
-            font-size: 20px;
             margin-bottom: 20px;
           }
         }
@@ -204,42 +214,250 @@
     }
 
     .hero-background {
-      top: 400px;
-      height: auto;
+      top: 420px;
+      width: 100%;
     }
 
     .hero-bottom {
       position: relative;
       top: 0;
-      margin-top: 100px;
-      align-items: center;
+      margin-top: 50px;
       gap: 20px;
 
       .hero-icons {
-
         .hero-line {
-          width: 91px;
-          height: 2px;
+          width: 93px;
+          height: 4px;
         }
 
-      .icons {
-          gap: 40px;
- 
-          a {
- 
-            img {
-              width: 30px;
-            }
+        .icons {
+          gap: 35px;
+
+          a img {
+            width: 30px;
+          }
+        }
+
+       
+      }
+
+      
+    }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .hero {
+    .hero-content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 80px;
+
+     .hero-left {
+      margin-left: 0;
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+      .hero-right {
+        margin-top: -20px;
+        order: 2;
+        margin-left: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .hero-text {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .rotation {
+            font-size: 34px;
+            margin-top: -18px;
+            margin-left : -20px;
+          }
+
+          .name-title {
+            margin-left: 0;
+            align-items: center;
+          }
+
+          h1 {
+            font-size: 44px; 
+          }
+
+          h2 {
+            font-size: 25px; 
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .hero-background {
+      top: 420px;
+      width: 100%;
+    }
+
+    .hero-bottom {
+      position: relative;
+      top: 0;
+      margin-top: 50px;
+      gap: 20px;
+
+      .hero-icons {
+        .hero-line {
+          width: 93px;
+          height: 4px;
+        }
+
+        .icons {
+          gap: 35px;
+
+          a img {
+            width: 30px;
           }
         }
 
         p {
-          font-size: 16px;
+          display: none;
         }
       }
 
       .scroll-down {
         display: none;
+      }
+    }
+  }
+}
+
+ @media screen and (max-width: 480px) {
+  .hero {
+    .hero-content {
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+     .hero-left {
+      padding-top: 50px;
+      margin-left: 0;
+       max-width: 480px;
+       width: 100%;
+  img {
+    width: 100%;
+    object-fit: fill;
+  }
+}
+
+      .hero-right {
+        margin-top: 0px;
+        order: 2;
+        margin-left: 0;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+
+        .hero-text {
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+
+          .rotation {
+            font-size: 34px;
+            margin-top: -18px;
+            margin-left : -20px;
+          }
+
+          .name-title {
+            margin-left: 0;
+            align-items: center;
+          }
+
+          h1 {
+            font-size: 44px; 
+          }
+
+          h2 {
+            font-size: 25px; 
+            margin-bottom: 20px;
+          }
+        }
+      }
+    }
+
+    .hero-background {
+      top: 420px;
+      width: 100%;
+    }
+
+    .hero-bottom {
+      position: relative;
+      top: 0;
+      margin-top: 50px;
+      gap: 20px;
+
+      .hero-icons {
+        .hero-line {
+          width: 93px;
+          height: 4px;
+        }
+
+        .icons {
+          gap: 35px;
+
+          a img {
+            width: 30px;
+          }
+        }
+
+        p {
+          display: none;
+        }
+      }
+
+      .scroll-down {
+        display: none;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .hero {
+    .hero-content {
+      .hero-right {
+        margin-top: 40px;
+        .hero-text {
+          .rotation {
+            font-size: 28px;
+            margin-top: -10px;
+            margin-left : -20px;
+          }
+
+          .name-title {
+            align-items: center;
+
+            h1 {
+              font-size: 36px;
+            }
+
+            h2 {
+              font-size: 20px;
+              margin-bottom: 15px;
+            }
+          }
+        }
       }
     }
   }
