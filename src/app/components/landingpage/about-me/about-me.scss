@@ -5,20 +5,17 @@ article {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding-top: 300px;
-  margin: -250px auto;
+  margin: 100px auto;
   position: relative;
   z-index: 10;
   max-width: 1440px;
   margin-bottom: 100px;
-  overflow-x: hidden;
+  overflow: hidden;
   
 
 
 .about-me-background {
   position: absolute;
-  
-overflow-y: visible;
   left: 100%;
   transform: translateX(-50%);
   top: 20px;
@@ -105,34 +102,90 @@ overflow-y: visible;
     }
   }
 
-    @media screen and (max-width: 1315px) {
-      margin-top: 20px;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-   .about-me-image {
-    display: none;
-   }
-  .about-me-content {
-    
-    padding: 0;
-    
+  // Tablet 1390px
+  @media screen and (max-width: 1390px) {
+    .about-me-image {
+      display: none;
+    }
 
-    
+    .about-me-content {
+      padding: 0;
+      width: 100%;
 
-    .about-me-info-section {
-      justify-content: center;
+      .about-me-info-section {
+        justify-content: center;
+      }
     }
   }
-}}
-     
 
-       
-      
+  // Tablet 800px
+  @media screen and (max-width: 800px) {
+    .about-me-image {
+      display: none;
+    }
+    .about-me-background {
+  left: 450px;
+  top: -110px;
+ 
 
+  img {
+    width: 400px;
+  }
+}
 
+    .about-me-content {
+      padding: 0px;
+      width: 400px;
 
+      h2 {
+        font-size: 45px;
+      }
+      p {
+        font-size: 16px;
+      }
 
-    
-  
+      .about-me-info-section {
+        justify-content: center;
+      }
+    }
+  }
+
+  // Mobile 480px
+  @media screen and (max-width: 480px) {
+    .about-me-image {
+      display: none;
+    }
+
+    .about-me-content {
+      padding: 20px;
+      width: 400px;
+
+      h2 {
+        font-size: 44px;
+        padding-bottom: 30px;
+      }
+
+      p {
+        font-size: 14px;
+      }
+
+      .about-me-info-section {
+        justify-content: center;
+      }
+    }
+  }
+
+  // Mobile 390px
+  @media screen and (max-width: 390px) {
+    .about-me-content {
+      h2 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+}
 
