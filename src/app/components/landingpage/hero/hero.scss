@@ -1,6 +1,5 @@
 
 @use '../../../../styles/components/buttons' as *;
-@use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
  
 .hero {
@@ -61,27 +60,26 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-        margin-left: -5px;
+    margin-left: -5px;
 
-  }
+    h1 {
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 120%;
+      white-space: nowrap;
+      color: white;
+      font-style: bold;
+    }
 
-  h1 {
-    font-size: 90px;
-    font-weight: 700;
-    line-height: 120%;
-    white-space: nowrap;
-    color: white;
-    font-style: bold;
-  }
-
-  h2 {
-    font-size: 50.5px;
-    font-weight: 400;
-    white-space: nowrap;
-    color: $secondary-color;  
-    line-height: 120%;
-    margin-bottom: 40px;
-    letter-spacing: 0 ;    
+    h2 {
+      font-size: 50.5px;
+      font-weight: 400;
+      white-space: nowrap;
+      color: $secondary-color;
+      line-height: 120%;
+      margin-bottom: 40px;
+      letter-spacing: 0;
+    }
   }
 }
     }
@@ -201,13 +199,6 @@
           .name-title {
             margin-left: 0;
             align-items: center;
-          }
-
-          h1 {
-          }
-
-          h2 {
-            margin-bottom: 20px;
           }
         }
       }
