@@ -282,6 +282,16 @@ section {
         margin: 120px auto 80px;
         padding: 0 24px;
 
+        .footer-left {
+            left: -150px;
+            top: 755px;
+
+            img {
+                width: 400px;
+                height: auto;
+            }
+        }
+
         .contact-header {
             .line {
                 width: 30px;
