@@ -103,13 +103,28 @@ article {
   }
 
   @media screen and (max-width: 1390px) {
+    .about-me-background {
+  left: 750px;
+  top: 10px;
+ 
+
+  img {
+    width: 400px;
+  }
+}
+  
     .about-me-image {
       display: none;
     }
-
-    .about-me-content {
-      padding: 0;
+     .about-me-content {
+      display: flex;
+      flex-direction: column;
+      padding-right: 280px;
+      padding-left: 280px;
       width: 100%;
+
+
+
 
       .about-me-info-section {
         justify-content: center;
@@ -131,9 +146,14 @@ article {
   }
 }
 
-    .about-me-content {
-      padding: 0px;
-      width: 400px;
+       .about-me-content {
+      display: flex;
+      
+      flex-direction: column;
+      
+      padding: 100px;
+      width: 100%;
+
 
       h2 {
         font-size: 45px;
@@ -154,10 +174,15 @@ article {
     }
 
     .about-me-content {
-      padding: 20px;
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
+      padding: 30px;
       width: 400px;
 
       h2 {
+        display: flex;
+        justify-content: flex-start;
         font-size: 44px;
         padding-bottom: 30px;
       }
