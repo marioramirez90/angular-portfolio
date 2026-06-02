@@ -109,11 +109,17 @@
   color: $primary-color;
   font-size: 23px;
   font-weight: 400;
+  
 
   &:hover {
     background-color: $hover-color;
     color: $primary-color;
   }
+    @media screen and (max-width: 480px) {
+    width: 158px;
+    height: 58px;
+}
+  
 }
 
 .github-button{
@@ -136,4 +142,8 @@
     border-color: $border-color;
     color: $primary-color;
   }
+    @media screen and (max-width: 480px) {
+    width: 137px;
+    height: 58px;
+}
 }

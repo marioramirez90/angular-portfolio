@@ -1,64 +1,68 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
-section{
-   display: flex;
-   flex-direction: column;
+section {
+    display: flex;
+    flex-direction: column;
     max-width: 1440px;
     margin: 0 auto;
     align-items: center;
     position: relative;
 
-
-    .portfolio-background{
+    .portfolio-background {
         position: absolute;
         left: -480px;
         top: 500px;
         z-index: -1;
+        pointer-events: none;
+
+        img {
+            max-width: none;
+            display: block;
+        }
     }
 
-    .portfolio-header{
+    .portfolio-header {
         display: flex;
         flex-direction: column;
         align-items: flex-end;
         width: 100%;
         justify-content: center;
-        gap:20px ;
+        gap: 20px;
 
-        .head{
+        .head {
             display: flex;
             align-items: center;
             justify-content: end;
             width: 1060px;
             gap: 30px;
             margin-bottom: 30px;
-            
-        .small-line{
-            height: 4px;
-            width: 100px;
-            background-color: $secondary-color;
-        }
 
-         .big-line{
-            height: 4px;
-            width: 500px;
-            background-color: $secondary-color;
-        }
+            .small-line {
+                height: 4px;
+                width: 100px;
+                background-color: $secondary-color;
+            }
 
-        h2{
-            font-size: 90px;
-            font-weight: 900;
-        }
+            .big-line {
+                height: 4px;
+                width: 500px;
+                background-color: $secondary-color;
+            }
 
+            h2 {
+                font-size: 90px;
+                font-weight: 900;
+            }
         }
     }
 
-    p{
+    p {
         font-size: 16px;
         font-weight: 400;
     }
 
-    .portfolio-content{
+    .portfolio-content {
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -66,40 +70,41 @@ section{
         gap: 50px;
         margin-top: 50px;
 
-        .project-content{
+        .project-content {
             display: flex;
             justify-content: flex-start;
             align-items: center;
 
-            &.reverse{
+
+            &.reverse {
                 flex-direction: row-reverse;
                 gap: 30px;
 
-                 .project-image{
+                .project-image {
                     display: flex;
                     justify-content: center;
                     align-items: center;
                 }
 
-                .project-info{
+                .project-info {
                     align-items: flex-end;
                     text-align: end;
                 }
             }
 
-             .portfolio-buttons{
-                    display: flex;
-                    justify-content: center;
-                    gap: 80px;
-                }
+            .portfolio-buttons {
+                display: flex;
+                justify-content: center;
+                gap: 80px;
+            }
 
-            .project-image{
-                .image{
-                  width: 80%;
+            .project-image {
+                .image {
+                    width: 80%;
                 }
             }
 
-            .project-info{
+            .project-info {
                 display: flex;
                 flex-direction: column;
                 align-items: flex-start;
@@ -107,21 +112,21 @@ section{
                 gap: 20px;
                 width: 500px;
 
-                h3{
+                h3 {
                     font-size: 32px;
                     font-weight: 700;
                     line-height: 120%;
                     color: $secondary-color;
                 }
 
-                span{
+                span {
                     font-size: 23px;
                     font-weight: 400;
                     line-height: 120%;
                     color: $border-color;
                 }
 
-                p{
+                p {
                     font-size: 16px;
                     font-weight: 400;
                     line-height: 120%;
@@ -129,116 +134,176 @@ section{
             }
         }
     }
-}
 
-@media (max-width: 930px) {
-    .portfolio-header .head {
-        width: 100% !important;
-       
-        align-items: center !important;
-        gap: 2px !important;
-    }
-    .portfolio-header .head h2 {
-        font-size: 32px !important;
-    }
-    .portfolio-header .head .small-line {
-        width: 24px !important;
-    }
-    .portfolio-header .head .big-line {
-        width: 80px !important;
-    }
-    .portfolio-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 32px !important;
-    }
-    .project-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 24px !important;
-        .project-info {
-            align-items: center !important;
-            text-align: center !important;
-            width: 100% !important;
+    // ── Tablet ────────────────────────────────────────────────────────────────
+    @media (max-width: 930px) {
+        .portfolio-header {
+            align-items: center;
+            
+
+            .head {
+                width: 100%;
+              
+                gap: 10px;
+                margin-bottom: 40px;
+
+                h2 {
+                    font-size: 45px;
+                }
+
+                .small-line {
+                    width: 24px;
+                }
+
+                .big-line {
+                    width: 80px;
+                }
+            }
         }
-        .project-info h3 {
-            font-size: 18px !important;
-        }
-        .project-info span {
-            font-size: 14px !important;
-        }
-        .project-info p {
-            font-size: 12px !important;
-        }
-        .project-image {
-            width: 100% !important;
-            display: flex;
+
+      
+   
+        .p-tag{
             justify-content: center;
-        }
-        .portfolio-buttons {
-            gap: 24px !important;
-        }
-    }
-}
+             text-align: center;
+            padding: 0 20px;
 
-@media (max-width: 600px) {
-    .portfolio-header .head h2 {
-        font-size: 18px !important;
-    }
-    .portfolio-header .head .small-line {
-        width: 10px !important;
-    }
-    .portfolio-header .head .big-line {
-        width: 24px !important;
-    }
-    .project-content .project-info h3 {
-        font-size: 12px !important;
-    }
-    .project-content .project-info span,
-    .project-content .project-info p {
-        font-size: 8px !important;
-    }
-    .portfolio-buttons {
-        gap: 8px !important;
-    }
-}
-
-@media (max-width: 320px) {
-    .portfolio-header .head {
-        width: 100% !important;
-       
-        align-items: center !important;
-        gap: 2px !important;
-    }
-    .portfolio-header .head h2 {
-        font-size: 45px !important;
-    }
-    .portfolio-header .head .small-line {
-        width: 24px !important;
-    }
-    .portfolio-header .head .big-line {
-        width: 80px !important;
-    }
-    .portfolio-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        justify-content: center !important;
-        gap: 16px !important;
-    }
-    .project-content {
-        flex-direction: column !important;
-        align-items: center !important;
-        gap: 12px !important;
-        .project-info {
-            align-items: center !important;
-            text-align: center !important;
-            width: 100% !important;
         }
-        .project-image {
-            width: 100% !important;
-            display: flex;
+
+        .portfolio-content {
+            padding: 0 20px;
+            gap: 80px;
+            margin-top: 40px;
+
+            .project-content {
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+
+                &.reverse {
+                    flex-direction: column;
+
+                    .project-info {
+                        align-items: center;
+                        text-align: center;
+                        gap: 20px;
+                    }
+                }
+
+            
+
+                .project-image {
+                    width: 100%;
+                    display: flex;
+                    justify-content: center;
+                }
+
+                .project-info {
+                    align-items: center;
+                    text-align: center;
+                    width: 100%;
+                    margin-top: 0;
+
+                    h3 {
+                        font-size: 18px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    p {
+                        font-size: 12px;
+                    }
+                }
+
+                .portfolio-buttons {
+                    gap: 24px;
+                }
+            }
+        }
+    }
+
+    // ── Mobile ────────────────────────────────────────────────────────────────
+    @media (max-width: 600px) {
+        .portfolio-header .head {
+            h2 {
+                font-size: 45px;
+            }
+
+            .small-line {
+                width: 24px;
+            }
+
+            .big-line {
+                width: 81px;
+            }
+        }
+
+
+         .p-tag{
             justify-content: center;
+             text-align: center;
+            padding: 0 30px;
+
+        }
+
+        
+
+        .portfolio-content .project-content {
+            justify-content: center;
+            align-items: center;
+            .project-info {
+                gap: 25px;
+                h3 {
+                    font-size: 32px;
+                }
+
+                span{
+                    font-size: 23px;
+                }
+                p {
+                    font-size: 16px;
+                }
+            }
+
+            .portfolio-buttons {
+                gap: 40px;
+                align-items: center;
+            }
+        }
+    }
+
+    // ── Small Mobile ──────────────────────────────────────────────────────────
+    @media (max-width: 350px) {
+        .portfolio-header .head {
+            gap: 6px;
+
+            h2 {
+                font-size: 14px;
+            }
+
+            .small-line {
+                width: 8px;
+            }
+
+            .big-line {
+                width: 16px;
+            }
+        }
+  .portfolio-background {
+        left: -10px;   
+        top: 700px;
+        img {
+            width: 250px;
+        }
+      }
+        .portfolio-content {
+            gap: 16px;
+
+            .project-content {
+                gap: 12px;
+            }
         }
     }
 }

@@ -1,4 +1,7 @@
 <section id="portfolio" class="portfolio">
+    <div class="portfolio-background">
+        <img src="img/backgrounds/shadow-portfolio.svg" alt="portfolio-background">
+    </div>
     <div class="portfolio-header">
         <div class="head">
         <div class="small-line"></div>
@@ -9,9 +12,7 @@
      <div class="p-tag">    
         <p>{{ 'PORTFOLIO.DESCRIPTION' | translate }}</p>
     </div>
-    <div class="portfolio-background">
-        <img src="img/backgrounds/shadow-portfolio.svg" alt="portfolio-background">
-    </div>
+    
     
     <div class="portfolio-content">@for (project of projects; track $index) {
     <div class="project-content" [class.reverse]="$index % 2 !== 0">
@@ -28,6 +29,7 @@
                 <a href="{{project.github}}" target="_blank" class="github-button">{{ 'PORTFOLIO.GITHUB' | translate }}</a>
             </div>
             </div>
+            
             
         </div>
     </div>
