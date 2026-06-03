@@ -280,7 +280,6 @@ section {
 @media (max-width: 1024px) {
     section {
         margin: 120px auto 80px;
-        padding: 0 24px;
 
         .footer-left {
             left: -150px;
@@ -307,6 +306,8 @@ section {
             flex-direction: column;
             align-items: flex-start;
             gap: 40px;
+                    padding: 0 24px;
+
 
             .contact-text,
             .form-box,

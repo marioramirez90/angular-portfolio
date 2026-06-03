@@ -75,7 +75,6 @@ section {
             justify-content: flex-start;
             align-items: center;
 
-
             &.reverse {
                 flex-direction: row-reverse;
                 gap: 30px;
@@ -135,50 +134,101 @@ section {
         }
     }
 
-    // ── Tablet ────────────────────────────────────────────────────────────────
-    @media (max-width: 930px) {
+    // ── Tablet (1200px) ───────────────────────────────────────────────────────
+    @media (max-width: 1200px) {
+
         .portfolio-header {
             align-items: center;
-            
 
             .head {
                 width: 100%;
-              
-                gap: 10px;
-                margin-bottom: 40px;
+                gap: 20px;
+                margin-bottom: 30px;
 
                 h2 {
-                    font-size: 45px;
+                    font-size: 72px;
                 }
 
                 .small-line {
-                    width: 24px;
+                    width: 70px;
                 }
 
                 .big-line {
-                    width: 80px;
+                    width: 300px;
                 }
             }
         }
 
-      
-   
-        .p-tag{
-            justify-content: center;
-             text-align: center;
-            padding: 0 20px;
+        .portfolio-content {
+            gap: 60px;
 
+            .project-content {
+                gap: 30px;
+
+                .project-info {
+                    width: 420px;
+
+                    h3 {
+                        font-size: 26px;
+                    }
+
+                    span {
+                        font-size: 18px;
+                    }
+
+                    p {
+                        font-size: 15px;
+                    }
+                }
+
+                .portfolio-buttons {
+                    gap: 50px;
+                }
+            }
+        }
+    }
+
+    // ── Tablet klein (930px) ──────────────────────────────────────────────────
+    @media (max-width: 930px) {
+
+        .portfolio-header {
+            align-items: center;
+
+            .head {
+                width: 100%;
+                gap: 12px;
+                margin-bottom: 40px;
+
+                h2 {
+                    font-size: 52px;
+                }
+
+                .small-line {
+                    width: 40px;
+                }
+
+                .big-line {
+                    width: 120px;
+                }
+            }
+        }
+
+        .p-tag {
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
         }
 
         .portfolio-content {
-            padding: 0 20px;
+            padding: 0;
             gap: 80px;
             margin-top: 40px;
 
             .project-content {
                 flex-direction: column;
                 align-items: center;
-                gap: 15px;
+                gap: 20px;
+                padding: 0 20px;
 
                 &.reverse {
                     flex-direction: column;
@@ -189,8 +239,6 @@ section {
                         gap: 20px;
                     }
                 }
-
-            
 
                 .project-image {
                     width: 100%;
@@ -205,30 +253,31 @@ section {
                     margin-top: 0;
 
                     h3 {
-                        font-size: 18px;
+                        font-size: 26px;
                     }
 
                     span {
-                        font-size: 14px;
+                        font-size: 18px;
                     }
 
                     p {
-                        font-size: 12px;
+                        font-size: 15px;
                     }
                 }
 
                 .portfolio-buttons {
-                    gap: 24px;
+                    gap: 32px;
                 }
             }
         }
     }
 
-    // ── Mobile ────────────────────────────────────────────────────────────────
+    // ── Mobile (600px) ────────────────────────────────────────────────────────
     @media (max-width: 600px) {
+
         .portfolio-header .head {
             h2 {
-                font-size: 45px;
+                font-size: 40px;
             }
 
             .small-line {
@@ -236,73 +285,90 @@ section {
             }
 
             .big-line {
-                width: 81px;
+                width: 80px;
             }
         }
 
-
-         .p-tag{
+        .p-tag {
             justify-content: center;
-             text-align: center;
-            padding: 0 30px;
-
+            text-align: center;
+            padding: 0 10px;
         }
-
-        
 
         .portfolio-content .project-content {
             justify-content: center;
             align-items: center;
+
             .project-info {
-                gap: 25px;
+                gap: 20px;
+
                 h3 {
-                    font-size: 32px;
+                    font-size: 24px;
                 }
 
-                span{
-                    font-size: 23px;
-                }
-                p {
+                span {
                     font-size: 16px;
+                }
+
+                p {
+                    font-size: 14px;
                 }
             }
 
             .portfolio-buttons {
-                gap: 40px;
+                gap: 32px;
                 align-items: center;
             }
         }
     }
 
-    // ── Small Mobile ──────────────────────────────────────────────────────────
+    // ── Small Mobile (350px) ──────────────────────────────────────────────────
     @media (max-width: 350px) {
+
         .portfolio-header .head {
-            gap: 6px;
+            gap: 8px;
 
             h2 {
-                font-size: 14px;
+                font-size: 28px;
             }
 
             .small-line {
-                width: 8px;
+                width: 10px;
             }
 
             .big-line {
-                width: 16px;
+                width: 20px;
             }
         }
-  .portfolio-background {
-        left: -10px;   
-        top: 700px;
-        img {
-            width: 250px;
+
+        .portfolio-background {
+            left: -10px;
+            top: 700px;
+
+            img {
+                width: 250px;
+            }
         }
-      }
+
         .portfolio-content {
-            gap: 16px;
+            gap: 40px;
 
             .project-content {
-                gap: 12px;
+                gap: 16px;
+
+                .project-info {
+                    h3 {
+                        font-size: 20px;
+                    }
+
+                    span {
+                        font-size: 14px;
+                    }
+
+                    p {
+                        font-size: 13px;
+                    }
+                }
             }
         }
     }

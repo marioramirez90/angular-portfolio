@@ -1,42 +1,54 @@
-<section >
-   <div class="references-background">
-    <img src="img/backgrounds/green-shadow.svg" alt="">
-   </div>
+<section class="references-section">
   <div class="references">
-   <div class="reference-icon">
-    <img src="img/icons/apostrop.svg" alt="">
-   </div>
-  
-  <div class="content">
 
-    <div class="reference-text">
+    <div class="reference-icon">
+      <img src="img/icons/apostrop.svg" alt="Anführungszeichen">
+    </div>
 
-      <div class="titel-references-container">
-        <p>{{ references[currentIndex]?.descriptionKey | translate }}</p>
-      </div>
-      <div class="reference-name">
+    <div class="content">
+      <div class="reference-text">
+        <div class="titel-references-container">
+          <p>{{ references[currentIndex]?.descriptionKey | translate }}</p>
+        </div>
+        <div class="reference-name">
           <div class="line"></div>
           <p>{{ references[currentIndex]?.name }} - {{ 'REFERENCES.TEAM_PARTNER' | translate }}</p>
         </div>
+      </div>
+
+      <div class="image">
+        <img
+          [src]="references[currentIndex]?.img"
+          alt="{{ references[currentIndex]?.name }}"
+        />
+      </div>
     </div>
 
-    <div class="image">
-      <img [src]="references[currentIndex]?.img" alt="{{ references[currentIndex]?.name }}" />
-    </div>
-  </div>
+    <div class="slider">
+      <button
+        (click)="prev()"
+        (mouseenter)="leftHover=true"
+        (mouseleave)="leftHover=false"
+        aria-label="Vorherige Referenz"
+      >
+        <img [src]="leftHover ? 'img/icons/hover-left.svg' : 'img/icons/links.svg'" alt="" />
+      </button>
 
-  <div class="slider">
-    <button (click)="prev()" (mouseenter)="leftHover=true" (mouseleave)="leftHover=false">
-      <img [src]="leftHover ? 'img/icons/hover-left.svg' : 'img/icons/links.svg'" alt="" />
-    </button>
-    <div class="dots">
-      @for (ref of references; track $index; let i = $index) {
-        <span class="dot" [class.active]="i === currentIndex"> </span>
-      }
+      <div class="dots">
+        @for (ref of references; track $index; let i = $index) {
+          <span class="dot" [class.active]="i === currentIndex"></span>
+        }
+      </div>
+
+      <button
+        (click)="next()"
+        (mouseenter)="rightHover=true"
+        (mouseleave)="rightHover=false"
+        aria-label="Nächste Referenz"
+      >
+        <img [src]="rightHover ? 'img/icons/hover-right.svg' : 'img/icons/rechts.svg'" alt="" />
+      </button>
     </div>
-    <button (click)="next()" (mouseenter)="rightHover=true" (mouseleave)="rightHover=false">
-      <img [src]="rightHover ? 'img/icons/hover-right.svg' : 'img/icons/rechts.svg'" alt="" />
-    </button>
-  </div>
+
   </div>
 </section>
