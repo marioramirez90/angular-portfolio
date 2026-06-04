@@ -44,8 +44,12 @@ export class Contact {
       this.submitSuccess = false;
       this.submitError = false;
 
-      const endpoint = 'https://marioramirez.developerakademie.net/sendMail.php';
-      const payload = this.userform.value;
+      const endpoint = 'https://formspree.io/f/mldqqozw';
+      const payload = {
+        name: this.userform.value.name ?? '',
+        email: this.userform.value.email ?? '',
+        message: this.userform.value.text ?? '',
+      };
 
       this.http.post(endpoint, payload).subscribe({
         next: (response) => {
@@ -60,19 +64,14 @@ export class Contact {
           }, 3000);
         },
         error: (error) => {
-          console.error('Mail submission failed, falling back to mock success:', error);
-          // Fallback simulation so that page continues to work and demonstrate correctly in dev
+          console.error('Mail submission failed:', error);
+          this.isSubmitting = false;
+          this.submitError = true;
+          this.cdr.markForCheck();
           setTimeout(() => {
-            this.isSubmitting = false;
-            this.submitSuccess = true;
-            this.userform.reset();
-            this.focused = {};
+            this.submitError = false;
             this.cdr.markForCheck();
-            setTimeout(() => {
-              this.submitSuccess = false;
-              this.cdr.markForCheck();
-            }, 3000);
-          }, 1500);
+          }, 3000);
         }
       });
     }
