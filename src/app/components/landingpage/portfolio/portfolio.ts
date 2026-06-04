@@ -30,8 +30,8 @@ export class Portfolio {
       projectName: 'Join',
       technologies:['Angular','TypeScript','HTML','CSS','Firebase'],
       descriptionKey:'PROJECTS.JOIN_DESC',
-      link:'https://marioramirez.developerakademie.net/Pollo-loco/index.html',
-      github:'https://github.com/marioramirez90/el-poll-loco',
+      link:'https://marioramirez.developerakademie.net/Join/index.html',
+      github:'https://github.com/marioramirez90/Join',
     },
   ]
 }

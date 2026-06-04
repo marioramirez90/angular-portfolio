@@ -19,6 +19,7 @@
         <div class="input-group">
           <input [placeholder]="focused['name'] ? '' : ('CONTACT.NAME_PLACEHOLDER' | translate)" id="name" type="text" formControlName="name"
             (focus)="onFocus('name')"
+            (blur)="onBlur('name')"
             [class.invalid]="userform.get('name')?.invalid && userform.get('name')?.touched"
             [class.valid]="userform.get('name')?.valid && userform.get('name')?.touched" />
           <span class="error-icon" [class.visible]="userform.get('name')?.invalid && userform.get('name')?.touched">!</span>
@@ -29,6 +30,7 @@
         <div class="input-group">
           <input [placeholder]="focused['email'] ? '' : ('CONTACT.EMAIL_PLACEHOLDER' | translate)" id="mail" type="email" formControlName="email"
             (focus)="onFocus('email')"
+            (blur)="onBlur('email')"
             [class.invalid]="userform.get('email')?.invalid && userform.get('email')?.touched"
             [class.valid]="userform.get('email')?.valid && userform.get('email')?.touched" />
           <span class="error-icon" [class.visible]="userform.get('email')?.invalid && userform.get('email')?.touched">!</span>
@@ -39,6 +41,7 @@
         <div class="input-group">
           <textarea [placeholder]="focused['text'] ? '' : ('CONTACT.MESSAGE_PLACEHOLDER' | translate)" id="text" formControlName="text"
             (focus)="onFocus('text')"
+            (blur)="onBlur('text')"
             [class.invalid]="userform.get('text')?.invalid && userform.get('text')?.touched"
             [class.valid]="userform.get('text')?.valid && userform.get('text')?.touched"></textarea>
           <span class="error-icon textarea-icon" [class.visible]="userform.get('text')?.invalid && userform.get('text')?.touched">!</span>
@@ -57,7 +60,26 @@
           <span class="error-msg" [class.visible]="userform.get('checkbox')?.invalid && userform.get('checkbox')?.dirty">{{ 'CONTACT.POLICY_ERROR' | translate }}</span>
         </div>
 
-        <button type="submit" [disabled]="userform.invalid">{{ 'CONTACT.SUBMIT' | translate }}</button>
+        <button type="submit" [disabled]="userform.invalid || isSubmitting">{{ 'CONTACT.SUBMIT' | translate }}</button>
+
+        @if (submitSuccess) {
+          <div class="feedback-card success">
+            <span class="feedback-icon">✓</span>
+            <p>{{ 'CONTACT.SUCCESS_MSG' | translate }}</p>
+          </div>
+        }
+        @if (submitError) {
+          <div class="feedback-card error">
+            <span class="feedback-icon">!</span>
+            <p>{{ 'CONTACT.ERROR_MSG' | translate }}</p>
+          </div>
+        }
+        @if (isSubmitting) {
+          <div class="feedback-card loading">
+            <div class="spinner"></div>
+            <p>{{ 'CONTACT.SENDING' | translate }}</p>
+          </div>
+        }
       </form>
     </div>
     

@@ -2,7 +2,8 @@
   "HEADER": {
     "ABOUT_ME": "About me",
     "SKILLS": "Skills",
-    "PORTFOLIO": "Portfolio"
+    "PORTFOLIO": "Portfolio",
+    "CONTACT": "Contact"
   },
   "HERO": {
     "I_AM": "I am",
@@ -12,10 +13,10 @@
   },
   "ABOUT_ME": {
     "TITLE": "About Me",
-    "DESCRIPTION": "Ich bin Fullstack-Entwickler aus Deutschland. Ich liebe es, Ideen in echte Anwendungen umzusetzen und lerne ständig neue Technologien durch Projekte, praktische Erfahrung und kontinuierliche Weiterentwicklung im Alltag.",
-    "LOCATION": "Ich bin in Hamburg, Deutschland, ansässig und offen für verschiedene Arbeitsmodelle, einschließlich Remote-Arbeit.",
-    "MINDSET": "Ich bin offen für neue Technologien und lerne ständig dazu, um mich kontinuierlich weiterzuentwickeln.",
-    "PROBLEM_SOLVING": "Ich arbeite analytisch und lösungsorientiert. Bei jedem Problem suche ich nach einer effizienten und sauberen Lösung und lerne aus jeder Herausforderung dazu. Dabei sind für mich kreatives Denken, Ausdauer und Teamarbeit besonders wichtig."
+    "DESCRIPTION": "I am a full-stack developer from Germany. I love turning ideas into real applications and constantly learn new technologies through projects, hands-on experience, and continuous development in my daily life.",
+    "LOCATION": "I am based in Hamburg, Germany, and open to various work models, including remote work.",
+    "MINDSET": "I am open to new technologies and constantly learning to continuously develop my skills.",
+    "PROBLEM_SOLVING": "I work in an analytical and solution-oriented manner. For every problem, I look for an efficient and clean solution and learn from every challenge. In doing so, creative thinking, perseverance, and teamwork are particularly important to me."
   },
   "SKILLS": {
     "TITLE": "My Skills",
@@ -35,8 +36,10 @@
   "REFERENCES": {
     "TEAM_PARTNER": "Team Partner",
     "REF1": "Mario really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
-    "REF2": "Michael really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
-    "REF3": "Mario really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment."
+    "REF2": "Mario really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+    "REF3": "Mario really kept the team together with his great organization and clear communication. We wouldn't have got this far without his commitment.",
+    "PREV": "Previous reference",
+    "NEXT": "Next reference"
   },
   "PROJECTS": {
     "POKEDEX_DESC": "Based on the PokéAPI a simple library that provides and catalogues pokemon information.",
@@ -46,8 +49,8 @@
   "CONTACT": {
     "TITLE": "Contact",
     "HEADING": "Got a problem to solve?",
-    "DESCRIPTION": "Encourage people to contact you and describe what role you are interested in. Show that you will add value to their projects through your work.",
-    "CTA": "Need a Frontend developer? Contact me!",
+    "DESCRIPTION": "Are you looking for a Fullstack Developer? Through my work, I bring clean solutions and real value to your projects.",
+    "CTA": "Feel free to contact me.",
     "NAME_PLACEHOLDER": "Your Name",
     "EMAIL_PLACEHOLDER": "Your Email",
     "MESSAGE_PLACEHOLDER": "Your Message",
@@ -58,17 +61,21 @@
     "PRIVACY_LINK": "privacy policy",
     "PRIVACY_AFTER": "and agree to the processing of my data as outlined.",
     "POLICY_ERROR": "Please accept the policy",
-    "SUBMIT": "Send Message :)"
+    "SUBMIT": "Send Message :)",
+    "SUCCESS_MSG": "Your message has been sent successfully!",
+    "ERROR_MSG": "Oops! Something went wrong. Please try again.",
+    "SENDING": "Sending message..."
   },
   "FOOTER": {
-    "LEGAL_NOTICE": "Legal Notice"
+    "LEGAL_NOTICE": "Legal Notice",
+    "PRIVACY_POLICY": "Privacy Policy"
   },
   "LEGAL": {
     "TITLE": "Legal Notice",
     "IMPRINT": "Legal Notice",
     "CONTACT": "Contact",
-    "EMAIL": "Email: [your email]",
-    "PHONE": "Phone: [optional]",
+    "EMAIL": "Email: mario-ramirez@hotmail.de",
+    "PHONE": "Phone: +49 40 12345678",
     "RESPONSIBLE": "Responsible for content according to § 55 Abs. 2 RStV",
     "ADDRESS": "Mario Ramirez<br>Torfmoos 27<br>22415 Hamburg<br>Germany"
   },
@@ -77,7 +84,7 @@
     "GENERAL_TITLE": "1. General Information",
     "GENERAL_TEXT": "The protection of your personal data is important to me. This website processes personal data exclusively within the framework of legal provisions (GDPR).",
     "RESPONSIBLE_TITLE": "2. Responsible Party",
-    "RESPONSIBLE_TEXT": "Mario Ramirez<br>Im Torfmoss 27<br>Email: mario-ramirez@hotmail.de",
+    "RESPONSIBLE_TEXT": "Mario Ramirez<br>Im Torfmoos 27<br>Email: mario-ramirez@hotmail.de",
     "LOGFILES_TITLE": "3. Access Data (Server Log Files)",
     "LOGFILES_TEXT": "The hosting provider of this website automatically collects and stores information in so-called server log files, which your browser automatically transmits.",
     "LOGFILES_BROWSER": "Browser type and version",

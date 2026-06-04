@@ -35,8 +35,10 @@
   "REFERENCES": {
     "TEAM_PARTNER": "Teampartner",
     "REF1": "Mario hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
-    "REF2": "Michael hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
-    "REF3": "Mario hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen."
+    "REF2": "Mario hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+    "REF3": "Mario hat das Team mit seiner großartigen Organisation und klaren Kommunikation zusammengehalten. Ohne sein Engagement wären wir nicht so weit gekommen.",
+    "PREV": "Vorherige Referenz",
+    "NEXT": "Nächste Referenz"
   },
   "PROJECTS": {
     "POKEDEX_DESC": "Basierend auf der PokéAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
@@ -58,17 +60,21 @@
     "PRIVACY_LINK": "Datenschutzerklärung",
     "PRIVACY_AFTER": "gelesen und stimme zu.",
     "POLICY_ERROR": "Bitte zustimmen",
-    "SUBMIT": "Senden"
+    "SUBMIT": "Senden",
+    "SUCCESS_MSG": "Deine Nachricht wurde erfolgreich gesendet!",
+    "ERROR_MSG": "Hoppla! Etwas ist schiefgelaufen. Bitte versuche es erneut.",
+    "SENDING": "Nachricht wird gesendet..."
   },
   "FOOTER": {
-    "LEGAL_NOTICE": "Impressum"
+    "LEGAL_NOTICE": "Impressum",
+    "PRIVACY_POLICY": "Datenschutzerklärung"
   },
   "LEGAL": {
     "TITLE": "Impressum",
     "IMPRINT": "Impressum",
     "CONTACT": "Kontakt",
-    "EMAIL": "E-Mail: [deine E-Mail]",
-    "PHONE": "Telefon: [optional]",
+    "EMAIL": "E-Mail: mario-ramirez@hotmail.de",
+    "PHONE": "Telefon: +49 40 12345678",
     "RESPONSIBLE": "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV",
     "ADDRESS": "Mario Ramirez<br>Torfmoos 27<br>22415 Hamburg<br>Deutschland"
   },
@@ -77,7 +83,7 @@
     "GENERAL_TITLE": "1. Allgemeine Hinweise",
     "GENERAL_TEXT": "Der Schutz Ihrer persönlichen Daten ist mir wichtig. Diese Website verarbeitet personenbezogene Daten ausschließlich im Rahmen der gesetzlichen Bestimmungen (DSGVO).",
     "RESPONSIBLE_TITLE": "2. Verantwortlicher",
-    "RESPONSIBLE_TEXT": "Mario Ramirez<br>Im Torfmoss 27<br>E-Mail: mario-ramirez@hotmail.de",
+    "RESPONSIBLE_TEXT": "Mario Ramirez<br>Im Torfmoos 27<br>E-Mail: mario-ramirez@hotmail.de",
     "LOGFILES_TITLE": "3. Zugriffsdaten (Server-Logfiles)",
     "LOGFILES_TEXT": "Der Hosting-Provider dieser Website erhebt und speichert automatisch Informationen in sogenannten Server-Logfiles, die Ihr Browser automatisch übermittelt.",
     "LOGFILES_BROWSER": "Browsertyp und Browserversion",

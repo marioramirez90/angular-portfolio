@@ -29,7 +29,7 @@
         (click)="prev()"
         (mouseenter)="leftHover=true"
         (mouseleave)="leftHover=false"
-        aria-label="Vorherige Referenz"
+        [attr.aria-label]="'REFERENCES.PREV' | translate"
       >
         <img [src]="leftHover ? 'img/icons/hover-left.svg' : 'img/icons/links.svg'" alt="" />
       </button>
@@ -44,7 +44,7 @@
         (click)="next()"
         (mouseenter)="rightHover=true"
         (mouseleave)="rightHover=false"
-        aria-label="Nächste Referenz"
+        [attr.aria-label]="'REFERENCES.NEXT' | translate"
       >
         <img [src]="rightHover ? 'img/icons/hover-right.svg' : 'img/icons/rechts.svg'" alt="" />
       </button>
