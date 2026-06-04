@@ -14,7 +14,7 @@
         <button class="language-button" [class.active]="currentLang === 'EN'" (click)="setLanguage('EN')">EN</button>
       </div>
     </div>
-    <div class="hamburger" (click)="toggleMenu()">
+    <div class="hamburger" [class.open]="menuOpen" (click)="toggleMenu()">
       <span></span>
       <span></span>
       <span></span>
