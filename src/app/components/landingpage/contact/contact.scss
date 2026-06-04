@@ -367,17 +367,15 @@ section {
       width: 100%;
       display: flex;
       justify-content: flex-end;
-      cursor: pointer;
 
         img {
             width: 39px;
             height: 39px;
-            
-        }
+            cursor: pointer;
+            transition: filter 0.2s ease-in-out;
 
-        &:hover {
-            img {
-        filter: invert(55%) sepia(90%) saturate(500%) hue-rotate(75deg);
+            &:hover {
+                filter: invert(55%) sepia(90%) saturate(500%) hue-rotate(75deg);
             }
         }
 }
