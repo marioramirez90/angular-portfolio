@@ -1,11 +1,11 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-@use '../../../../styles/abstracts/mixins' as *;
-
 .myskills {
-  @include flex-layout(row, space-between, flex-start);
+  display: flex;
   max-width: 1440px;
   margin: 0 auto;
+  justify-content: space-between;
+  align-items: start;
   position: relative;
 
   .myskill-background {
@@ -13,6 +13,7 @@
     left: -550px;
     top: 100px;
     z-index: -1;
+    
 
     img {
       object-position: top;
@@ -20,13 +21,17 @@
   }
 
   .icon-skills {
-    @include flex-layout(row, flex-start, stretch);
+    display: flex;
     flex-wrap: wrap;
     margin-left: 70px;
     height: 400px;
 
     .icon {
-      @include flex-layout(column, center, center, 12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      gap: 12px;
       width: calc(25% - 12px);
 
       .image-icon {
@@ -52,6 +57,8 @@
         transform: translateX(-50%);
         transition: 0.2s ease;
       }
+      
+      
 
       .base {
         z-index: 1;
@@ -64,7 +71,7 @@
 
       .bubble {
         opacity: 0;
-        transform: translate(-25%, -100px);
+        transform: translate(-25%, -100px); 
         z-index: 0;
       }
 
@@ -82,22 +89,27 @@
         position: relative;
         top: 45px;
         margin: 0;
-        font-size: 16px;
+         font-size: 16px;
         font-weight: 400;
         font-style: normal;
         line-height: 120%;
       }
     }
   }
-
   .myskills-container {
-    @include flex-layout(column, center, flex-end, 30px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    gap: 30px;
     width: 500px;
     margin-top: 30px;
 
     .titel-myskills-container {
-      @include flex-layout(row, flex-end, center, 30px);
-
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 30px;
       h3 {
         font-size: 90px;
         font-weight: 700;
@@ -105,9 +117,8 @@
         line-height: 120%;
         padding-bottom: 20px;
       }
-
       .line {
-        @include flex-layout(row);
+        display: flex;
         margin-top: -50px;
         border-radius: 4px 0px 0px 4px;
         height: 4px;
@@ -117,8 +128,10 @@
     }
 
     .myskills-container-text {
-      @include flex-layout(column, flex-start, stretch, 25px);
+      display: flex;
+      flex-direction: column;
       text-align: end;
+      gap: 25px;
       padding-right: 100px;
 
       span {
@@ -150,7 +163,10 @@
   }
 }
 
-@include respond-to(980px) {
+
+
+
+@media screen and (max-width: 980px) {
   .second-text {
     font-size: 16px;
     padding-left: 20px;
@@ -160,9 +176,13 @@
     top: 120px;
   }
 
+ 
+
   .myskills {
     margin: 250px auto;
-    @include flex-layout(column, center, center);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     margin-bottom: 100px;
 
     .myskill-background {
@@ -170,11 +190,12 @@
     }
 
     .icon-skills {
-      max-width: 360px;
+      max-width: 360px; 
       width: 100%;
       gap: 18px;
       margin-left: 0;
       justify-content: center;
+      
 
       .icon {
         max-width: 90px;
@@ -211,6 +232,7 @@
       align-items: center;
       text-align: center;
 
+
       .titel-myskills-container {
         position: relative;
         top: -580px;
@@ -232,14 +254,15 @@
         margin-top: -150px;
         padding: 20px;
         width: 100%;
-
         p {
           font-size: 24px;
         }
+       
 
         .highlight {
+
           span {
-            font-size: 24px;
+          font-size: 24px;
           }
         }
       }

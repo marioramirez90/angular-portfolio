@@ -1,27 +1,30 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-@use '../../../../styles/abstracts/mixins' as *;
 
 article {
-  @include flex-layout(row, space-between, center);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin: 100px auto;
   position: relative;
   z-index: 10;
   max-width: 1440px;
   margin-bottom: 100px;
+  
 
-  .about-me-background {
-    position: absolute;
-    left: 100%;
-    transform: translateX(-50%);
-    top: 20px;
-    z-index: 2;
 
-    img {
-      display: block;
-      height: auto;
-    }
+.about-me-background {
+  position: absolute;
+  left: 100%;
+  transform: translateX(-50%);
+  top: 20px;
+  z-index: 2;
+
+  img {
+    display: block;
+    height: auto;
   }
+}
 
   .about-me-content {
     width: 520px;
@@ -43,23 +46,37 @@ article {
     }
 
     .about-me-info {
-      @include flex-center(column, 30px);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
     }
 
     .about-me-info-section {
-      @include flex-layout(row, flex-start, flex-start, 10px);
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      gap: 10px;
 
       img {
-        @include hover-scale(1.5);
+        transition: transform 0.3s ease;
+
+        &:hover {
+          transform: scale(1.5);
+        }
       }
     }
   }
 
   .about-me-image {
-    @include flex-center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 
     .image-self {
-      @include flex-layout(row, center);
+      display: flex;
+      justify-content: center;
       overflow: hidden;
       height: 430px;
       width: 430px;
@@ -84,25 +101,29 @@ article {
     }
   }
 
-  @include respond-to(1390px) {
+  @media screen and (max-width: 1390px) {
     .about-me-background {
-      left: 750px;
-      top: 10px;
+  left: 750px;
+  top: 10px;
+ 
 
-      img {
-        width: 400px;
-      }
-    }
-
+  img {
+    width: 400px;
+  }
+}
+  
     .about-me-image {
       display: none;
     }
-
-    .about-me-content {
-      @include flex-layout(column);
+     .about-me-content {
+      display: flex;
+      flex-direction: column;
       padding-right: 280px;
       padding-left: 280px;
       width: 100%;
+
+
+
 
       .about-me-info-section {
         justify-content: center;
@@ -110,29 +131,32 @@ article {
     }
   }
 
-  @include respond-to(800px) {
+  @media screen and (max-width: 800px) {
     .about-me-image {
       display: none;
     }
-
     .about-me-background {
-      left: 450px;
-      top: -110px;
+  left: 450px;
+  top: -110px;
+ 
 
-      img {
-        width: 400px;
-      }
-    }
+  img {
+    width: 400px;
+  }
+}
 
-    .about-me-content {
-      @include flex-layout(column);
+       .about-me-content {
+      display: flex;
+      
+      flex-direction: column;
+      
       padding: 100px;
       width: 100%;
+
 
       h2 {
         font-size: 45px;
       }
-
       p {
         font-size: 16px;
       }
@@ -143,18 +167,21 @@ article {
     }
   }
 
-  @include respond-to(480px) {
+  @media screen and (max-width: 480px) {
     .about-me-image {
       display: none;
     }
 
     .about-me-content {
-      @include flex-layout(column, flex-start);
+      display: flex;
+      justify-content: flex-start;
+      flex-direction: column;
       padding: 30px;
       width: 400px;
 
       h2 {
-        @include flex-layout(row, flex-start);
+        display: flex;
+        justify-content: flex-start;
         font-size: 44px;
         padding-bottom: 30px;
       }
@@ -169,7 +196,8 @@ article {
     }
   }
 
-  @include respond-to(390px) {
+  // Mobile 390px
+  @media screen and (max-width: 390px) {
     .about-me-content {
       h2 {
         font-size: 36px;
@@ -181,3 +209,4 @@ article {
     }
   }
 }
+

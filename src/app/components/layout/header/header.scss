@@ -1,6 +1,5 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-@use '../../../../styles/abstracts/mixins' as *;
 
 header {
   position: fixed;
@@ -10,13 +9,16 @@ header {
   width: 100%;
   background-color: $background;
   z-index: 1000;
-  @include flex-layout(row, center);
+  display: flex;
+  justify-content: center;
 }
 
 .header {
-  @include flex-layout(row, space-between, center);
+  display: flex;
   width: 100%;
   max-width: 1440px;
+  justify-content: space-between;
+  align-items: center;
   padding: 25px 80px 25px 100px;
   height: 110px;
   color: white;
@@ -51,11 +53,15 @@ header {
   }
 
   .nav {
-    @include flex-layout(row, center, center, 100px);
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: center;
     letter-spacing: 0.03em;
 
     .nav-link {
-      @include flex-layout(row, flex-start, stretch, 30px);
+      display: flex;
+      gap: 30px;
     }
 
     a {
@@ -101,13 +107,15 @@ header {
   }
 
   .language-section {
-    @include flex-layout(row, flex-start, stretch, 10px);
+    display: flex;
+    gap: 10px;
   }
 }
 
 .hamburger {
   display: none;
-  @include flex-layout(column, flex-start, stretch, 6px);
+  flex-direction: column;
+  gap: 6px;
   cursor: pointer;
   padding: 8px;
 
@@ -129,7 +137,10 @@ header {
   bottom: 0;
   background: rgb(85, 88, 105);
   z-index: 999;
-  @include flex-center(column, 36px);
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 36px;
 
   &.open {
     display: flex;
@@ -173,7 +184,7 @@ header {
   }
 }
 
-@include respond-to(930px) {
+@media (max-width: 930px) {
   .header {
     padding: 0 24px;
 

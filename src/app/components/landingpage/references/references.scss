@@ -1,6 +1,5 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-@use '../../../../styles/abstracts/mixins' as *;
 
 .references-section {
   position: relative;
@@ -23,7 +22,10 @@
 }
 
 .references {
-  @include flex-layout(column, flex-start, center, 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
   margin-top: 10px;
   position: relative;
   max-width: 1440px;
@@ -39,14 +41,21 @@
   }
 
   .content {
-    @include flex-center(row, 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 
-    @include respond-to(1380px) {
+    @media screen and (max-width: 1380px) {
       flex-direction: column-reverse;
     }
 
     .reference-text {
-      @include flex-layout(column, center, center, 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      flex-direction: column;
       max-height: 272px;
       max-width: 850px;
       width: 100%;
@@ -66,7 +75,10 @@
       }
 
       .reference-name {
-        @include flex-layout(row, flex-start, center, 10px);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
         width: 660px;
 
         .line {
@@ -79,7 +91,9 @@
     }
 
     .image {
-      @include flex-center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 272px;
       width: 272px;
       border-radius: 1000px;
@@ -99,17 +113,24 @@
   }
 
   .slider {
-    @include flex-layout(row, center, center, 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 
     button {
-      @include flex-layout(row, flex-start, center);
+      display: flex;
+      align-items: center;
       background: none;
       border: none;
       cursor: pointer;
     }
 
     .dots {
-      @include flex-center(row, 20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
 
       .dot {
         width: 10px;
@@ -125,7 +146,8 @@
   }
 }
 
-@include respond-to(1000px) {
+// ── Tablet (1000px) ───────────────────────────────────────────────────────────
+@media screen and (max-width: 1000px) {
   .references {
     .content {
       .reference-text {
@@ -152,7 +174,8 @@
   }
 }
 
-@include respond-to(600px) {
+// ── Mobile (600px) ────────────────────────────────────────────────────────────
+@media screen and (max-width: 600px) {
   .references {
     .content {
       .reference-text {
@@ -168,8 +191,10 @@
         }
 
         .reference-name {
-          @include flex-layout(column, flex-start, flex-start, 10px);
+          flex-direction: column;
+          align-items: flex-start;
           width: 100%;
+          gap: 10px;
 
           .line {
             width: 100%;

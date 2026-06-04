@@ -1,21 +1,30 @@
 @use '../../../styles/components/buttons' as *;
 @use '../../../styles/abstracts/variables' as *;
-@use '../../../styles/abstracts/mixins' as *;
 
 .privacy {
-  @include flex-center(column);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   max-width: 1440px;
   margin: 200px auto;
 }
 
 .content {
-  @include flex-layout(column, flex-start, flex-start, 20px);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
   width: 100%;
   padding: 0 200px;
 }
 
 .header {
-  @include flex-layout(row, flex-end, center, 20px);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  gap: 20px;
   margin-bottom: 70px;
   width: 100%;
 }
@@ -24,7 +33,9 @@
   height: 4px;
   width: 100px;
   background-color: $secondary-color;
-  @include flex-center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .big-line {
@@ -71,7 +82,8 @@ ul {
   }
 }
 
-@include respond-to(830px) {
+/* Tablet + kleiner */
+@media (max-width: 830px) {
   .privacy {
     margin: 120px auto;
   }
@@ -82,10 +94,13 @@ ul {
     align-items: start;
     text-align: start;
     gap: 16px;
-    padding: 0 25px;
+        padding: 0 25px;
+
   }
 
   .header {
+    
+   
     gap: 12px;
     margin-bottom: 30px;
   }
@@ -99,6 +114,7 @@ ul {
     max-width: 200px;
   }
 
+  
   h2 {
     font-size: 23px;
   }
@@ -116,7 +132,9 @@ ul {
   }
 }
 
-@include respond-to(600px) {
+/* Sehr kleine Geräte */
+@media (max-width: 600px) {
+ 
   .big-line {
     max-width: 71px;
     width: 100%;
@@ -126,10 +144,9 @@ ul {
     font-size: 32px;
     line-height: 120%;
   }
-
   h2 {
     font-size: 23px;
-    text-align: start;
+      text-align: start;
   }
 
   p,

@@ -1,123 +1,153 @@
+
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-@use '../../../../styles/abstracts/mixins' as *;
-
+ 
 .hero {
-  @include flex-layout(column, space-between);
+  display: flex;
   position: relative;
+  justify-content: space-between;
   width: 100%;
+  flex-direction: column;
   max-width: 1440px;
   margin: 0 auto;
   margin-bottom: 20px;
 
+ 
   .hero-content {
-    @include flex-layout(row, flex-start, flex-start);
+    display: flex;
+    align-items: flex-start;
     margin-top: 170px;
 
+ 
     .hero-left {
-      @include flex-center;
+      display: flex;
+      justify-content: center;
       max-width: 790px;
       max-height: 850px;
       margin-left: 5px;
-    }
 
+    }
+ 
     .hero-right {
-      @include flex-layout(column, flex-start, center);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       margin-top: 130px;
       margin-left: -180px;
       z-index: 2;
+      
+ 
+  
+ 
+  .hero-text {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
-      .hero-text {
-        @include flex-layout(row, center, center);
-
-        .rotation {
-          font-size: 70px;
-          font-weight: 400;
-          transform: rotate(-90deg);
-          white-space: nowrap;
-          color: white;
-          line-height: 120%;
-          letter-spacing: 0;
-          margin-top: -30px;
-        }
-
-        .name-title {
-          @include flex-layout(column, flex-start, flex-start);
-          margin-left: -5px;
-
-          h1 {
-            font-size: 90px;
-            font-weight: 700;
-            line-height: 120%;
-            white-space: nowrap;
-            color: white;
-            font-style: bold;
-          }
-
-          h2 {
-            font-size: 50.5px;
-            font-weight: 400;
-            white-space: nowrap;
-            color: $secondary-color;
-            line-height: 120%;
-            margin-bottom: 40px;
-            letter-spacing: 0;
-          }
-        }
-      }
-    }
+  .rotation {
+    font-size: 70px;
+    font-weight: 400;
+    transform: rotate(-90deg);
+    white-space: nowrap;
+    color: white;
+    line-height: 120%;
+    letter-spacing: 0;
+    margin-top: -30px; 
   }
 
+  .name-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -5px;
+
+    h1 {
+      font-size: 90px;
+      font-weight: 700;
+      line-height: 120%;
+      white-space: nowrap;
+      color: white;
+      font-style: bold;
+    }
+
+    h2 {
+      font-size: 50.5px;
+      font-weight: 400;
+      white-space: nowrap;
+      color: $secondary-color;
+      line-height: 120%;
+      margin-bottom: 40px;
+      letter-spacing: 0;
+    }
+  }
+}
+    }
+  }
+ 
   .hero-background {
     position: absolute;
     top: 380px;
     width: 100%;
     height: auto;
-
+ 
     img {
       width: 100%;
       height: auto;
       display: block;
     }
   }
-
+ 
   .hero-bottom {
     position: absolute;
     top: 825px;
     z-index: 2;
-    @include flex-layout(row, space-between, center);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
-
+ 
     .hero-icons {
-      @include flex-layout(row, flex-start, center, 30px);
-
+      display: flex;
+      gap: 30px;
+      align-items: center;
+ 
       .hero-line {
         width: 100px;
         height: 4px;
         border-radius: 0 4px 4px 0;
         background-color: $secondary-color;
       }
-
+ 
       .icons {
-        @include flex-layout(row, flex-start, stretch, 20px);
-
+        display: flex;
+        gap: 20px;
+ 
         a {
           display: inline-flex;
-          @include hover-scale(1.2);
+          transition: transform 0.3s ease;
+ 
+          &:hover {
+            transform: scale(1.2);
+          }
         }
       }
-
+ 
       p {
         font-size: 23px;
         font-weight: 400;
       }
     }
-
+ 
     .scroll-down {
-      @include flex-layout(column, center, center, 50px);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 50px;
       padding-right: 50px;
       padding-bottom: 90px;
-
+ 
       p {
         font-size: 23px;
         font-weight: 400;
@@ -126,40 +156,48 @@
     }
   }
 }
+ 
 
-@include respond-to(1390px) {
+@media screen and (max-width: 1390px) {
   .hero {
     .hero-content {
-      .hero-left {
-        width: 100%;
+     
 
-        img {
-          max-width: 100%;
-        }
+     .hero-left {
+      width: 100%;
+      
+      img {
+      max-width: 100%;
       }
+    }
 
       .hero-right {
-        padding-right: 20px;
+      padding-right: 20px;
 
         .hero-text {
+          
+         
+
           .rotation {
-            font-size: 50px;
+           font-size: 50px;
             margin-top: -20px;
-            margin-left: -20px;
+            margin-left : -20px;
           }
+
 
           .name-title {
             margin-left: 0;
             align-items: center;
 
             h1 {
-              font-size: 60px;
+              font-size: 60px; 
             }
 
             h2 {
-              font-size: 34px;
+              font-size: 34px; 
               margin-bottom: 20px;
             }
+         
           }
         }
       }
@@ -167,38 +205,46 @@
   }
 }
 
-@include respond-to(980px) {
+
+@media screen and (max-width: 980px) {
   .hero {
     .hero-content {
-      @include flex-layout(column, center, center);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       margin-top: 80px;
 
-      .hero-left {
-        margin-left: 0;
-
-        img {
-          width: 100%;
-          max-width: 100%;
-          height: auto;
-        }
+     .hero-left {
+      margin-left: 0;
+      img {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
       }
+    }
 
       .hero-right {
-        padding-right: 0px;
+              padding-right: 0px;
+
         margin-top: 50px;
         order: 2;
         margin-left: 0;
         z-index: 2;
-        @include flex-layout(column, center, center);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
 
         .hero-text {
-          @include flex-layout(row, center, center);
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
 
           .rotation {
             font-size: 34px;
             margin-top: -18px;
-            margin-left: -20px;
+            margin-left : -20px;
           }
 
           .name-title {
@@ -206,11 +252,11 @@
             align-items: center;
 
             h1 {
-              font-size: 44px;
+              font-size: 44px; 
             }
 
             h2 {
-              font-size: 25px;
+              font-size: 25px; 
               margin-bottom: 20px;
             }
           }
@@ -255,38 +301,44 @@
   }
 }
 
-@include respond-to(480px) {
+ @media screen and (max-width: 480px) {
   .hero {
     .hero-content {
-      @include flex-layout(column, center, center);
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
 
-      .hero-left {
-        padding-top: 50px;
-        margin-left: 0;
-        max-width: 480px;
-        width: 100%;
-
-        img {
-          width: 100%;
-          object-fit: fill;
-        }
-      }
+     .hero-left {
+      padding-top: 50px;
+      margin-left: 0;
+       max-width: 480px;
+       width: 100%;
+  img {
+    width: 100%;
+    object-fit: fill;
+  }
+}
 
       .hero-right {
         margin-top: 50px;
         order: 2;
         margin-left: 0;
         z-index: 2;
-        @include flex-layout(column, center, center);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
         width: 100%;
 
         .hero-text {
-          @include flex-layout(row, center, center);
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
 
           .rotation {
             font-size: 34px;
             margin-top: -18px;
-            margin-left: -20px;
+            margin-left : -20px;
           }
 
           .name-title {
@@ -294,11 +346,11 @@
             align-items: center;
 
             h1 {
-              font-size: 44px;
+              font-size: 44px; 
             }
 
             h2 {
-              font-size: 25px;
+              font-size: 25px; 
               margin-bottom: 20px;
             }
           }
@@ -343,17 +395,16 @@
   }
 }
 
-@include respond-to(390px) {
+@media screen and (max-width: 390px) {
   .hero {
     .hero-content {
       .hero-right {
         margin-top: 70px;
-
         .hero-text {
           .rotation {
             font-size: 28px;
             margin-top: -10px;
-            margin-left: -20px;
+            margin-left : -20px;
           }
 
           .name-title {
