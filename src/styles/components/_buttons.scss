@@ -1,4 +1,5 @@
 @use '../abstracts/variables' as *;
+@use '../abstracts/mixins' as *;
 
 .language-button {
   background-color: transparent;
@@ -25,7 +26,7 @@
     font-weight: 600;
   }
 
-  @media screen and (max-width: 930px) {
+  @include respond-to(930px) {
     border: none;
 
     &:hover {
@@ -39,36 +40,13 @@
 }
 
 .hero-button {
-  cursor: pointer;
-  z-index: 10;
-  background-color: $btn-background;
-  height: 58px;
-  width: 165px;
-  border: 1px solid $border-color;
-  color: $primary-color;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 23px;
-  transform: scale(1);
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+  @include button-base(165px, 200px);
 
-  &:hover {
-    height: 70px;
-    width: 200px;
-    background-color: $secondary-color;
-    border-color: $secondary-color;
-    color: $primary-color;
-  }
-
-  @media screen and (max-width: 480px) {
+  @include respond-to(480px) {
     margin-right: 0;
   }
 
-  @media screen and (max-width: 380px) {
+  @include respond-to(380px) {
     width: 138px;
     height: 48px;
     font-size: 18px;
@@ -76,32 +54,9 @@
 }
 
 .skills-button {
-  cursor: pointer;
-  z-index: 10;
-  background-color: $btn-background;
-  height: 58px;
-  width: 195px;
-  border: 1px solid $border-color;
-  color: $primary-color;
-  border-radius: 10px;
-  padding: 0;
-  font-size: 23px;
-  transform: scale(1);
-  transition:
-    transform 0.2s ease,
-    background-color 0.2s ease,
-    border-color 0.2s ease,
-    color 0.2s ease;
+  @include button-base(195px, 200px);
 
-  &:hover {
-    height: 70px;
-    width: 200px;
-    background-color: $secondary-color;
-    border-color: $secondary-color;
-    color: $primary-color;
-  }
-
-  @media screen and (max-width: 380px) {
+  @include respond-to(380px) {
     width: 160px;
     height: 48px;
     font-size: 18px;
@@ -109,9 +64,7 @@
 }
 
 .live-test-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   text-decoration: none;
   height: 58px;
   width: 152px;
@@ -128,12 +81,12 @@
     color: $primary-color;
   }
 
-  @media screen and (max-width: 480px) {
+  @include respond-to(480px) {
     width: 158px;
     height: 58px;
   }
 
-  @media screen and (max-width: 380px) {
+  @include respond-to(380px) {
     width: 138px;
     height: 48px;
     font-size: 18px;
@@ -141,9 +94,7 @@
 }
 
 .github-button {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   text-decoration: none;
   height: 58px;
   width: 152px;
@@ -161,12 +112,12 @@
     color: $primary-color;
   }
 
-  @media screen and (max-width: 480px) {
+  @include respond-to(480px) {
     width: 137px;
     height: 58px;
   }
 
-  @media screen and (max-width: 380px) {
+  @include respond-to(380px) {
     width: 138px;
     height: 48px;
     font-size: 18px;

@@ -1,20 +1,15 @@
 @use '../../../styles/components/buttons' as *;
 @use '../../../styles/abstracts/variables' as *;
+@use '../../../styles/abstracts/mixins' as *;
 
 section {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  @include flex-center(column);
   max-width: 1440px;
   margin: 200px auto;
   padding: 0 25px;
 
   .legal-notice-header {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    gap: 20px;
+    @include flex-layout(row, flex-end, center, 20px);
     width: 100%;
     margin-bottom: 70px;
 
@@ -22,9 +17,7 @@ section {
       height: 4px;
       width: 100px;
       background-color: $secondary-color;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flex-center;
     }
 
     .big-line {
@@ -41,11 +34,7 @@ section {
   }
 
   .legal-notice-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    gap: 20px;
+    @include flex-layout(column, flex-start, flex-start, 20px);
     width: 1000px;
 
     h2 {
@@ -56,13 +45,11 @@ section {
   }
 }
 
-@media (max-width: 830px) {
+@include respond-to(830px) {
   section {
     padding: 0 25px;
-   
 
     .legal-notice-header {
-     
       margin-bottom: 40px;
 
       .small-line {
