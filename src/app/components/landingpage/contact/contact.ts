@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, ChangeDetectorRef } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -13,6 +13,7 @@ import { HttpClient } from '@angular/common/http';
 export class Contact {
   private fb = inject(FormBuilder);
   private http = inject(HttpClient);
+  private cdr = inject(ChangeDetectorRef);
 
   userform = this.fb.group({
     name: ['', [Validators.required, Validators.minLength(4)]],
@@ -52,9 +53,11 @@ export class Contact {
           this.submitSuccess = true;
           this.userform.reset();
           this.focused = {};
+          this.cdr.markForCheck();
           setTimeout(() => {
             this.submitSuccess = false;
-          }, 4000);
+            this.cdr.markForCheck();
+          }, 3000);
         },
         error: (error) => {
           console.error('Mail submission failed, falling back to mock success:', error);
@@ -64,9 +67,11 @@ export class Contact {
             this.submitSuccess = true;
             this.userform.reset();
             this.focused = {};
+            this.cdr.markForCheck();
             setTimeout(() => {
               this.submitSuccess = false;
-            }, 4000);
+              this.cdr.markForCheck();
+            }, 3000);
           }, 1500);
         }
       });
