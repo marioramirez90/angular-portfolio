@@ -297,6 +297,7 @@ section {
         .portfolio-content .project-content {
             justify-content: center;
             align-items: center;
+            padding: 0 20px;
 
             .project-info {
                 gap: 20px;
@@ -351,9 +352,11 @@ section {
 
         .portfolio-content {
             gap: 40px;
+            padding: 0 ;
 
             .project-content {
                 gap: 16px;
+                padding: 0px;
 
                 .project-info {
                     h3 {

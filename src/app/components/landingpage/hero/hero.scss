@@ -249,7 +249,9 @@
     }
 
       .hero-right {
-        margin-top: -20px;
+              padding-right: 0px;
+
+        margin-top: 50px;
         order: 2;
         margin-left: 0;
         z-index: 2;
@@ -343,7 +345,7 @@
 }
 
       .hero-right {
-        margin-top: 0px;
+        margin-top: 50px;
         order: 2;
         margin-left: 0;
         z-index: 2;
@@ -422,7 +424,7 @@
   .hero {
     .hero-content {
       .hero-right {
-        margin-top: 40px;
+        margin-top: 70px;
         .hero-text {
           .rotation {
             font-size: 28px;
