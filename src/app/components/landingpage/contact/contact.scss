@@ -275,6 +275,27 @@ section {
             }
         }
     }
+    .scroll-up {
+        margin-top: 50px;
+      max-width: 1440px;
+      padding: 0 120px;
+      width: 100%;
+      display: flex;
+      justify-content: flex-end;
+      cursor: pointer;
+
+        img {
+            width: 39px;
+            height: 39px;
+            
+        }
+
+        &:hover {
+            img {
+        filter: invert(55%) sepia(90%) saturate(500%) hue-rotate(75deg);
+            }
+        }
+}
 }
 
 @media (max-width: 1024px) {
@@ -316,6 +337,12 @@ section {
             .form-box form textarea {
                 width: 100%;
             }
+            
+        }
+          .scroll-up {
+            margin-top: 50px;
+            padding: 0 24px;
         }
     }
+   
 }
