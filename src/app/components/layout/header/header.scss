@@ -131,13 +131,13 @@ header {
 
   &.open {
     span:nth-child(1) {
-      transform: translateY(16px) rotate(45deg);
+      transform: translateY(12px) rotate(45deg);
     }
     span:nth-child(2) {
       opacity: 0;
     }
     span:nth-child(3) {
-      transform: translateY(-16px) rotate(-45deg);
+      transform: translateY(-12px) rotate(-45deg);
     }
   }
 }
@@ -201,6 +201,10 @@ header {
 @media (max-width: 930px) {
   .header {
     padding: 0 24px;
+
+    .mario {
+      padding-bottom: 0;
+    }
 
     .nav {
       display: none;
