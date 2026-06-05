@@ -20,10 +20,15 @@ section {
     img {
       width: 39px;
       height: 39px;
+      transition: filter 0.2s ease-in-out;
     }
 
     &:hover {
       transform: scale(1.1);
+
+      img {
+        filter: invert(55%) sepia(90%) saturate(500%) hue-rotate(75deg);
+      }
     }
   }
 
