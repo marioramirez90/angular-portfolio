@@ -76,7 +76,7 @@ section {
 @media (max-width: 830px) {
   section {
     padding: 0 25px;
-   
+    margin: 120px auto;
     .back-button {
       display: block;
     }
@@ -95,7 +95,7 @@ section {
       }
 
       h1 {
-        font-size: 32px;
+        font-size: 28px;
         text-align: center;
       }
     }
