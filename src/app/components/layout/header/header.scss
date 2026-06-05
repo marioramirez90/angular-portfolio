@@ -47,7 +47,7 @@ header {
         background: $secondary-color;
         top: 8px;
         left: 5.3px;
-        transform: translateX(-50%);
+        transform: rotateY(180deg) translateX(50%);
         border-radius: 2px;
       }
     }
@@ -88,7 +88,7 @@ header {
         content: '';
         position: absolute;
         left: 0;
-        bottom: -4px;
+        top: calc(100% + 1px);
         width: 0;
         height: 3px;
         background-color: $secondary-color;
@@ -137,7 +137,9 @@ header {
       opacity: 0;
     }
     span:nth-child(3) {
-      transform: translateY(-12px) rotate(-45deg);
+      position: relative;
+      bottom: 12px;
+      transform: rotate(315deg);
     }
   }
 }
@@ -172,9 +174,9 @@ header {
     &::after {
       content: '';
       position: absolute;
-      left: 50%;
-      bottom: -6px;
-      transform: translateX(-50%);
+      right: 50%;
+      top: calc(100% + 3px);
+      transform: translateX(50%);
       width: 0;
       height: 3px;
       background-color: $secondary-color;

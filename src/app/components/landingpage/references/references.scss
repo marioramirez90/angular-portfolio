@@ -8,8 +8,9 @@
   .references-background {
     position: absolute;
     left: calc(50% + 710px);
-    top: -100px;
-    transform: rotate(340deg) scaleX(-1);
+    top: auto;
+    bottom: calc(100% + 100px);
+    transform: translateY(100%) rotate(340deg) rotateY(180deg);
     z-index: -10;
     pointer-events: none;
 
@@ -35,7 +36,7 @@
     display: flex;
     z-index: 10;
     top: 60px;
-    left: -580px;
+    right: 580px;
     position: relative;
   }
 
@@ -110,7 +111,8 @@
         object-position: top;
         transform: scale(1.5);
         margin-right: 20px;
-        margin-top: -80px;
+        position: relative;
+        bottom: 80px;
       }
     }
   }
@@ -155,8 +157,9 @@
            .reference-icon {
     display: flex;
     z-index: 10;
-    top: 60px;
-    left: 500px;
+    top: 300px;
+    
+    right: 400px;
     position: relative;
   }
     .content {
@@ -187,6 +190,14 @@
 // ── Mobile (600px) ────────────────────────────────────────────────────────────
 @media screen and (max-width: 600px) {
   .references {
+          .reference-icon {
+    display: flex;
+    z-index: 10;
+    top: 220px;
+    
+    right: 180px;
+    position: relative;
+  }
     .content {
       .reference-text {
         padding: 24px 20px;

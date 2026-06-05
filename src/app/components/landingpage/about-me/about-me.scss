@@ -13,11 +13,11 @@ article {
   
 
 
-.about-me-background {
-  position: absolute;
-  left: 100%;
-  transform: translateX(-50%);
-  top: 20px;
+  .about-me-background {
+    position: absolute;
+    right: 0;
+    transform: translateX(50%);
+    top: 20px;
   z-index: 2;
 
   img {
@@ -109,7 +109,9 @@ article {
     }
     .about-me-background {
   left: 450px;
-  top: -110px;
+  top: auto;
+  bottom: calc(100% + 110px);
+  transform: translateY(100%);
  
 
   img {

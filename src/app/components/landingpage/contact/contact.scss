@@ -13,7 +13,9 @@ section {
 
     .footer-left {
         position: absolute;
-        left: -550px;
+        right: 100%;
+        margin-right: 550px;
+        transform: translateX(100%);
         top: 320px;
         z-index: -1;
 
@@ -386,7 +388,9 @@ section {
         margin: 120px auto 80px;
 
         .footer-left {
-            left: -150px;
+            right: 100%;
+            margin-right: 150px;
+            transform: translateX(100%);
             top: 955px;
 
             img {
