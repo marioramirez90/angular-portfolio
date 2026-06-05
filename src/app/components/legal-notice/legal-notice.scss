@@ -10,6 +10,23 @@ section {
   margin: 200px auto;
   padding: 0 25px;
 
+  .back-button {
+    display: none;
+    align-self: flex-end;
+    margin-bottom: 24px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+
+    img {
+      width: 39px;
+      height: 39px;
+    }
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
   .legal-notice-header {
     display: flex;
     justify-content: flex-end;
@@ -60,6 +77,9 @@ section {
   section {
     padding: 0 25px;
    
+    .back-button {
+      display: block;
+    }
 
     .legal-notice-header {
      

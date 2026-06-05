@@ -10,6 +10,29 @@
   margin: 200px auto;
 }
 
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.back-button {
+  display: none;
+  align-self: flex-end;
+  margin-bottom: 24px;
+  cursor: pointer;
+  transition: transform 0.2s ease-in-out;
+
+  img {
+    width: 39px;
+    height: 39px;
+  }
+
+  &:hover {
+    transform: scale(1.1);
+  }
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -88,21 +111,25 @@ ul {
     margin: 120px auto;
   }
 
+  .container {
+    padding: 0 25px;
+  }
+
   .content {
     width: 100%;
     padding: 0;
     align-items: start;
     text-align: start;
     gap: 16px;
-        padding: 0 25px;
-
   }
 
   .header {
-    
-   
     gap: 12px;
     margin-bottom: 30px;
+  }
+
+  .back-button {
+    display: block;
   }
 
   .small-line {
