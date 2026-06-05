@@ -27,13 +27,20 @@
 
   @media screen and (max-width: 930px) {
     border: none;
+    background-color: transparent;
+    width: auto;
+    height: auto;
 
     &:hover {
       border: none;
+      background-color: transparent;
+      color: $secondary-color;
     }
 
     &.active {
       border: none;
+      background-color: transparent;
+      color: $hover-color;
     }
   }
 }

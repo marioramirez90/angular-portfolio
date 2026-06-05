@@ -2,7 +2,8 @@
   "HEADER": {
     "ABOUT_ME": "Über mich",
     "SKILLS": "Fähigkeiten",
-    "PORTFOLIO": "Projekte"
+    "PORTFOLIO": "Projekte",
+    "CONTACT": "Kontakt"
   },
   "HERO": {
     "I_AM": "I am",

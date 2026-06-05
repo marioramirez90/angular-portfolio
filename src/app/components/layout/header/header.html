@@ -29,7 +29,8 @@
     <a (click)="scrollTo('contact'); closeMenu()" [class.active]="activeSection === 'contact'">{{ 'HEADER.CONTACT' | translate }}</a>
 
   <div class="mobile-lang">
-    <button class="language-button" [class.active]="currentLang === 'DE'" (click)="setLanguage('DE')">DE /</button>
+    <button class="language-button" [class.active]="currentLang === 'DE'" (click)="setLanguage('DE')">DE</button>
+    <span> / </span>
     <button class="language-button" [class.active]="currentLang === 'EN'" (click)="setLanguage('EN')">EN</button>
   </div>
 </div>
