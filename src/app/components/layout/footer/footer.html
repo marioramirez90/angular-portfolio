@@ -1,33 +1,32 @@
- <footer>
+<footer>
   <div class="footer-container">
     <div class="footer-name">
-        <div class="footer-name-content">
-             <div class="mario">
-        Mar<span class="i">i<span class="dot"></span></span><span class="o">o</span>
-        
-      </div>
-      <a [routerLink]="['/legal-notice']">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
+      <div class="footer-name-content">
+        <div class="mario">
+          Mar<span class="i">i<span class="dot"></span></span><span class="o">o</span>
         </div>
-     
+        <a class="legal-link-desktop" [routerLink]="['/legal-notice']">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
+      </div>
     </div>
     <div class="footer-text">
-        <p>
-            © 2024 Mario Ramirez 2026
-        </p>
+      <p>
+        © Mario Ramirez 2026
+      </p>
     </div>
     <div class="footer-icons">
-   <div class="icons">
-      <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
-        <img src="img/icons/linkedin.svg" alt="LinkedIn" />
-      </a>
-      <a href="https://github.com" target="_blank" rel="noopener noreferrer">
-        <img src="img/icons/github.svg" alt="GitHub" />
-      </a>
-      <a href="mailto:mario-ramirez@hotmail.de">
-        <img src="img/icons/email.svg" alt="E-Mail" />
-      </a>
-    </div>
-
+      <div class="icons">
+        <a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer">
+          <img src="img/icons/linkedin.svg" alt="LinkedIn" />
+        </a>
+        <a href="https://github.com" target="_blank" rel="noopener noreferrer">
+          <img src="img/icons/github.svg" alt="GitHub" />
+        </a>
+        <a href="mailto:mario-ramirez@hotmail.de">
+          <img src="img/icons/email.svg" alt="E-Mail" />
+        </a>
+      </div>
+      <a class="legal-link-mobile" [routerLink]="['/legal-notice']">{{ 'FOOTER.LEGAL_NOTICE' | translate }}</a>
     </div>
   </div>
 </footer>
+
