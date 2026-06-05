@@ -1,5 +1,6 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
+@use '../../../../styles/abstracts/mixins' as *;
 
 .references-section {
   position: relative;
@@ -23,16 +24,13 @@
 }
 
 .references {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 30px;
+  @include flexbox(column, flex-start, center, $gap: 30px);
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
 
   .reference-icon {
-    display: flex;
+    @include flexbox;
     z-index: 10;
     top: 60px;
     left: calc(50% - 610px);
@@ -40,21 +38,14 @@
   }
 
   .content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+    @include flexbox(row, center, center, $gap: 30px);
 
     @media screen and (max-width: 1380px) {
       flex-direction: column-reverse;
     }
 
     .reference-text {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 80px;
-      flex-direction: column;
+      @include flexbox(column, center, center, $gap: 80px);
       max-height: 272px;
       max-width: 850px;
       width: 100%;
@@ -78,10 +69,7 @@
 
 
       .reference-name {
-        display: flex;
-        justify-content: flex-start;
-        align-items: center;
-        gap: 10px;
+        @include flexbox(row, flex-start, center, $gap: 10px);
         width: 660px;
 
         .line {
@@ -96,9 +84,7 @@
 
 
     .image {
-      display: flex;
-      justify-content: center;
-      align-items: center;
+      @include flexbox(row, center, center);
       height: 272px;
       width: 272px;
       border-radius: 1000px;
@@ -116,24 +102,17 @@
   }
 
   .slider {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px;
+    @include flexbox(row, center, center, $gap: 30px);
 
     button {
-      display: flex;
-      align-items: center;
+      @include flexbox($align: center);
       background: none;
       border: none;
       cursor: pointer;
     }
 
     .dots {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 20px;
+      @include flexbox(row, center, center, $gap: 20px);
 
       .dot {
         width: 10px;
@@ -153,7 +132,7 @@
 @media screen and (max-width: 1380px) {
   .references {
     .reference-icon {
-      display: flex;
+      @include flexbox;
       z-index: 10;
       top: 250px;
       left: calc(50% - 430px);
@@ -166,7 +145,7 @@
 @media screen and (max-width: 1000px) {
   .references {
     .reference-icon {
-      display: flex;
+      @include flexbox;
       z-index: 10;
       top: 180px;
       left: calc(5% - 20px);
@@ -202,7 +181,7 @@
 @media screen and (max-width: 700px) {
   .references {
     .reference-icon {
-      display: flex;
+      @include flexbox;
       z-index: 10;
       top: 155px;
       left: calc(5% - 10px);
@@ -228,10 +207,8 @@
         }
 
         .reference-name {
-          flex-direction: column;
-          align-items: flex-start;
+          @include flexbox(column, flex-start, flex-start, $gap: 10px);
           width: 100%;
-          gap: 10px;
 
           .line {
             width: 100%;

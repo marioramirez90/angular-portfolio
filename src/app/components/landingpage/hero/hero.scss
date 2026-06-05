@@ -1,12 +1,11 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
+@use '../../../../styles/abstracts/mixins' as *;
 
 .hero {
-  display: flex;
+  @include flexbox(column, space-between);
   position: relative;
-  justify-content: space-between;
   width: 100%;
-  flex-direction: column;
   max-width: 1440px;
   margin: 0 auto;
   margin-bottom: 20px;
@@ -14,14 +13,12 @@
 
 
   .hero-content {
-    display: flex;
-    align-items: flex-start;
+    @include flexbox($align: flex-start);
     margin-top: 170px;
 
 
     .hero-left {
-      display: flex;
-      justify-content: center;
+      @include flexbox($justify: center);
       max-width: 790px;
       max-height: 850px;
       margin-left: 5px;
@@ -29,9 +26,7 @@
     }
 
     .hero-right {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
+      @include flexbox(column, flex-start, center);
       margin-top: 130px;
       position: relative;
       right: 180px;
@@ -41,10 +36,7 @@
 
 
       .hero-text {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flexbox(row, center, center);
         position: relative;
         left: 2.5px;
 
@@ -61,9 +53,7 @@
         }
 
         .name-title {
-          display: flex;
-          flex-direction: column;
-          align-items: flex-start;
+          @include flexbox(column, flex-start, flex-start);
           position: relative;
           right: 5px;
 
@@ -107,15 +97,11 @@
     position: absolute;
     top: 825px;
     z-index: 2;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+    @include flexbox(row, space-between, center);
     width: 100%;
 
     .hero-icons {
-      display: flex;
-      gap: 30px;
-      align-items: center;
+      @include flexbox(row, flex-start, center, $gap: 30px);
 
       .hero-line {
         width: 100px;
@@ -125,8 +111,7 @@
       }
 
       .icons {
-        display: flex;
-        gap: 20px;
+        @include flexbox($gap: 20px);
 
         a {
           display: inline-flex;
@@ -145,11 +130,7 @@
     }
 
     .scroll-down {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      gap: 70px;
+      @include flexbox(column, center, center, $gap: 70px);
       padding-right: 50px;
       padding-bottom: 90px;
 
@@ -219,9 +200,7 @@
     min-height: auto;
 
     .hero-content {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flexbox(column, center, center);
       margin-top: 80px;
 
       .hero-left {
@@ -241,10 +220,7 @@
         order: 2;
         right: auto;
         z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flexbox(column, center, center);
         width: 100%;
 
         .hero-text {
@@ -319,9 +295,7 @@
 @media screen and (max-width: 480px) {
   .hero {
     .hero-content {
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      @include flexbox(column, center, center);
 
       .hero-left {
         padding-top: 50px;
@@ -340,10 +314,7 @@
         order: 2;
         right: auto;
         z-index: 2;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
+        @include flexbox(column, center, center);
         width: 100%;
 
         .hero-text {

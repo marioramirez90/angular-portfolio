@@ -1,12 +1,11 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
+@use '../../../../styles/abstracts/mixins' as *;
 
 .myskills {
-  display: flex;
+  @include flexbox(row, space-between, start);
   max-width: 1440px;
   margin: 0 auto;
-  justify-content: space-between;
-  align-items: start;
   position: relative;
 
   .myskill-background {
@@ -22,17 +21,12 @@
   }
 
   .icon-skills {
-    display: flex;
-    flex-wrap: wrap;
+    @include flexbox($wrap: wrap);
     margin-left: 70px;
     height: 400px;
 
     .icon {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      gap: 12px;
+      @include flexbox(column, center, center, $gap: 12px);
       width: calc(25% - 12px);
 
       .image-icon {
@@ -99,19 +93,12 @@
   }
 
   .myskills-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-end;
-    gap: 30px;
+    @include flexbox(column, center, flex-end, $gap: 30px);
     width: 500px;
     margin-top: 30px;
 
     .titel-myskills-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      gap: 30px;
+      @include flexbox(row, flex-end, center, $gap: 30px);
 
       h3 {
         font-size: 90px;
@@ -122,7 +109,7 @@
       }
 
       .line {
-        display: flex;
+        @include flexbox;
         margin-top: -50px;
         border-radius: 4px 0px 0px 4px;
         height: 4px;
@@ -132,10 +119,8 @@
     }
 
     .myskills-container-text {
-      display: flex;
-      flex-direction: column;
+      @include flexbox(column, $gap: 25px);
       text-align: end;
-      gap: 25px;
       padding-right: 100px;
 
       span {
@@ -233,9 +218,7 @@
 
   .myskills {
     margin: 250px auto;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+    @include flexbox(column, center, center);
     margin-bottom: 100px;
 
     .myskill-background {

@@ -1,23 +1,26 @@
 @use 'variables' as *;
 
-@mixin flex-center($direction: row, $gap: null) {
+@mixin flexbox($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap, $gap: null) {
   display: flex;
-  justify-content: center;
-  align-items: center;
   flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
+  flex-wrap: $wrap;
   @if $gap {
     gap: $gap;
   }
 }
 
+@mixin flex($direction: row, $justify: flex-start, $align: stretch, $wrap: nowrap, $gap: null) {
+  @include flexbox($direction, $justify, $align, $wrap, $gap);
+}
+
+@mixin flex-center($direction: row, $gap: null) {
+  @include flexbox($direction, center, center, nowrap, $gap);
+}
+
 @mixin flex-layout($direction: row, $justify: flex-start, $align: stretch, $gap: null) {
-  display: flex;
-  flex-direction: $direction;
-  justify-content: $justify;
-  align-items: $align;
-  @if $gap {
-    gap: $gap;
-  }
+  @include flexbox($direction, $justify, $align, nowrap, $gap);
 }
 
 @mixin respond-to($max-width) {
