@@ -1,6 +1,12 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
+.about-me-section {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
 article {
   display: flex;
   justify-content: space-between;
@@ -18,7 +24,7 @@ article {
     right: 0;
     transform: translateX(50%);
     top: 20px;
-    z-index: 2;
+    z-index: -1;
 
     img {
       display: block;
