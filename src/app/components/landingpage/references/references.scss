@@ -1,6 +1,5 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
-@use '../../../../styles/abstracts/mixins' as *;
 
 .references-section {
   position: relative;
@@ -8,10 +7,9 @@
 
   .references-background {
     position: absolute;
-    left: calc(50% + 710px);
-    top: auto;
-    bottom: calc(100% + 100px);
-    transform: translateY(100%) rotate(340deg) rotateY(180deg);
+    left: calc(50% + 380px);
+    top: -150px;
+    transform: rotate(260deg) scaleX(-1);
     z-index: -10;
     pointer-events: none;
 
@@ -24,36 +22,46 @@
 }
 
 .references {
-  @include flexbox(column, flex-start, center, $gap: 30px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  margin-top: 10px;
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
+  overflow-x: hidden;
 
   .reference-icon {
-    @include flexbox;
+    display: flex;
     z-index: 10;
     top: 60px;
-    left: calc(50% - 610px);
-    position: absolute;
+    left: -580px;
+    position: relative;
   }
 
   .content {
-    @include flexbox(row, center, center, $gap: 30px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
 
     @media screen and (max-width: 1380px) {
       flex-direction: column-reverse;
     }
 
     .reference-text {
-      @include flexbox(column, center, center, $gap: 80px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 80px;
+      flex-direction: column;
       max-height: 272px;
       max-width: 850px;
       width: 100%;
       border-radius: 32px;
       border: 4px solid $border-color;
       padding: 48px 96px;
-
-
 
       .titel-references-container {
         width: 100%;
@@ -66,10 +74,11 @@
         }
       }
 
-
-
       .reference-name {
-        @include flexbox(row, flex-start, center, $gap: 10px);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
         width: 660px;
 
         .line {
@@ -81,10 +90,10 @@
       }
     }
 
-
-
     .image {
-      @include flexbox(row, center, center);
+      display: flex;
+      justify-content: center;
+      align-items: center;
       height: 272px;
       width: 272px;
       border-radius: 1000px;
@@ -95,24 +104,33 @@
         width: 100%;
         height: 100%;
         object-fit: cover;
-        object-position: center;
+        object-position: top;
         transform: scale(1.5);
+        margin-right: 20px;
+        margin-top: -80px;
       }
     }
   }
 
   .slider {
-    @include flexbox(row, center, center, $gap: 30px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
 
     button {
-      @include flexbox($align: center);
+      display: flex;
+      align-items: center;
       background: none;
       border: none;
       cursor: pointer;
     }
 
     .dots {
-      @include flexbox(row, center, center, $gap: 20px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
 
       .dot {
         width: 10px;
@@ -128,30 +146,8 @@
   }
 }
 
-// ── Laptop (1380px) ───────────────────────────────────────────────────────────
-@media screen and (max-width: 1380px) {
-  .references {
-    .reference-icon {
-      @include flexbox;
-      z-index: 10;
-      top: 250px;
-      left: calc(50% - 430px);
-      position: absolute;
-    }
-  }
-}
-
-// ── Tablet (1000px) ───────────────────────────────────────────────────────────
 @media screen and (max-width: 1000px) {
   .references {
-    .reference-icon {
-      @include flexbox;
-      z-index: 10;
-      top: 180px;
-      left: calc(5% - 20px);
-      position: absolute;
-    }
-
     .content {
       .reference-text {
         padding: 32px 40px;
@@ -177,22 +173,8 @@
   }
 }
 
-// ── Mobile (600px) ────────────────────────────────────────────────────────────
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 600px) {
   .references {
-    .reference-icon {
-      @include flexbox;
-      z-index: 10;
-      top: 155px;
-      left: calc(5% - 10px);
-      position: absolute;
-
-      img {
-        width: 50px;
-        height: auto;
-      }
-    }
-
     .content {
       .reference-text {
         padding: 24px 20px;
@@ -207,8 +189,10 @@
         }
 
         .reference-name {
-          @include flexbox(column, flex-start, flex-start, $gap: 10px);
+          flex-direction: column;
+          align-items: flex-start;
           width: 100%;
+          gap: 10px;
 
           .line {
             width: 100%;

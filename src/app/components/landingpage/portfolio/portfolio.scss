@@ -25,21 +25,6 @@ section {
         }
     }
 
-    .portfolio-background {
-        position: absolute;
-        right: 100%;
-        margin-right: 480px;
-        transform: translateX(100%);
-        top: 500px;
-        z-index: -1;
-        pointer-events: none;
-
-        img {
-            max-width: none;
-            display: block;
-        }
-    }
-
     .portfolio-header {
         display: flex;
         flex-direction: column;

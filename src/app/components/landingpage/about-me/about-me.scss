@@ -23,7 +23,7 @@ article {
     position: absolute;
     right: 0;
     transform: translateX(50%);
-    top: 20px;
+    top: -100px;
     z-index: -1;
 
     img {
@@ -117,14 +117,14 @@ article {
     }
 
     .about-me-background {
-      left: 450px;
+      left: 280px;
       top: auto;
-      bottom: calc(100% + 110px);
+      bottom: calc(100% + 80px);
       transform: translateY(100%);
 
 
       img {
-        width: 400px;
+        height: 600px;
       }
     }
 
