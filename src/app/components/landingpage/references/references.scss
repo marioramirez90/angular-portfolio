@@ -26,7 +26,7 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  margin-top: 10px;
+  margin-top: 50px;
   position: relative;
   max-width: 1440px;
   margin: 0 auto;
@@ -90,24 +90,39 @@
       }
     }
 
-    .image {
+    .image-container {
       display: flex;
-      justify-content: center;
       align-items: center;
-      height: 272px;
-      width: 272px;
-      border-radius: 1000px;
-      border: 4px solid $secondary-color;
-      overflow: hidden;
+      position: relative;
 
-      img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: top;
-        transform: scale(1.5);
-        margin-right: 20px;
-        margin-top: -80px;
+      .image {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 272px;
+        width: 272px;
+        border-radius: 1000px;
+        border: 4px solid $secondary-color;
+        overflow: hidden;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: top;
+          transform: scale(1.5);
+          margin-right: 20px;
+          margin-top: -80px;
+        }
+      }
+
+      .line {
+        height: 4px;
+        width: 260px;
+        background-color: $secondary-color;
+        position: absolute;
+        left: 100%;
+        z-index: 5;
       }
     }
   }
@@ -158,10 +173,31 @@
       }
     }
   }
+
+  .references {
+    .reference-icon {
+      position: absolute;
+      top: 290px;
+      left: calc(50% - 435px);
+    }
+  }
 }
 
 @media screen and (max-width: 1000px) {
   .references {
+    margin-top: 100px;
+
+    .reference-icon {
+      position: absolute;
+      top: 220px;
+      left: calc(5% - 30px);
+
+      img {
+        width: 70px;
+        height: auto;
+      }
+    }
+
     .content {
       .reference-text {
         padding: 32px 40px;
@@ -179,9 +215,15 @@
         }
       }
 
-      .image {
-        width: 200px;
-        height: 200px;
+      .image-container {
+        .image {
+          width: 200px;
+          height: 200px;
+        }
+
+        .line {
+          width: 150px;
+        }
       }
     }
   }
@@ -189,6 +231,17 @@
 
 @media screen and (max-width: 600px) {
   .references {
+    .reference-icon {
+      position: absolute;
+      top: 155px;
+      left: calc(5% - 10px);
+
+      img {
+        width: 50px;
+        height: auto;
+      }
+    }
+
     .content {
       .reference-text {
         padding: 24px 20px;
@@ -215,9 +268,15 @@
         }
       }
 
-      .image {
-        width: 140px;
-        height: 140px;
+      .image-container {
+        .image {
+          width: 140px;
+          height: 140px;
+        }
+
+        .line {
+          width: 100px;
+        }
       }
     }
   }

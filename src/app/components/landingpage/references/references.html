@@ -19,11 +19,14 @@
         </div>
       </div>
 
-      <div class="image">
-        <img
-          [src]="references[currentIndex]?.img"
-          alt="{{ references[currentIndex]?.name }}"
-        />
+      <div class="image-container">
+        <div class="image">
+          <img
+            [src]="references[currentIndex]?.img"
+            alt="{{ references[currentIndex]?.name }}"
+          />
+        </div>
+        <div class="line"></div>
       </div>
     </div>
 
