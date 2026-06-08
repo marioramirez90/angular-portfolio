@@ -199,12 +199,11 @@ section {
             top: 650px;
 
             img {
-                width: 250px;
+                width: 320px;
             }
         }
     }
 
-    // ── Tablet klein (930px) ──────────────────────────────────────────────────
     @media (max-width: 930px) {
 
         .portfolio-header {
@@ -287,7 +286,6 @@ section {
         }
     }
 
-    // ── Mobile (600px) ────────────────────────────────────────────────────────
     @media (max-width: 600px) {
 
         .portfolio-header .head {
@@ -338,7 +336,6 @@ section {
         }
     }
 
-    // ── Small Mobile (350px) ──────────────────────────────────────────────────
     @media (max-width: 350px) {
 
         .portfolio-header .head {

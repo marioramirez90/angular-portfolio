@@ -117,14 +117,14 @@ article {
     }
 
     .about-me-background {
-      left: 280px;
-      top: auto;
-      bottom: calc(100% + 80px);
-      transform: translateY(100%);
-
+      left: auto;
+      right: 0;
+      top: 10px;
+      bottom: auto;
+      transform: translateX(50%);
 
       img {
-        height: 600px;
+        height: 300px;
       }
     }
 
