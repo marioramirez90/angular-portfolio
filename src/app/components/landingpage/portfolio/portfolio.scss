@@ -190,6 +190,18 @@ section {
                 }
             }
         }
+
+        .portfolio-background {
+            left: 50%;
+            right: auto;
+            transform: translateX(-50%);
+            margin-right: 0;
+            top: 650px;
+
+            img {
+                width: 250px;
+            }
+        }
     }
 
     // ── Tablet klein (930px) ──────────────────────────────────────────────────
@@ -342,17 +354,6 @@ section {
 
             .big-line {
                 width: 20px;
-            }
-        }
-
-        .portfolio-background {
-            right: 100%;
-            margin-right: 10px;
-            transform: translateX(100%);
-            top: 700px;
-
-            img {
-                width: 250px;
             }
         }
 
