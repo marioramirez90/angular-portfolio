@@ -7,9 +7,9 @@
 
   .references-background {
     position: absolute;
-    left: calc(50% + 380px);
-    top: -150px;
-    transform: rotate(260deg) scaleX(-1);
+    left: calc(50% + 310px);
+    top: -290px;
+    transform: rotate(160deg);
     z-index: -10;
     pointer-events: none;
 
@@ -141,6 +141,20 @@
         &.active {
           background: $border-color;
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1380px) {
+  .references-section {
+    .references-background {
+      left: calc(50% + 250px);
+      top: -100px;
+      transform: translateX(-50%) rotate(180deg);
+
+      img {
+        width: 450px;
       }
     }
   }
