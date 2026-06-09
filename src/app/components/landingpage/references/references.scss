@@ -1,9 +1,13 @@
 @use '../../../../styles/components/buttons' as *;
 @use '../../../../styles/abstracts/variables' as *;
 
+:host {
+  display: block;
+  width: 100%;
+}
+
 .references-section {
   position: relative;
-  overflow: hidden;
 
   .references-background {
     position: absolute;
@@ -165,8 +169,8 @@
   .references-section {
     .references-background {
       left: calc(50% + 250px);
-      top: -100px;
-      transform: translateX(-50%) rotate(180deg);
+      top: -120px;
+      transform: translateX(-50%) rotate(240deg);
 
       img {
         width: 450px;
