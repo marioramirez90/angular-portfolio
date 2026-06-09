@@ -211,7 +211,7 @@ section {
 
           .custom-checkbox {
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             gap: 10px;
             cursor: pointer;
 
@@ -237,6 +237,7 @@ section {
               display: inline-block;
               position: relative;
               border-radius: 4px;
+              margin-top: 3px;
             }
 
             input:checked + .box::after {

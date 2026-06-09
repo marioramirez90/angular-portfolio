@@ -18,7 +18,7 @@
     <div class="portfolio-content">@for (project of projects; track $index) {
     <div class="project-content" [class.reverse]="$index % 2 !== 0">
         <div class="project-image">
-            <img class="image" src="{{project.image}}" alt="">
+            <img class="image" src="{{project.image}}" alt="Vorschau {{project.projectName}}">
         </div>
         <div>
             <div class="project-info">
