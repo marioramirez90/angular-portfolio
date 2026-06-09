@@ -13,17 +13,17 @@ references = [
 {
 name: 'V.Schuster',
 descriptionKey: 'REFERENCES.REF1',
-img: 'img/references/1.png'
+img: 'img/references/1.webp'
 },
 {
 name: 'E.Eichinger',
 descriptionKey: 'REFERENCES.REF2',
-img: 'img/references/2.png'
+img: 'img/references/2.webp'
 },
 {
 name: 'I.Nuber',
 descriptionKey: 'REFERENCES.REF3',
-img: 'img/references/3.png'
+img: 'img/references/3.webp'
 }
 ];
 

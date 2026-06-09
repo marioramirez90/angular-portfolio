@@ -9,7 +9,8 @@
   max-width: 1440px;
   margin: 0 auto;
   margin-bottom: 20px;
-  min-height: 920px;
+  height: 100vh;
+  min-height: 900px;
 
 
   .hero-content {
@@ -198,6 +199,7 @@
 @media screen and (max-width: 980px) {
   .hero {
     min-height: auto;
+    height: auto;
 
     .hero-content {
       @include flexbox(column, center, center);

@@ -6,7 +6,7 @@
     "CONTACT": "Kontakt"
   },
   "HERO": {
-    "I_AM": "I am",
+    "I_AM": "Ich bin",
     "ROLE": "FULLSTACK DEVELOPER",
     "LETS_TALK": "Kontakt",
     "SCROLL_DOWN": "runterscrollen"
@@ -20,9 +20,9 @@
   },
   "SKILLS": {
     "TITLE": "Fähigkeiten",
-    "CONTINUALLY": "Continually learning",
+    "CONTINUALLY": "Lerne stetig dazu",
     "DESCRIPTION": "Erfahrung mit verschiedenen Frontend-Technologien aus mehreren Projekten.",
-    "ANOTHER_SKILL": "skills",
+    "ANOTHER_SKILL": "Fähigkeiten",
     "ENTHUSIASM": "Begeistert neue Technologien und Frameworks zu lernen.",
     "LOOKING_FOR": "Offen für weitere",
     "GET_IN_TOUCH": "Kontakt"
