@@ -10,8 +10,6 @@
   margin: 0 auto;
   margin-bottom: 20px;
   height: 100vh;
-  min-height: 900px;
-  max-height: 1080px;
 
 
   .hero-content {
@@ -97,7 +95,7 @@
 
   .hero-bottom {
     position: absolute;
-    top: 825px;
+    bottom: -190px;
     z-index: 2;
     @include flexbox(row, space-between, center);
     width: 100%;
