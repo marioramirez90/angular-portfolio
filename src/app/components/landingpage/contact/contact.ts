@@ -16,9 +16,9 @@ export class Contact {
   private cdr = inject(ChangeDetectorRef);
 
   userform = this.fb.group({
-    name: ['', [Validators.required, Validators.minLength(4)]],
+    name: ['', [Validators.required, Validators.minLength(3)]],
     email: ['', [Validators.required, Validators.email]],
-    text: ['', [Validators.required, Validators.minLength(10)]],
+    text: ['', [Validators.required, Validators.minLength(3)]],
     checkbox: [false, [Validators.requiredTrue]],
   });
 

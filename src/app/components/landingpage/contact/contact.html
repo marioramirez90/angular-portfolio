@@ -20,33 +20,51 @@
           <input [placeholder]="focused['name'] ? '' : ('CONTACT.NAME_PLACEHOLDER' | translate)" id="name" type="text" formControlName="name"
             (focus)="onFocus('name')"
             (blur)="onBlur('name')"
-            [class.invalid]="userform.get('name')?.invalid && userform.get('name')?.touched"
-            [class.valid]="userform.get('name')?.valid && userform.get('name')?.touched" />
-          <span class="error-icon" [class.visible]="userform.get('name')?.invalid && userform.get('name')?.touched">!</span>
-          <span class="success-icon" [class.visible]="userform.get('name')?.valid && userform.get('name')?.touched">✓</span>
-          <span class="error-msg" [class.visible]="userform.get('name')?.invalid && userform.get('name')?.touched">{{ 'CONTACT.NAME_ERROR' | translate }}</span>
+            [class.invalid]="userform.get('name')?.invalid && (userform.get('name')?.touched || focused['name'])"
+            [class.valid]="userform.get('name')?.valid && (userform.get('name')?.touched || focused['name'])" />
+          <span class="error-icon" [class.visible]="userform.get('name')?.invalid && (userform.get('name')?.touched || focused['name'])">!</span>
+          <span class="success-icon" [class.visible]="userform.get('name')?.valid && (userform.get('name')?.touched || focused['name'])">✓</span>
+          <span class="error-msg" [class.visible]="userform.get('name')?.invalid && (userform.get('name')?.touched || focused['name'])">
+            @if (userform.get('name')?.errors?.['required']) {
+              {{ 'CONTACT.NAME_ERROR' | translate }}
+            } @else if (userform.get('name')?.errors?.['minlength']) {
+              {{ 'CONTACT.NAME_MIN_ERROR' | translate }}
+            }
+          </span>
         </div>
 
         <div class="input-group">
           <input [placeholder]="focused['email'] ? '' : ('CONTACT.EMAIL_PLACEHOLDER' | translate)" id="mail" type="email" formControlName="email"
             (focus)="onFocus('email')"
             (blur)="onBlur('email')"
-            [class.invalid]="userform.get('email')?.invalid && userform.get('email')?.touched"
-            [class.valid]="userform.get('email')?.valid && userform.get('email')?.touched" />
-          <span class="error-icon" [class.visible]="userform.get('email')?.invalid && userform.get('email')?.touched">!</span>
-          <span class="success-icon" [class.visible]="userform.get('email')?.valid && userform.get('email')?.touched">✓</span>
-          <span class="error-msg" [class.visible]="userform.get('email')?.invalid && userform.get('email')?.touched">{{ 'CONTACT.EMAIL_ERROR' | translate }}</span>
+            [class.invalid]="userform.get('email')?.invalid && (userform.get('email')?.touched || focused['email'])"
+            [class.valid]="userform.get('email')?.valid && (userform.get('email')?.touched || focused['email'])" />
+          <span class="error-icon" [class.visible]="userform.get('email')?.invalid && (userform.get('email')?.touched || focused['email'])">!</span>
+          <span class="success-icon" [class.visible]="userform.get('email')?.valid && (userform.get('email')?.touched || focused['email'])">✓</span>
+          <span class="error-msg" [class.visible]="userform.get('email')?.invalid && (userform.get('email')?.touched || focused['email'])">
+            @if (userform.get('email')?.errors?.['required']) {
+              {{ 'CONTACT.EMAIL_ERROR' | translate }}
+            } @else if (userform.get('email')?.errors?.['email']) {
+              {{ 'CONTACT.EMAIL_INVALID_ERROR' | translate }}
+            }
+          </span>
         </div>
 
         <div class="input-group">
           <textarea [placeholder]="focused['text'] ? '' : ('CONTACT.MESSAGE_PLACEHOLDER' | translate)" id="text" formControlName="text"
             (focus)="onFocus('text')"
             (blur)="onBlur('text')"
-            [class.invalid]="userform.get('text')?.invalid && userform.get('text')?.touched"
-            [class.valid]="userform.get('text')?.valid && userform.get('text')?.touched"></textarea>
-          <span class="error-icon textarea-icon" [class.visible]="userform.get('text')?.invalid && userform.get('text')?.touched">!</span>
-          <span class="success-icon textarea-icon" [class.visible]="userform.get('text')?.valid && userform.get('text')?.touched">✓</span>
-          <span class="error-msg" [class.visible]="userform.get('text')?.invalid && userform.get('text')?.touched">{{ 'CONTACT.MESSAGE_ERROR' | translate }}</span>
+            [class.invalid]="userform.get('text')?.invalid && (userform.get('text')?.touched || focused['text'])"
+            [class.valid]="userform.get('text')?.valid && (userform.get('text')?.touched || focused['text'])"></textarea>
+          <span class="error-icon textarea-icon" [class.visible]="userform.get('text')?.invalid && (userform.get('text')?.touched || focused['text'])">!</span>
+          <span class="success-icon textarea-icon" [class.visible]="userform.get('text')?.valid && (userform.get('text')?.touched || focused['text'])">✓</span>
+          <span class="error-msg" [class.visible]="userform.get('text')?.invalid && (userform.get('text')?.touched || focused['text'])">
+            @if (userform.get('text')?.errors?.['required']) {
+              {{ 'CONTACT.MESSAGE_ERROR' | translate }}
+            } @else if (userform.get('text')?.errors?.['minlength']) {
+              {{ 'CONTACT.MESSAGE_MIN_ERROR' | translate }}
+            }
+          </span>
         </div>
 
         <div class="checkbox-content">
