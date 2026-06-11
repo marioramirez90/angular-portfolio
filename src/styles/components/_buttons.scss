@@ -64,8 +64,7 @@
     color 0.2s ease;
 
   &:hover {
-    height: 70px;
-    width: 200px;
+    transform: scale(1.1);
     background-color: $secondary-color;
     border-color: $secondary-color;
     color: $primary-color;
@@ -101,8 +100,7 @@
     color 0.2s ease;
 
   &:hover {
-    height: 70px;
-    width: 200px;
+    transform: scale(1.1);
     background-color: $secondary-color;
     border-color: $secondary-color;
     color: $primary-color;
