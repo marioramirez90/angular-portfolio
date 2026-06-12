@@ -51,8 +51,15 @@ export class Header {
   }
 
   private smoothScrollTo(id: string, duration = 800) {
-    const element = document.getElementById(id);
+    let element = document.getElementById(id);
     if (!element) return;
+
+    if (id === 'my-skills' && window.innerWidth <= 980) {
+      const h3Element = document.querySelector('#my-skills h3');
+      if (h3Element) {
+        element = h3Element as HTMLElement;
+      }
+    }
 
     const headerOffset = 110;
     const start = window.scrollY;
