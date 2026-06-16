@@ -14,7 +14,7 @@
 
   .hero-content {
     @include flexbox($align: flex-start);
-    margin-top: 170px;
+    margin-top: 40px;
 
 
     .hero-left {
@@ -27,7 +27,7 @@
 
     .hero-right {
       @include flexbox(column, flex-start, center);
-      margin-top: 130px;
+      margin-top: 180px;
       position: relative;
       right: 180px;
       z-index: 2;
@@ -82,7 +82,7 @@
 
   .hero-background {
     position: absolute;
-    top: 380px;
+    top: 280px;
     width: 100%;
     height: auto;
 
@@ -95,7 +95,7 @@
 
   .hero-bottom {
     position: absolute;
-    bottom: -190px;
+    bottom: -60px;
     z-index: 2;
     @include flexbox(row, space-between, center);
     width: 100%;
@@ -351,7 +351,7 @@
     }
 
     .hero-background {
-      top: 420px;
+      top: 310px;
       width: 100%;
     }
 
@@ -391,7 +391,7 @@
   .hero {
     .hero-content {
       .hero-right {
-        margin-top: 70px;
+        margin-top: -50px;
 
         .hero-text {
           .rotation {
