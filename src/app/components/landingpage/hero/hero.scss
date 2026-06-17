@@ -197,8 +197,7 @@
 
 @media screen and (max-width: 980px) {
   .hero {
-    min-height: auto;
-    height: auto;
+    height: 100vh;
 
     .hero-content {
       @include flexbox(column, center, center);
@@ -351,14 +350,13 @@
     }
 
     .hero-background {
-      top: 310px;
+      top: 420px;
       width: 100%;
     }
 
     .hero-bottom {
       position: relative;
-      top: 0;
-      margin-top: 50px;
+      top: -30px;
       gap: 20px;
 
       .hero-icons {
@@ -415,5 +413,12 @@
         }
       }
     }
+
+    .hero-background {
+      top: 280px;
+      width: 100%;
+    }
   }
+
+
 }
