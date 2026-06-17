@@ -14,7 +14,7 @@
 
   .hero-content {
     @include flexbox($align: flex-start);
-    margin-top: 40px;
+    margin-top: 60px;
 
 
     .hero-left {
@@ -82,7 +82,7 @@
 
   .hero-background {
     position: absolute;
-    top: 280px;
+    top: 310px;
     width: 100%;
     height: auto;
 
@@ -146,7 +146,9 @@
 
 @media screen and (max-width: 1390px) {
   .hero {
+
     .hero-content {
+      margin-top: 100px;
 
 
       .hero-left {
@@ -155,6 +157,8 @@
         img {
           max-width: 100%;
         }
+
+        .hero-image-stack {}
       }
 
       .hero-right {
@@ -189,6 +193,35 @@
 
           }
         }
+
+        .hero-button {}
+      }
+    }
+
+    .hero-background {
+
+      img {}
+    }
+
+    .hero-bottom {
+
+      .hero-icons {
+
+        .hero-line {}
+
+        .icons {
+
+          a {}
+        }
+
+        p {}
+      }
+
+      .scroll-down {
+
+        p {}
+
+        .img {}
       }
     }
   }
