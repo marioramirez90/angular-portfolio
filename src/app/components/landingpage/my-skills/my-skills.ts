@@ -17,6 +17,8 @@ export class MySkills {
     { name: 'Angular', image: 'img/icons/angular.svg' },
     { name: 'Git', image: 'img/icons/git.svg' },
     { name: 'REST API', image: 'img/icons/rest-api.svg' },
+    { name: 'Python', image: 'img/icons/Python.svg' },
+    { name: 'Django', image: 'img/icons/django.svg' },
   ];
 
   constructor(private router: Router) {}

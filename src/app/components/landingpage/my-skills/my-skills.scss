@@ -27,7 +27,7 @@
 
     .icon {
       @include flexbox(column, center, center, $gap: 12px);
-      width: calc(25% - 12px);
+      width: calc(25% - 50px);
 
       .image-icon {
         width: 60px;
@@ -233,8 +233,7 @@
 
 
       .icon {
-        max-width: 90px;
-
+        width: calc(25% - 12px);
         .image-icon {
           width: 48px;
           height: 48px;
@@ -242,16 +241,17 @@
       }
 
       .continually-icon {
-        top: -37px;
+        top: -50px;
         margin-bottom: -58px;
 
         p {
+          margin-bottom: -115px;
           font-size: 16px;
         }
 
         img {
-          width: 48px;
-          height: 48px;
+          width: 52px;
+          height: 52px;
         }
 
         .bubble {
@@ -302,7 +302,7 @@
 
       .myskills-container-text {
         position: relative;
-        margin-top: -150px;
+        margin-top: -50px;
         padding: 20px;
         width: 100%;
 
