@@ -124,6 +124,15 @@ footer {
       align-items: center;
       text-align: center;
 
+      .mario {
+        .i {
+          .dot {
+            top: 8.5px;
+            left: 5.1px;
+          }
+        }
+      }
+
       .legal-link-desktop {
         display: none;
       }
