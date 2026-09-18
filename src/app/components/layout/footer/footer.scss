@@ -48,7 +48,7 @@ footer {
           width: 7.9px;
           height: 7.6px;
           background: $secondary-color;
-          top: 9px;
+          top: 8px;
           left: 5px;
           transform: rotateY(180deg) translateX(50%);
           border-radius: 2px;
@@ -109,7 +109,6 @@ footer {
     }
   }
 
-  // Responsive layout starting at 930px (matching header hamburger breakpoint)
   @media (max-width: 930px) {
     height: auto;
     padding: 40px 0;
@@ -124,11 +123,6 @@ footer {
     .footer-name-content {
       align-items: center;
       text-align: center;
-
-      .mario {
-        font-size: 18px;
-        width: auto;
-      }
 
       .legal-link-desktop {
         display: none;
