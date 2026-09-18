@@ -33,5 +33,13 @@ export class Portfolio {
       link:'https://marioramirez.developerakademie.net/Join/index.html',
       github:'https://github.com/marioramirez90/Join',
     },
+    {
+      image: 'img/projects-image/kanmind.png',
+      projectName: 'KanMind',
+      technologies: ['Python', 'Django', 'Django REST Framework', 'SQLite'],
+      descriptionKey: 'PROJECTS.KANMIND_DESC',
+      link: '',
+      github: 'https://github.com/marioramirez90/coderr_backend',
+    },
   ]
 }

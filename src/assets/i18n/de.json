@@ -44,7 +44,8 @@
   "PROJECTS": {
     "POKEDEX_DESC": "Basierend auf der PokéAPI – eine einfache Bibliothek, die Pokémon-Informationen bereitstellt und katalogisiert.",
     "POLLO_DESC": "Ein einfaches Jump-and-Run-Spiel, das auf einem objektorientierten Ansatz basiert. Hilf dem Mexikaner, Münzen und explosive Flaschen zu finden, um gegen den Endboss zu kämpfen.",
-    "JOIN_DESC": "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop, weise Benutzer und Kategorien zu."
+    "JOIN_DESC": "Aufgabenmanager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben mit Drag-and-Drop, weise Benutzer und Kategorien zu.",
+    "KANMIND_DESC": "REST-API-Backend für ein modernes Kanban-Board. Ermöglicht das Verwalten von Projekten, Aufgaben und Kommentaren inklusive Statusverfolgung und Zuweisungen."
   },
   "CONTACT": {
     "TITLE": "Kontakt",
