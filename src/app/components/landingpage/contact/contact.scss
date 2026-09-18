@@ -255,7 +255,7 @@ section {
 
             &:hover .box {
               filter: drop-shadow(0 0 4px rgba(121, 126, 243, 1));
-              border-color: darken($border-color, 10%);
+              border-color: $border-color;
             }
           }
 
@@ -289,86 +289,37 @@ section {
           font-weight: 700;
           font-style: normal;
           cursor: pointer;
-          transition: background-color 0.3s ease;
+          transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+          display: flex;
+          align-items: center;
+          justify-content: center;
 
           &:hover:not(:disabled) {
             background-color: $hover-color;
+            box-shadow: 0 0 20px rgba(112, 230, 28, 0.4);
+            transform: translateY(-2px);
           }
 
           &:disabled {
             background-color: $disabled-color;
             cursor: not-allowed;
-          }
-        }
-
-        .feedback-card {
-          display: flex;
-          align-items: center;
-          gap: 15px;
-          padding: 15px 25px;
-          border-radius: 10px;
-          width: 100%;
-          max-width: 620px;
-          box-sizing: border-box;
-          margin-top: 10px;
-          font-size: 16px;
-          animation: fadeIn 0.4s ease forwards;
-
-          &.success {
-            background-color: rgba(112, 230, 28, 0.15);
-            border: 2px solid $border-color;
-            color: $primary-color;
-
-            .feedback-icon {
-              color: $border-color;
-              font-weight: bold;
-              font-size: 20px;
-            }
+            transform: none;
+            box-shadow: none;
           }
 
-          &.error {
-            background-color: rgba(230, 28, 64, 0.15);
-            border: 2px solid $warnning-color;
-            color: $primary-color;
-
-            .feedback-icon {
-              color: $warnning-color;
-              font-weight: bold;
-              font-size: 20px;
-            }
+          .btn-loader {
+            display: flex;
+            align-items: center;
+            gap: 10px;
           }
 
-          &.loading {
-            background-color: rgba(151, 71, 255, 0.15);
-            border: 2px solid $secondary-color;
-            color: $primary-color;
-          }
-
-          .spinner {
-            width: 20px;
-            height: 20px;
-            border: 3px solid rgba(255, 255, 255, 0.3);
+          .btn-spinner {
+            width: 18px;
+            height: 18px;
+            border: 2px solid rgba(255, 255, 255, 0.3);
             border-radius: 50%;
-            border-top-color: $primary-color;
-            animation: spin 1s ease-in-out infinite;
-          }
-        }
-
-        @keyframes spin {
-          to {
-            transform: rotate(360deg);
-          }
-        }
-
-        @keyframes fadeIn {
-          from {
-            opacity: 0;
-            transform: translateY(10px);
-          }
-
-          to {
-            opacity: 1;
-            transform: translateY(0);
+            border-top-color: white;
+            animation: spin 0.8s linear infinite;
           }
         }
       }
@@ -393,6 +344,216 @@ section {
         filter: invert(55%) sepia(90%) saturate(500%) hue-rotate(75deg);
       }
     }
+  }
+}
+
+.toast-backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(10, 15, 26, 0.55);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  z-index: 99998;
+  animation: backdropFade 0.3s ease forwards;
+}
+
+.toast-notification {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 99999;
+  min-width: 340px;
+  max-width: 500px;
+  width: calc(100% - 40px);
+  background: rgba(20, 29, 47, 0.96);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-radius: 20px;
+  padding: 24px 28px;
+  box-sizing: border-box;
+  overflow: hidden;
+  cursor: pointer;
+  animation: toastPopInCenter 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+
+  &.success {
+    border: 1px solid rgba(112, 230, 28, 0.6);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(112, 230, 28, 0.3);
+
+    .toast-icon-wrapper {
+      background: rgba(112, 230, 28, 0.15);
+    }
+
+    .toast-title {
+      color: $border-color;
+    }
+
+    .toast-progress-bar {
+      background: linear-gradient(90deg, $border-color, $secondary-color);
+    }
+  }
+
+  &.error {
+    border: 1px solid rgba(230, 28, 64, 0.6);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7), 0 0 35px rgba(230, 28, 64, 0.3);
+
+    .toast-icon-wrapper {
+      background: rgba(230, 28, 64, 0.15);
+
+      .error-mark {
+        color: $warnning-color;
+        font-size: 24px;
+        font-weight: 800;
+      }
+    }
+
+    .toast-title {
+      color: $warnning-color;
+    }
+
+    .toast-progress-bar {
+      background: linear-gradient(90deg, $warnning-color, $secondary-color);
+    }
+  }
+
+  .toast-content {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .toast-icon-wrapper {
+    width: 50px;
+    height: 50px;
+    min-width: 50px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .checkmark-svg {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: block;
+
+    .checkmark-circle {
+      stroke-dasharray: 166;
+      stroke-dashoffset: 166;
+      stroke-width: 3.5;
+      stroke-miterlimit: 10;
+      stroke: $border-color;
+      fill: none;
+      animation: stroke 0.6s cubic-bezier(0.65, 0, 0.45, 1) forwards;
+    }
+
+    .checkmark-check {
+      transform-origin: 50% 50%;
+      stroke-dasharray: 48;
+      stroke-dashoffset: 48;
+      stroke-width: 4;
+      stroke: $border-color;
+      animation: stroke 0.4s cubic-bezier(0.65, 0, 0.45, 1) 0.3s forwards;
+    }
+  }
+
+  .toast-text-group {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    flex: 1;
+
+    .toast-title {
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+    }
+
+    .toast-message {
+      font-size: 15px;
+      color: $primary-color;
+      line-height: 1.45;
+      margin: 0;
+      opacity: 0.95;
+    }
+  }
+
+  .toast-close {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 26px;
+    line-height: 1;
+    cursor: pointer;
+    padding: 0 4px;
+    transition: color 0.2s ease, transform 0.2s ease;
+
+    &:hover {
+      color: $primary-color;
+      transform: scale(1.15);
+    }
+  }
+
+  .toast-progress-bar {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 4px;
+    width: 100%;
+    transform-origin: left;
+    animation: toastProgress 4.5s linear forwards;
+  }
+}
+
+@keyframes backdropFade {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes stroke {
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes toastPopInCenter {
+  0% {
+    opacity: 0;
+    transform: translate(-50%, -50%) scale(0.7);
+    filter: blur(8px);
+  }
+  60% {
+    transform: translate(-50%, -50%) scale(1.04);
+    filter: blur(0);
+  }
+  100% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+@keyframes toastProgress {
+  from {
+    transform: scaleX(1);
+  }
+  to {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
   }
 }
 
@@ -443,3 +604,13 @@ section {
     }
   }
 }
+
+@media (max-width: 600px) {
+  .toast-notification {
+    top: 20px;
+    right: 16px;
+    left: 16px;
+    min-width: unset;
+    max-width: unset;
+  }
+}

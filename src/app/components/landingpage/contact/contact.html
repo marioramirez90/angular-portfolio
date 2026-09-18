@@ -78,30 +78,58 @@
           <span class="error-msg" [class.visible]="userform.get('checkbox')?.invalid && userform.get('checkbox')?.dirty">{{ 'CONTACT.POLICY_ERROR' | translate }}</span>
         </div>
 
-        <button type="submit" [disabled]="userform.invalid || isSubmitting">{{ 'CONTACT.SUBMIT' | translate }}</button>
-
-        @if (submitSuccess) {
-          <div class="feedback-card success">
-            <span class="feedback-icon">✓</span>
-            <p>{{ 'CONTACT.SUCCESS_MSG' | translate }}</p>
-          </div>
-        }
-        @if (submitError) {
-          <div class="feedback-card error">
-            <span class="feedback-icon">!</span>
-            <p>{{ 'CONTACT.ERROR_MSG' | translate }}</p>
-          </div>
-        }
-        @if (isSubmitting) {
-          <div class="feedback-card loading">
-            <div class="spinner"></div>
-            <p>{{ 'CONTACT.SENDING' | translate }}</p>
-          </div>
-        }
+        <button type="submit" [disabled]="userform.invalid || isSubmitting">
+          @if (isSubmitting) {
+            <span class="btn-loader">
+              <span class="btn-spinner"></span>
+              {{ 'CONTACT.SENDING' | translate }}
+            </span>
+          } @else {
+            {{ 'CONTACT.SUBMIT' | translate }}
+          }
+        </button>
       </form>
     </div>
     
   </div>
+
+  @if (submitSuccess) {
+    <div class="toast-backdrop" (click)="closeToast()"></div>
+    <div class="toast-notification success" (click)="closeToast()" role="alert">
+      <div class="toast-content">
+        <div class="toast-icon-wrapper">
+          <svg class="checkmark-svg" viewBox="0 0 52 52">
+            <circle class="checkmark-circle" cx="26" cy="26" r="23" fill="none"/>
+            <path class="checkmark-check" fill="none" d="M14.1 27.2l7.1 7.2 16.7-16.8"/>
+          </svg>
+        </div>
+        <div class="toast-text-group">
+          <span class="toast-title">Hey!</span>
+          <p class="toast-message">{{ 'CONTACT.SUCCESS_MSG' | translate }}</p>
+        </div>
+        <button type="button" class="toast-close" (click)="closeToast(); $event.stopPropagation()" aria-label="Close notification">×</button>
+      </div>
+      <div class="toast-progress-bar"></div>
+    </div>
+  }
+
+  @if (submitError) {
+    <div class="toast-backdrop" (click)="closeToast()"></div>
+    <div class="toast-notification error" (click)="closeToast()" role="alert">
+      <div class="toast-content">
+        <div class="toast-icon-wrapper">
+          <span class="error-mark">!</span>
+        </div>
+        <div class="toast-text-group">
+          <span class="toast-title">Oops!</span>
+          <p class="toast-message">{{ 'CONTACT.ERROR_MSG' | translate }}</p>
+        </div>
+        <button type="button" class="toast-close" (click)="closeToast(); $event.stopPropagation()" aria-label="Close notification">×</button>
+      </div>
+      <div class="toast-progress-bar"></div>
+    </div>
+  }
+
   <div class="scroll-up">
       <img (click)="scrollToTop()" class="footer-image-stack" src="img/icons/up-button.svg" alt="Nach oben scrollen" />
     </div>

@@ -1,4 +1,4 @@
-import { Component, inject, ChangeDetectorRef } from '@angular/core';
+import { Component, inject, ChangeDetectorRef, OnDestroy } from '@angular/core';
 import { FormBuilder, ReactiveFormsModule, Validators } from '@angular/forms';
 import { RouterLink } from '@angular/router';
 import { TranslatePipe } from '@ngx-translate/core';
@@ -10,7 +10,7 @@ import { HttpClient } from '@angular/common/http';
   templateUrl: './contact.html',
   styleUrl: './contact.scss',
 })
-export class Contact {
+export class Contact implements OnDestroy {
   private fb = inject(FormBuilder);
   private http = inject(HttpClient);
   private cdr = inject(ChangeDetectorRef);
@@ -26,6 +26,13 @@ export class Contact {
   isSubmitting = false;
   submitSuccess = false;
   submitError = false;
+  private toastTimer: any = null;
+
+  ngOnDestroy() {
+    if (this.toastTimer) {
+      clearTimeout(this.toastTimer);
+    }
+  }
 
   onFocus(field: string) {
     this.focused[field] = true;
@@ -36,6 +43,16 @@ export class Contact {
     if (!this.userform.get(field)?.value) {
       this.focused[field] = false;
     }
+  }
+
+  closeToast() {
+    this.submitSuccess = false;
+    this.submitError = false;
+    if (this.toastTimer) {
+      clearTimeout(this.toastTimer);
+      this.toastTimer = null;
+    }
+    this.cdr.markForCheck();
   }
 
   onSubmit() {
@@ -52,26 +69,26 @@ export class Contact {
       };
 
       this.http.post(endpoint, payload).subscribe({
-        next: (response) => {
+        next: () => {
           this.isSubmitting = false;
           this.submitSuccess = true;
           this.userform.reset();
           this.focused = {};
           this.cdr.markForCheck();
-          setTimeout(() => {
-            this.submitSuccess = false;
-            this.cdr.markForCheck();
-          }, 3000);
+          if (this.toastTimer) clearTimeout(this.toastTimer);
+          this.toastTimer = setTimeout(() => {
+            this.closeToast();
+          }, 4500);
         },
         error: (error) => {
           console.error('Mail submission failed:', error);
           this.isSubmitting = false;
           this.submitError = true;
           this.cdr.markForCheck();
-          setTimeout(() => {
-            this.submitError = false;
-            this.cdr.markForCheck();
-          }, 3000);
+          if (this.toastTimer) clearTimeout(this.toastTimer);
+          this.toastTimer = setTimeout(() => {
+            this.closeToast();
+          }, 4500);
         }
       });
     }
@@ -102,3 +119,4 @@ export class Contact {
     requestAnimationFrame(step);
   }
 }
+
