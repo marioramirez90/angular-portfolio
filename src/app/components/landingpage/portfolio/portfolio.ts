@@ -14,7 +14,7 @@ export class Portfolio {
       projectName: 'Pokedex',
       technologies:['HTML','CSS','JavaScript'],
       descriptionKey:'PROJECTS.POKEDEX_DESC',
-      link:'https://marioramirez.developerakademie.net/pokedex/index.html',
+      link:'https://marioramirez.de/projekte/pokedex/',
       github:'https://github.com/marioramirez90/Pokedex',
     },
       {
@@ -22,7 +22,7 @@ export class Portfolio {
       projectName: 'Pollo-loco',
       technologies:['HTML','CSS','JavaScript'],
       descriptionKey:'PROJECTS.POLLO_DESC',
-      link:'https://marioramirez.developerakademie.net/Pollo-loco/index.html',
+      link:'https://www.marioramirez.de/projekte/pollo-loco/',
       github:'https://github.com/marioramirez90/el-poll-loco',
     },
     {
@@ -30,7 +30,7 @@ export class Portfolio {
       projectName: 'Join',
       technologies:['Angular','TypeScript','HTML','CSS','Firebase'],
       descriptionKey:'PROJECTS.JOIN_DESC',
-      link:'https://marioramirez.developerakademie.net/Join/index.html',
+      link:'https://www.marioramirez.de/projekte/join/',
       github:'https://github.com/marioramirez90/Join',
     },
     {

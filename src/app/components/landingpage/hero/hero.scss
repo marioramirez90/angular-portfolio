@@ -101,7 +101,7 @@
 
   .hero-bottom {
     position: absolute;
-    bottom: -60px;
+    bottom: -75px;
     z-index: 2;
     @include flexbox(row, space-between, center);
     width: 100%;
