@@ -38,8 +38,8 @@ export class Portfolio {
       projectName: 'KanMind',
       technologies: ['Python', 'Django', 'Django REST Framework', 'SQLite'],
       descriptionKey: 'PROJECTS.KANMIND_DESC',
-      link: '',
-      github: 'https://github.com/marioramirez90/coderr_backend',
+      link: 'https://www.marioramirez.de/projekte/kanmind/',
+      github: 'https://github.com/marioramirez90/kanmind_backend',
     },
   ]
 }
