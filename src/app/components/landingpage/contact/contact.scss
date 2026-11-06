@@ -607,9 +607,9 @@ section {
 
 @media (max-width: 600px) {
   .toast-notification {
-    top: 20px;
-    right: 16px;
-    left: 16px;
+    top: 50%;
+    left: 50%;
+    right: auto;
     min-width: unset;
     max-width: unset;
   }
