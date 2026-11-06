@@ -41,5 +41,13 @@ export class Portfolio {
       link: 'https://www.marioramirez.de/projekte/kanmind/',
       github: 'https://github.com/marioramirez90/kanmind_backend',
     },
+    {
+  image: 'img/projects-image/coderr.png',
+  projectName: 'Coderr',
+  technologies: ['Python','Django','Django REST Framework','SQLite','Token Authentication'],
+  descriptionKey: 'PROJECTS.CODERR_DESC',
+  link: 'https://www.marioramirez.de/projekte/coderr/',
+  github: 'https://github.com/marioramirez90/coderr_backend',
+},
   ]
 }
