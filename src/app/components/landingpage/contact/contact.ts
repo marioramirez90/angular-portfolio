@@ -61,7 +61,7 @@ export class Contact implements OnDestroy {
       this.submitSuccess = false;
       this.submitError = false;
 
-      const endpoint = 'https://formspree.io/f/mldqqozw';
+      const endpoint = './send_mail.php';
       const payload = {
         name: this.userform.value.name ?? '',
         email: this.userform.value.email ?? '',
