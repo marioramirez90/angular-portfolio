@@ -56,6 +56,11 @@
           letter-spacing: 0;
           position: relative;
           bottom: 18px;
+
+          &.rotation--de {
+            font-size: 39px;
+            line-height: 150%;
+          }
         }
 
         .name-title {
@@ -180,6 +185,10 @@
             font-size: 45px;
             position: relative;
             bottom: 10px;
+
+            &.rotation--de {
+              font-size: 34px;
+            }
           }
 
 
@@ -278,6 +287,10 @@
             font-size: 34px;
             position: relative;
             bottom: 10px;
+
+            &.rotation--de {
+              font-size: 22px;
+            }
           }
 
           .name-title {
@@ -383,6 +396,10 @@
             font-size: 32px;
             position: relative;
             bottom: 10px;
+
+            &.rotation--de {
+              font-size: 22px;
+            }
           }
 
           .name-title {
@@ -457,6 +474,10 @@
             font-size: 26px;
             position: relative;
             bottom: 5px;
+
+            &.rotation--de {
+              font-size: 20px;
+            }
           }
 
           .name-title {

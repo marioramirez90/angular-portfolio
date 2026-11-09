@@ -11,6 +11,11 @@ import { TranslatePipe } from '@ngx-translate/core';
 export class Hero {
   constructor(private router: Router) {}
 
+  get isGerman(): boolean {
+    const language = localStorage.getItem('lang');
+    return language === 'de' || language === null;
+  }
+
   scrollTo(id: string) {
     if (this.router.url !== '/') {
       this.router.navigate(['/']).then(() => {
